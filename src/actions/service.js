@@ -5,6 +5,7 @@ export default {
   setActive: {
     serviceId: PropTypes.string.isRequired,
     keepActiveRoute: PropTypes.bool,
+    url: PropTypes.string,
   },
   blurActive: {},
   setActiveNext: {},
@@ -80,6 +81,7 @@ export default {
     needle: PropTypes.string.isRequired,
   },
   resetFilter: {},
+  listAll: {},
   resetStatus: {},
   reorder: {
     oldIndex: PropTypes.number.isRequired,

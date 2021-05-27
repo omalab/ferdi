@@ -1,4 +1,4 @@
-import { shell } from 'electron';
+import { shell, remote } from 'electron';
 import {
   action,
   reaction,
@@ -7,7 +7,6 @@ import {
 } from 'mobx';
 import { debounce, remove } from 'lodash';
 import ms from 'ms';
-import { app } from '@electron/remote';
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -26,6 +25,8 @@ import { SPELLCHECKER_LOCALES } from '../i18n/languages';
 
 const debug = require('debug')('Ferdi:ServiceStore');
 
+const { app } = remote;
+
 export default class ServicesStore extends Store {
   @observable allServicesRequest = new CachedRequest(this.api.services, 'all');
 
@@ -40,6 +41,8 @@ export default class ServicesStore extends Store {
   @observable clearCacheRequest = new Request(this.api.services, 'clearCache');
 
   @observable filterNeedle = null;
+
+  @observable listAllServices = [];
 
   // Array of service IDs that have recently been used
   // [0] => Most recent, [n] => Least recent
@@ -62,6 +65,7 @@ export default class ServicesStore extends Store {
     this.actions.service.openRecipeFile.listen(this._openRecipeFile.bind(this));
     this.actions.service.clearCache.listen(this._clearCache.bind(this));
     this.actions.service.setWebviewReference.listen(this._setWebviewReference.bind(this));
+    this.actions.service.listAll.listen(this._getAllEnabled.bind(this));
     this.actions.service.detachService.listen(this._detachService.bind(this));
     this.actions.service.focusService.listen(this._focusService.bind(this));
     this.actions.service.focusActiveService.listen(this._focusActiveService.bind(this));
@@ -193,16 +197,18 @@ export default class ServicesStore extends Store {
 
   // Computed props
   @computed get all() {
+    let output = [];
     if (this.stores.user.isLoggedIn) {
       const services = this.allServicesRequest.execute().result;
       if (services) {
-        return observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
+        output = observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
           s.index = index;
           return s;
         }));
       }
     }
-    return [];
+    this.listAllServices = output;
+    return output;
   }
 
   @computed get enabled() {
@@ -468,17 +474,18 @@ export default class ServicesStore extends Store {
     await request._promise;
   }
 
-  @action _setActive({ serviceId, keepActiveRoute }) {
+  @action _setActive({ serviceId, keepActiveRoute, url }) {
     if (!keepActiveRoute) this.stores.router.push('/');
     const service = this.one(serviceId);
-
     this.all.forEach((s, index) => {
       this.all[index].isActive = false;
     });
     service.isActive = true;
     this._awake({ serviceId: service.id });
     service.lastUsed = Date.now();
-
+    if (url && url.length > 0) {
+      service.webview.loadURL(url);
+    }
     if (this.active.recipe.id === TODOS_RECIPE_ID && !this.stores.todos.settings.isFeatureEnabledByUser) {
       this.actions.todos.toggleTodosFeatureVisibility();
     }
@@ -805,6 +812,12 @@ export default class ServicesStore extends Store {
     } else {
       service.webview.openDevTools();
     }
+  }
+
+  @action _getAllEnabled() {
+    const service = this.enabled;
+    console.log(service);
+    return service;
   }
 
   @action _openDevToolsForActiveService() {

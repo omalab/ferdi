@@ -193,6 +193,24 @@ export default class AppStore extends Store {
       this.stores.router.push(url);
     });
 
+    // Handle Recipe change Request
+    ipcRenderer.on('changeRecipeRequest', async (event, data) => {
+      const url = new URL(data.url);
+      const host = url.hostname;
+      let shiftTo; let
+        currentRecipe = null;
+      this.stores.services.listAllServices.forEach((element) => {
+        if (element.isActive) {
+          currentRecipe = element.id;
+        }
+        if (host.includes(element.recipe.id)) {
+          console.log(`Link will Open in ${element.recipe.name} Plugin`);
+          shiftTo = element.id;
+        }
+      });
+      this.actions.service.setActive({ serviceId: shiftTo || currentRecipe, keepActiveRoute: !shiftTo, url: data.url });
+    });
+
     ipcRenderer.on('muteApp', () => {
       this._toggleMuteApp();
     });

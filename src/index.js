@@ -471,6 +471,16 @@ ipcMain.on('feature-basic-auth-cancel', () => {
   authCallback = noop;
 });
 
+ipcMain.on('change-recipe', (e, { url }) => {
+  onDidLoad((window) => {
+    try {
+      window.webContents.send('changeRecipeRequest', {
+        url,
+      });
+    } catch (error) { console.log(error); }
+  });
+});
+
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // On OS X it is common for applications and their menu bar

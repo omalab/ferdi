@@ -253,19 +253,19 @@ export default class Service {
     // Send those headers to ipcMain so that it can be set in session
     if (typeof this.recipe.modifyRequestHeaders === 'function') {
       const modifiedRequestHeaders = this.recipe.modifyRequestHeaders();
-      debug(this.name, 'modifiedRequestHeaders', modifiedRequestHeaders);
+      // debug(this.name, 'modifiedRequestHeaders', modifiedRequestHeaders);
       ipcRenderer.send('modifyRequestHeaders', {
         modifiedRequestHeaders,
         serviceId: this.id,
       });
     } else {
-      debug(this.name, 'modifyRequestHeaders is not defined in the recipe');
+      // debug(this.name, 'modifyRequestHeaders is not defined in the recipe');
     }
 
     const handleUserAgent = (url, forwardingHack = false) => {
       if (url.startsWith('https://accounts.google.com')) {
         if (!this.chromelessUserAgent) {
-          debug('Setting user agent to chromeless for url', url);
+          // debug('Setting user agent to chromeless for url', url);
           this.webview.setUserAgent(userAgent(true));
           if (forwardingHack) {
             this.webview.loadURL(url);
@@ -273,7 +273,7 @@ export default class Service {
           this.chromelessUserAgent = true;
         }
       } else if (this.chromelessUserAgent) {
-        debug('Setting user agent to contain chrome');
+        // debug('Setting user agent to contain chrome');
         this.webview.setUserAgent(this.userAgent);
         this.chromelessUserAgent = false;
       }
@@ -286,7 +286,7 @@ export default class Service {
     }));
 
     this.webview.addEventListener('new-window', (event, url, frameName, options) => {
-      debug('new-window', event, url, frameName, options);
+      // debug('new-window', event, url, frameName, options);
       if (event.disposition === 'foreground-tab') {
         ipcRenderer.send('open-browser-window', event, this.id);
       } else {
@@ -303,7 +303,7 @@ export default class Service {
     this.webview.addEventListener('will-navigate', event => handleUserAgent(event.url, true));
 
     this.webview.addEventListener('did-start-loading', (event) => {
-      debug('Did start load', this.name, event);
+      // debug('Did start load', this.name, event);
 
       this.hasCrashed = false;
       this.isLoading = true;
@@ -325,7 +325,7 @@ export default class Service {
     });
 
     this.webview.addEventListener('did-fail-load', (event) => {
-      debug('Service failed to load', this.name, event);
+      // debug('Service failed to load', this.name, event);
       if (event.isMainFrame && event.errorCode !== -21 && event.errorCode !== -3) {
         this.isError = true;
         this.errorMessage = event.errorDescription;
@@ -334,28 +334,28 @@ export default class Service {
     });
 
     this.webview.addEventListener('crashed', () => {
-      debug('Service crashed', this.name);
+      // debug('Service crashed', this.name);
       this.hasCrashed = true;
     });
 
     webviewWebContents.on('login', (event, request, authInfo, callback) => {
       // const authCallback = callback;
-      debug('browser login event', authInfo);
+      // debug('browser login event', authInfo);
       event.preventDefault();
 
       if (authInfo.isProxy && authInfo.scheme === 'basic') {
-        debug('Sending service echo ping');
+        // debug('Sending service echo ping');
         webviewWebContents.send('get-service-id');
 
-        debug('Received service id', this.id);
+        // debug('Received service id', this.id);
 
         const ps = stores.settings.proxy[this.id];
 
         if (ps) {
-          debug('Sending proxy auth callback for service', this.id);
+          // debug('Sending proxy auth callback for service', this.id);
           callback(ps.user, ps.password);
         } else {
-          debug('No proxy auth config found for', this.id);
+          // debug('No proxy auth config found for', this.id);
         }
       }
     });

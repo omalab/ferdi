@@ -51,8 +51,8 @@ export default class ServicesStore extends Store {
 
   constructor(...args) {
     super(...args);
-
     // Register action handlers
+
     this.actions.service.setActive.listen(this._setActive.bind(this));
     this.actions.service.blurActive.listen(this._blurActive.bind(this));
     this.actions.service.setActiveNext.listen(this._setActiveNext.bind(this));
@@ -484,7 +484,12 @@ export default class ServicesStore extends Store {
     this._awake({ serviceId: service.id });
     service.lastUsed = Date.now();
     if (url && url.length > 0) {
-      service.webview.loadURL(url);
+      const outInterval = setInterval(() => {
+        if (service.webview) {
+          service.webview.loadURL(url);
+          clearInterval(outInterval);
+        }
+      }, 100);
     }
     if (this.active.recipe.id === TODOS_RECIPE_ID && !this.stores.todos.settings.isFeatureEnabledByUser) {
       this.actions.todos.toggleTodosFeatureVisibility();

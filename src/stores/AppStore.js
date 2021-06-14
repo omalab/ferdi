@@ -1,4 +1,4 @@
-import { ipcRenderer, shell } from 'electron';
+import { Debugger, ipcRenderer, shell } from 'electron';
 import {
   app, screen, powerMonitor, nativeTheme, getCurrentWindow, process as remoteProcess,
 } from '@electron/remote';
@@ -10,6 +10,8 @@ import { URL } from 'url';
 import os from 'os';
 import path from 'path';
 import { readJsonSync } from 'fs-extra';
+import {social}  from  "./urlConfig.json";
+var URI = require('urijs');
 
 import Store from './lib/Store';
 import Request from './lib/Request';
@@ -197,9 +199,17 @@ export default class AppStore extends Store {
     ipcRenderer.on('changeRecipeRequest', async (event, data) => {
       const url = new URL(data.url);
       const host = url.hostname;
-      let shiftTo; let
-        currentRecipe = null;
+      let shiftTo;
+      let currentRecipe = null;
       this.stores.services.listAllServices.forEach((element) => {
+        let recs=element.recipe.id.split('-');
+        recs.forEach(x=>{
+          let y =social[x];
+          var uri = new URI(url);
+          if(y){
+            console.log(y)
+          }
+        })
         if (element.isActive) {
           currentRecipe = element.id;
         }
@@ -208,7 +218,28 @@ export default class AppStore extends Store {
           shiftTo = element.id;
         }
       });
-      this.actions.service.setActive({ serviceId: shiftTo || currentRecipe, keepActiveRoute: !shiftTo, url: data.url });
+      if (shiftTo) {
+        if (this.stores.workspaces && this.stores.workspaces.listAll && this.stores.workspaces.listAll.length >= 1) {
+          const activeWorkSapce = this.stores.workspaces.activeWorkspace.id;
+          this.stores.workspaces.listAll.forEach((workspace) => {
+            workspace.services.forEach((serviceId) => {
+              if (shiftTo == serviceId) {
+                if (activeWorkSapce == workspace.id) {
+                  this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+                } else {
+                  this.stores.workspaces.actions.workspaces.activate({ workspace });
+                  setTimeout(() => {
+                    this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+                  }, 100);
+                }
+              }
+            });
+          });
+        }
+      } else {
+        console.log(currentRecipe);
+        this.actions.service.setActive({ serviceId: currentRecipe, keepActiveRoute: true, url: data.url });
+      }
     });
 
     ipcRenderer.on('muteApp', () => {

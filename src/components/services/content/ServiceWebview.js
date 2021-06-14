@@ -7,7 +7,7 @@ import path from 'path';
 
 import ServiceModel from '../../../models/Service';
 
-const debug = require('debug')('Ferdi:Services');
+// const debug = require('debug')('Ferdi:Services');
 
 @observer
 class ServiceWebview extends Component {
@@ -28,7 +28,7 @@ class ServiceWebview extends Component {
       () => {
         if (this.webview && this.webview.view) {
           this.webview.view.addEventListener('console-message', (e) => {
-            debug('Service logged a message:', e.message);
+            // debug('Service logged a message:', e.message);
           });
         }
       },
@@ -42,13 +42,13 @@ class ServiceWebview extends Component {
 
   refocusWebview = () => {
     const { webview } = this;
-    debug('Refocus Webview is called', this.props.service);
+    // debug('Refocus Webview is called', this.props.service);
     if (!webview) return;
     if (this.props.service.isActive) {
       webview.view.blur();
       webview.view.focus();
     } else {
-      debug('Refocus not required - Not active service');
+      // debug('Refocus not required - Not active service');
     }
   };
 

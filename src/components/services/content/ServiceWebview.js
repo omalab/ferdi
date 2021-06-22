@@ -27,7 +27,7 @@ class ServiceWebview extends Component {
       () => this.webview,
       () => {
         if (this.webview && this.webview.view) {
-          this.webview.view.addEventListener('console-message', (e) => {
+          this.webview.view.addEventListener('console-message', () => {
             // debug('Service logged a message:', e.message);
           });
         }

@@ -483,6 +483,12 @@ export default class ServicesStore extends Store {
     service.isActive = true;
     this._awake({ serviceId: service.id });
     service.lastUsed = Date.now();
+// setTimeout(()=>{
+
+//   navigator.registerProtocolHandler("mailto",
+//     "https://mail.google.com/mail/?extsrc=mailto&url=%s",
+//     "Gmail");
+// })
     if (url && url.length > 0) {
       const outInterval = setInterval(() => {
         if (service.webview) {

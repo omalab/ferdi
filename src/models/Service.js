@@ -7,7 +7,7 @@ import path from 'path';
 import userAgent from '../helpers/userAgent-helpers';
 import { TODOS_RECIPE_ID, todosStore } from '../features/todos';
 
-const debug = require('debug')('Ferdi:Service');
+// const debug = require('debug')('Ferdi:Service');
 
 export const RESTRICTION_TYPES = {
   SERVICE_LIMIT: 0,
@@ -302,7 +302,7 @@ export default class Service {
 
     this.webview.addEventListener('will-navigate', event => handleUserAgent(event.url, true));
 
-    this.webview.addEventListener('did-start-loading', (event) => {
+    this.webview.addEventListener('did-start-loading', () => {
       // debug('Did start load', this.name, event);
 
       this.hasCrashed = false;

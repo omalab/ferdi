@@ -481,6 +481,16 @@ ipcMain.on('change-recipe', (e, { url }) => {
   });
 });
 
+ipcMain.on('on-context-menu', (e, { url }) => {
+  onDidLoad((window) => {
+    try {
+      window.webContents.send('checkContextMenu', {
+        url,
+      });
+    } catch (error) { console.log(error); }
+  });
+});
+
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // On OS X it is common for applications and their menu bar

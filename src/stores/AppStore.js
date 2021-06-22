@@ -1,4 +1,4 @@
-import { Debugger, ipcRenderer, shell } from 'electron';
+import { ipcRenderer, shell } from 'electron';
 import {
   app, screen, powerMonitor, nativeTheme, getCurrentWindow, process as remoteProcess,
 } from '@electron/remote';
@@ -10,8 +10,8 @@ import { URL } from 'url';
 import os from 'os';
 import path from 'path';
 import { readJsonSync } from 'fs-extra';
-import {social}  from  "./urlConfig.json";
-var URI = require('urijs');
+import { social } from './urlConfig.json';
+const { remote: { BrowserWindow } } = require("electron");
 
 import Store from './lib/Store';
 import Request from './lib/Request';
@@ -24,6 +24,9 @@ import { getLocale } from '../helpers/i18n-helpers';
 import { getServiceIdsFromPartitions, removeServicePartitionDirectory } from '../helpers/service-helpers.js';
 import { isValidExternalURL } from '../helpers/url-helpers';
 import { sleep } from '../helpers/async-helpers';
+
+const URI = require('urijs');
+const template = require('url-template');
 
 const debug = require('debug')('Ferdi:AppStore');
 
@@ -194,37 +197,39 @@ export default class AppStore extends Store {
 
       this.stores.router.push(url);
     });
-
     // Handle Recipe change Request
     ipcRenderer.on('changeRecipeRequest', async (event, data) => {
       const url = new URL(data.url);
-      const host = url.hostname;
-      let shiftTo;
+      let shiftTo ="0fe529a6-89ad-49e7-88fc-6f9d82a0c250";
       let currentRecipe = null;
       this.stores.services.listAllServices.forEach((element) => {
-        let recs=element.recipe.id.split('-');
-        recs.forEach(x=>{
-          let y =social[x];
-          var uri = new URI(url);
-          if(y){
-            console.log(y)
-          }
-        })
+        // debugger
+        const recs = element.recipe.id.split(element.recipe.id.includes('-')?'-':'_');
         if (element.isActive) {
           currentRecipe = element.id;
         }
-        if (host.includes(element.recipe.id)) {
-          console.log(`Link will Open in ${element.recipe.name} Plugin`);
-          shiftTo = element.id;
-        }
+        recs.forEach((x) => {
+          const y = social[x];
+          const uri = new URI(url);
+          if (y) {
+            if (y.domains.length > 0) {
+              if (
+                y.domains.includes(uri.domain())
+              ) {
+                console.log(`Link will Open in ${element.recipe.name} Plugin`);
+                shiftTo = element.id;
+              }
+            }
+          }
+        });
       });
       if (shiftTo) {
         if (this.stores.workspaces && this.stores.workspaces.listAll && this.stores.workspaces.listAll.length >= 1) {
           const activeWorkSapce = this.stores.workspaces.activeWorkspace.id;
           this.stores.workspaces.listAll.forEach((workspace) => {
             workspace.services.forEach((serviceId) => {
-              if (shiftTo == serviceId) {
-                if (activeWorkSapce == workspace.id) {
+              if (shiftTo === serviceId) {
+                if (activeWorkSapce === workspace.id) {
                   this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
                 } else {
                   this.stores.workspaces.actions.workspaces.activate({ workspace });
@@ -237,7 +242,6 @@ export default class AppStore extends Store {
           });
         }
       } else {
-        console.log(currentRecipe);
         this.actions.service.setActive({ serviceId: currentRecipe, keepActiveRoute: true, url: data.url });
       }
     });

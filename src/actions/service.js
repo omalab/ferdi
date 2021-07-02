@@ -7,6 +7,11 @@ export default {
     keepActiveRoute: PropTypes.bool,
     url: PropTypes.string,
   },
+  setEmailActive: {
+    serviceId: PropTypes.string.isRequired,
+    keepActiveRoute: PropTypes.bool,
+    url: PropTypes.string,
+  },
   blurActive: {},
   setActiveNext: {},
   setActivePrev: {},
@@ -82,6 +87,7 @@ export default {
   },
   resetFilter: {},
   listAll: {},
+  listAllEmailRecipes: {},
   resetStatus: {},
   reorder: {
     oldIndex: PropTypes.number.isRequired,

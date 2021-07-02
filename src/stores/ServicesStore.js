@@ -1,4 +1,4 @@
-import { shell, remote } from 'electron';
+import { shell, remote, ipcMain, ipcRenderer } from 'electron';
 import {
   action,
   reaction,
@@ -14,6 +14,7 @@ import Store from './lib/Store';
 import Request from './lib/Request';
 import CachedRequest from './lib/CachedRequest';
 import { matchRoute } from '../helpers/routing-helpers';
+import { social, emailRecipes } from './urlConfig.json';
 import { isInTimeframe } from '../helpers/schedule-helpers';
 import { getRecipeDirectory, getDevRecipeDirectory } from '../helpers/recipe-helpers';
 import { workspaceStore } from '../features/workspaces';
@@ -54,6 +55,7 @@ export default class ServicesStore extends Store {
     // Register action handlers
 
     this.actions.service.setActive.listen(this._setActive.bind(this));
+    this.actions.service.setEmailActive.listen(this._setEmailServiceActive.bind(this));
     this.actions.service.blurActive.listen(this._blurActive.bind(this));
     this.actions.service.setActiveNext.listen(this._setActiveNext.bind(this));
     this.actions.service.setActivePrev.listen(this._setActivePrev.bind(this));
@@ -66,6 +68,7 @@ export default class ServicesStore extends Store {
     this.actions.service.clearCache.listen(this._clearCache.bind(this));
     this.actions.service.setWebviewReference.listen(this._setWebviewReference.bind(this));
     this.actions.service.listAll.listen(this._getAllEnabled.bind(this));
+    this.actions.service.listAllEmailRecipes.listen(this._getAllEmail.bind(this));
     this.actions.service.detachService.listen(this._detachService.bind(this));
     this.actions.service.focusService.listen(this._focusService.bind(this));
     this.actions.service.focusActiveService.listen(this._focusActiveService.bind(this));
@@ -208,6 +211,29 @@ export default class ServicesStore extends Store {
       }
     }
     this.listAllServices = output;
+    return output;
+  }
+
+  // Computed props
+  @computed get allEmailRecipes() {
+    let output = [];
+    if (this.stores.user.isLoggedIn) {
+      const services = this.allServicesRequest.execute().result;
+      if (services) {
+        output = observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
+          s.index = index;
+          return s;
+        }));
+      }
+    }
+    output = output.filter((x) => {
+      if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
+        console.log(emailRecipes[x.recipe.id].link.length);
+        if (emailRecipes[x.recipe.id].link.length > 0) {
+          return true
+        } else return false
+      } else return false
+    })
     return output;
   }
 
@@ -483,12 +509,6 @@ export default class ServicesStore extends Store {
     service.isActive = true;
     this._awake({ serviceId: service.id });
     service.lastUsed = Date.now();
-// setTimeout(()=>{
-
-//   navigator.registerProtocolHandler("mailto",
-//     "https://mail.google.com/mail/?extsrc=mailto&url=%s",
-//     "Gmail");
-// })
     if (url && url.length > 0) {
       const outInterval = setInterval(() => {
         if (service.webview) {
@@ -507,6 +527,21 @@ export default class ServicesStore extends Store {
 
     this._focusActiveService();
   }
+
+
+  @action _setEmailServiceActive({ serviceId, mail, keepActiveRoute }) {
+    const service = this.one(serviceId);
+    if (mail && mail.length > 0) {
+      let url = emailRecipes[service.recipe.id].link;
+      if (url) {
+        url = url.replace('<mail>', mail)
+        try {
+          this.stores.app.actions.app.changeService({ serviceId, url })
+        } catch (error) { console.log(error); }
+      }
+    }
+  }
+
 
   @action _blurActive() {
     if (!this.active) return;
@@ -827,6 +862,12 @@ export default class ServicesStore extends Store {
 
   @action _getAllEnabled() {
     const service = this.enabled;
+    console.log(service);
+    return service;
+  }
+
+  @action _getAllEmail() {
+    const service = this.allEmailRecipes;
     console.log(service);
     return service;
   }

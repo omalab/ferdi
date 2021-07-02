@@ -336,7 +336,7 @@ const createWindow = () => {
   if (isMac) {
     // eslint-disable-next-line global-require
     const askFormacOSPermissions = require('./electron/macOSPermissions');
-    setTimeout(() => askFormacOSPermissions(mainWindow), ms('30s'));
+    setTimeout(() => { try { askFormacOSPermissions(mainWindow), ms('30s') } catch (e) { } });
   }
 
   mainWindow.on('show', () => {
@@ -350,7 +350,6 @@ const createWindow = () => {
   mainWindow.webContents.on('new-window', (e, url) => {
     debug('Open url', url);
     e.preventDefault();
-
     if (isValidExternalURL(url)) {
       shell.openExternal(url);
     }
@@ -474,9 +473,17 @@ ipcMain.on('feature-basic-auth-cancel', () => {
 ipcMain.on('change-recipe', (e, { url }) => {
   onDidLoad((window) => {
     try {
-      window.webContents.send('changeRecipeRequest', {
-        url,
-      });
+      window.webContents.send('changeRecipeRequest', { url });
+    } catch (error) { console.log(error); }
+  });
+});
+
+ipcMain.on('check-mail-recipe', () => {
+  debug('window');
+  onDidLoad((window) => {
+    try {
+      debug('window');
+      window.webContents.send('checkEmailRecipes');
     } catch (error) { console.log(error); }
   });
 });

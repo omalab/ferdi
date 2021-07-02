@@ -1,6 +1,9 @@
 import { getCurrentWebContents } from '@electron/remote';
 import ContextMenuBuilder from './contextMenuBuilder';
 
+const {
+  ipcRenderer,ipcMain
+} = require('electron');
 const webContents = getCurrentWebContents();
 
 export default async function setupContextMenu(isSpellcheckEnabled, getDefaultSpellcheckerLanguage, getSpellcheckerLanguage, getSearchEngine) {
@@ -9,7 +12,8 @@ export default async function setupContextMenu(isSpellcheckEnabled, getDefaultSp
   );
 
   webContents.on('context-menu', (e, props) => {
-    // TODO?: e.preventDefault();
+    // TODO?: 
+    e.preventDefault();
     contextMenuBuilder.showPopupMenu(
       { ...props, searchEngine: getSearchEngine() },
       isSpellcheckEnabled(),

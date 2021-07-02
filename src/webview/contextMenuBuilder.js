@@ -11,7 +11,7 @@ import { isMac } from '../environment';
 import { SEARCH_ENGINE_NAMES, SEARCH_ENGINE_URLS } from '../config';
 
 const {
-  clipboard, nativeImage, remote, shell, ipcRenderer,
+  clipboard, nativeImage, remote, shell, ipcRenderer, ipcMain
 } = require('electron');
 
 const { URL } = require('url');
@@ -23,7 +23,6 @@ function matchesWord(string) {
 
   return string.match(regex);
 }
-
 const contextMenuStringTable = {
   lookUpDefinition: ({ word }) => `Look Up "${word}"`,
   cut: () => 'Cut',
@@ -32,6 +31,7 @@ const contextMenuStringTable = {
   searchWith: ({ searchEngine }) => `Search with ${searchEngine}`,
   openLinkUrl: () => 'Open Link',
   openLinkInFerdiUrl: () => 'Open Link in Ferdi',
+  openLinkIn: () => 'Open Link in Email service',
   openLinkInRecipes: () => 'Open Link in Ferdi',
   openInBrowser: () => 'Open in Browser',
   copyLinkUrl: () => 'Copy Link',
@@ -148,6 +148,7 @@ module.exports = class ContextMenuBuilder {
     return menu;
   }
 
+
   /**
    * Builds a menu applicable to a link element.
    *
@@ -173,13 +174,12 @@ module.exports = class ContextMenuBuilder {
         shell.openExternal(menuInfo.linkURL);
       },
     });
-
-    // const openInFerdiLink = new MenuItem({
-    //   label: this.stringTable.openLinkInFerdiUrl(),
-    //   click: () => {
-    //     window.location.href = menuInfo.linkURL;
-    //   },
-    // });
+    const openIn = new MenuItem({
+      label: this.stringTable.openLinkIn(),
+      click: () => {
+        ipcRenderer.send('check-mail-recipe');
+      },
+    });
 
     const openInRecipes = new MenuItem({
       label: this.stringTable.openLinkInRecipes(),
@@ -193,7 +193,9 @@ module.exports = class ContextMenuBuilder {
     menu.append(copyLink);
     menu.append(openLink);
     menu.append(openInRecipes);
-    // menu.append(openInFerdiLink);
+    if (isEmailAddress) {
+      menu.append(openIn);
+    }
 
     if (this.isSrcUrlValid(menuInfo)) {
       this.addSeparator(menu);

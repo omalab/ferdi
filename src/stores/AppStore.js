@@ -1,4 +1,4 @@
-import { ipcRenderer, shell } from 'electron';
+import { ipcMain, ipcRenderer, shell } from 'electron';
 import {
   app, screen, powerMonitor, nativeTheme, getCurrentWindow, process as remoteProcess,
 } from '@electron/remote';
@@ -10,7 +10,7 @@ import { URL } from 'url';
 import os from 'os';
 import path from 'path';
 import { readJsonSync } from 'fs-extra';
-import { social } from './urlConfig.json';
+import { social, emailRecipes } from './urlConfig.json';
 const { remote: { BrowserWindow } } = require("electron");
 
 import Store from './lib/Store';
@@ -100,6 +100,7 @@ export default class AppStore extends Store {
     this.actions.app.resetUpdateStatus.listen(this._resetUpdateStatus.bind(this));
     this.actions.app.healthCheck.listen(this._healthCheck.bind(this));
     this.actions.app.muteApp.listen(this._muteApp.bind(this));
+    this.actions.app.changeService.listen(this._changeService.bind(this));
     this.actions.app.toggleMuteApp.listen(this._toggleMuteApp.bind(this));
     this.actions.app.clearAllCache.listen(this._clearAllCache.bind(this));
 
@@ -199,51 +200,11 @@ export default class AppStore extends Store {
     });
     // Handle Recipe change Request
     ipcRenderer.on('changeRecipeRequest', async (event, data) => {
-      const url = new URL(data.url);
-      let shiftTo ="0fe529a6-89ad-49e7-88fc-6f9d82a0c250";
-      let currentRecipe = null;
-      this.stores.services.listAllServices.forEach((element) => {
-        // debugger
-        const recs = element.recipe.id.split(element.recipe.id.includes('-')?'-':'_');
-        if (element.isActive) {
-          currentRecipe = element.id;
-        }
-        recs.forEach((x) => {
-          const y = social[x];
-          const uri = new URI(url);
-          if (y) {
-            if (y.domains.length > 0) {
-              if (
-                y.domains.includes(uri.domain())
-              ) {
-                console.log(`Link will Open in ${element.recipe.name} Plugin`);
-                shiftTo = element.id;
-              }
-            }
-          }
-        });
-      });
-      if (shiftTo) {
-        if (this.stores.workspaces && this.stores.workspaces.listAll && this.stores.workspaces.listAll.length >= 1) {
-          const activeWorkSapce = this.stores.workspaces.activeWorkspace.id;
-          this.stores.workspaces.listAll.forEach((workspace) => {
-            workspace.services.forEach((serviceId) => {
-              if (shiftTo === serviceId) {
-                if (activeWorkSapce === workspace.id) {
-                  this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
-                } else {
-                  this.stores.workspaces.actions.workspaces.activate({ workspace });
-                  setTimeout(() => {
-                    this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
-                  }, 100);
-                }
-              }
-            });
-          });
-        }
-      } else {
-        this.actions.service.setActive({ serviceId: currentRecipe, keepActiveRoute: true, url: data.url });
-      }
+      this._changeService(data, this);
+    });
+    
+    ipcRenderer.on('checkEmailRecipes', () => {
+      this.actions.ui.openEmailSelector();
     });
 
     ipcRenderer.on('muteApp', () => {
@@ -411,6 +372,7 @@ export default class AppStore extends Store {
     });
   }
 
+
   @action _launchOnStartup({
     enable,
   }) {
@@ -437,6 +399,58 @@ export default class AppStore extends Store {
 
     if (isValidExternalURL(url)) {
       shell.openExternal(url);
+    }
+  }
+  @action _changeService(data) {
+    const url = new URL(data.url);
+
+    let shiftTo = null;
+    let currentRecipe = null;
+    this.stores.services.listAllServices.forEach((element) => {
+      // debugger
+      const recs = element.recipe.id.split(element.recipe.id.includes('-') ? '-' : '_');
+      if (element.isActive) {
+        currentRecipe = element.id;
+      }
+      recs.forEach((x) => {
+        const y = social[x];
+        const uri = new URI(url);
+        if (y) {
+          if (y.domains.length > 0) {
+            if (
+              y.domains.includes(uri.domain())
+            ) {
+              console.log(`Link will Open in ${element.recipe.name} Plugin`);
+              shiftTo = element.id;
+            }
+          }
+        }
+      });
+    });
+    if (data.serviceId) {
+      shiftTo = data.serviceId;
+    }
+
+    if (shiftTo) {
+      if (this.stores.workspaces && this.stores.workspaces.listAll && this.stores.workspaces.listAll.length >= 1) {
+        const activeWorkSapce = this.stores.workspaces.activeWorkspace.id;
+        this.stores.workspaces.listAll.forEach((workspace) => {
+          workspace.services.forEach((serviceId) => {
+            if (shiftTo === serviceId) {
+              if (activeWorkSapce === workspace.id) {
+                this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+              } else {
+                this.stores.workspaces.actions.workspaces.activate({ workspace });
+                setTimeout(() => {
+                  this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+                }, 100);
+              }
+            }
+          });
+        });
+      }
+    } else {
+      this.actions.service.setActive({ serviceId: currentRecipe, keepActiveRoute: true, url: data.url });
     }
   }
 

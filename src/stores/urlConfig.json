@@ -1,4 +1,42 @@
 {
+  "emailRecipes":{
+    "amazon-work-mail" :{
+      "link":""
+    },
+    "enterprise-owa" :{
+      "link":"https://outlook.live.com/mail/0/deeplink/compose?to=<mail>"
+    },
+    "fastmail" :{
+      "link":"https://www.fastmail.com/mail/Inbox/compose?u=06994039&to=<mail>"
+    },
+    "gmail" :{
+      "link":"https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<mail>"
+    },
+    "infomaniak-mail" :{
+      "link":""
+    },
+    "mailbox.org" :{
+      "link":""
+    },
+    "office365-owa" :{
+      "link":"https://outlook.live.com/mail/0/deeplink/compose?to=<mail>"
+    },
+    "outlook" :{
+      "link":"https://outlook.live.com/mail/0/deeplink/compose?to=<mail>"
+    },
+    "proton-mail" :{
+      "link":""
+    },
+    "rainloop" :{
+      "link":""
+    },
+    "roundcube" :{
+      "link":""
+    },
+    "zoho" :{
+      "link":"https://mail.zoho.in/zm/#compose?to=<mail>"
+    }
+  },
   "email": {
     "email": {
       "domains": [

@@ -11,7 +11,6 @@ import os from 'os';
 import path from 'path';
 import { readJsonSync } from 'fs-extra';
 import { social, emailRecipes } from './urlConfig.json';
-const { remote: { BrowserWindow } } = require("electron");
 
 import Store from './lib/Store';
 import Request from './lib/Request';
@@ -24,6 +23,8 @@ import { getLocale } from '../helpers/i18n-helpers';
 import { getServiceIdsFromPartitions, removeServicePartitionDirectory } from '../helpers/service-helpers.js';
 import { isValidExternalURL } from '../helpers/url-helpers';
 import { sleep } from '../helpers/async-helpers';
+
+const { remote: { BrowserWindow } } = require('electron');
 
 const URI = require('urijs');
 const template = require('url-template');
@@ -202,7 +203,7 @@ export default class AppStore extends Store {
     ipcRenderer.on('changeRecipeRequest', async (event, data) => {
       this._changeService(data, this);
     });
-    
+
     ipcRenderer.on('checkEmailRecipes', () => {
       this.actions.ui.openEmailSelector();
     });
@@ -401,6 +402,7 @@ export default class AppStore extends Store {
       shell.openExternal(url);
     }
   }
+
   @action _changeService(data) {
     const url = new URL(data.url);
 

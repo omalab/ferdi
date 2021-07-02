@@ -2,30 +2,39 @@
 
 import {
   app,
-  BrowserWindow,
-  shell,
-  ipcMain,
-  session,
+  BrowserWindow, ipcMain,
+  session, shell,
 } from 'electron';
-
-import fs from 'fs-extra';
-import path from 'path';
-import windowStateKeeper from 'electron-window-state';
 import { enforceMacOSAppLocation } from 'electron-util';
+import windowStateKeeper from 'electron-window-state';
+import fs from 'fs-extra';
 import ms from 'ms';
-
-require('@electron/remote/main').initialize();
-
+import path from 'path';
+import * as buildInfo from './buildInfo.json'; // eslint-disable-line import/no-unresolved
 import {
   DEFAULT_APP_SETTINGS,
   DEFAULT_WINDOW_OPTIONS,
 } from './config';
-
+import handleDeepLink from './electron/deepLinking';
+import './electron/exception';
+import ipcApi from './electron/ipc-api';
+import Settings from './electron/Settings';
+import { isPositionValid } from './electron/windowUtils';
 import {
-  isMac,
+  isLinux, isMac,
   isWindows,
-  isLinux,
 } from './environment';
+import { mainIpcHandler as basicAuthHandler } from './features/basicAuth';
+import { asarPath } from './helpers/asar-helpers';
+import { isValidExternalURL } from './helpers/url-helpers';
+import userAgent, { ferdiVersion } from './helpers/userAgent-helpers';
+import DBus from './lib/DBus';
+import Tray from './lib/Tray';
+import { appId } from './package.json'; // eslint-disable-line import/no-unresolved
+
+
+require('@electron/remote/main').initialize();
+
 
 // TODO: This seems to be duplicated between here and 'config.js'
 // Set app directory before loading user modules
@@ -45,20 +54,6 @@ if (isDevMode) {
   app.setPath('userData', path.join(app.getPath('appData'), `${app.name}Dev`));
 }
 
-import { mainIpcHandler as basicAuthHandler } from './features/basicAuth';
-import ipcApi from './electron/ipc-api';
-import Tray from './lib/Tray';
-import DBus from './lib/DBus';
-import Settings from './electron/Settings';
-import handleDeepLink from './electron/deepLinking';
-import { isPositionValid } from './electron/windowUtils';
-import { appId } from './package.json'; // eslint-disable-line import/no-unresolved
-import * as buildInfo from './buildInfo.json'; // eslint-disable-line import/no-unresolved
-import './electron/exception';
-
-import { asarPath } from './helpers/asar-helpers';
-import { isValidExternalURL } from './helpers/url-helpers';
-import userAgent, { ferdiVersion } from './helpers/userAgent-helpers';
 
 const osName = require('os-name');
 const debug = require('debug')('Ferdi:App');
@@ -336,7 +331,7 @@ const createWindow = () => {
   if (isMac) {
     // eslint-disable-next-line global-require
     const askFormacOSPermissions = require('./electron/macOSPermissions');
-    setTimeout(() => { try { askFormacOSPermissions(mainWindow), ms('30s') } catch (e) { } });
+    setTimeout(() => { try { askFormacOSPermissions(mainWindow), ms('30s'); } catch (e) { } });
   }
 
   mainWindow.on('show', () => {

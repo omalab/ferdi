@@ -15,7 +15,7 @@ export default {
   },
   changeService: {
     serviceId: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
+    url: PropTypes.string.isRequired,
   },
   openExternalUrl: {
     url: PropTypes.string.isRequired,

@@ -1,4 +1,6 @@
-import { shell, remote, ipcMain, ipcRenderer } from 'electron';
+import {
+  shell, remote,
+} from 'electron';
 import {
   action,
   reaction,
@@ -14,7 +16,7 @@ import Store from './lib/Store';
 import Request from './lib/Request';
 import CachedRequest from './lib/CachedRequest';
 import { matchRoute } from '../helpers/routing-helpers';
-import { social, emailRecipes } from './urlConfig.json';
+import { emailRecipes } from './urlConfig.json';
 import { isInTimeframe } from '../helpers/schedule-helpers';
 import { getRecipeDirectory, getDevRecipeDirectory } from '../helpers/recipe-helpers';
 import { workspaceStore } from '../features/workspaces';
@@ -230,10 +232,10 @@ export default class ServicesStore extends Store {
       if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
         console.log(emailRecipes[x.recipe.id].link.length);
         if (emailRecipes[x.recipe.id].link.length > 0) {
-          return true
-        } else return false
-      } else return false
-    })
+          return true;
+        } return false;
+      } return false;
+    });
     return output;
   }
 
@@ -531,12 +533,13 @@ export default class ServicesStore extends Store {
 
   @action _setEmailServiceActive({ serviceId, mail, keepActiveRoute }) {
     const service = this.one(serviceId);
+    console.log(keepActiveRoute);
     if (mail && mail.length > 0) {
       let url = emailRecipes[service.recipe.id].link;
       if (url) {
-        url = url.replace('<mail>', mail)
+        url = url.replace('<mail>', mail);
         try {
-          this.stores.app.actions.app.changeService({ serviceId, url })
+          this.stores.app.actions.app.changeService({ serviceId, url });
         } catch (error) { console.log(error); }
       }
     }

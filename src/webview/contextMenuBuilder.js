@@ -11,7 +11,7 @@ import { isMac } from '../environment';
 import { SEARCH_ENGINE_NAMES, SEARCH_ENGINE_URLS } from '../config';
 
 const {
-  clipboard, nativeImage, remote, shell, ipcRenderer, ipcMain
+  clipboard, nativeImage, remote, shell, ipcRenderer,
 } = require('electron');
 
 const { URL } = require('url');

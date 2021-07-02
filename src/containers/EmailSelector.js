@@ -27,11 +27,11 @@ export default @inject('stores', 'actions') @observer class EmailSelector extend
     const { closeEmailSelector } = this.props.actions.ui;
 
     const {
-      setEmailActive
+      setEmailActive,
     } = this.props.actions.service;
     const isLoading = services.allServicesRequest.isExecuting;
 
-    let allServices = services.allEmailRecipes
+    const allServices = services.allEmailRecipes;
 
     return (
       <Layout
@@ -50,7 +50,7 @@ export default @inject('stores', 'actions') @observer class EmailSelector extend
                   <ServiceItem
                     key={service.id}
                     service={service}
-                    goToServiceForm={() => { setEmailActive({ serviceId: service.id, mail: 'test@yopmail.com' }) }}
+                    goToServiceForm={() => { setEmailActive({ serviceId: service.id, mail: 'test@yopmail.com' }); }}
                   />
                 ))}
               </tbody>
@@ -71,10 +71,10 @@ EmailSelector.wrappedComponent.propTypes = {
   }).isRequired,
   actions: PropTypes.shape({
     service: PropTypes.shape({
-      setEmailActive: PropTypes.func.isRequired
+      setEmailActive: PropTypes.func.isRequired,
     }).isRequired,
     ui: PropTypes.shape({
-      closeEmailSelector: PropTypes.func.isRequired
-    })
+      closeEmailSelector: PropTypes.func.isRequired,
+    }),
   }).isRequired,
 };

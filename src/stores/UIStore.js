@@ -90,7 +90,7 @@ export default class UIStore extends Store {
 
   // Actions
   @action _openEmailSelector() {
-    const emailSelectorPath = '/settings/emailSelector'
+    const emailSelectorPath = '/settings/emailSelector';
     this.stores.router.push(emailSelectorPath);
   }
 

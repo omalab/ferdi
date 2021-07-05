@@ -84,17 +84,20 @@ export default class UIStore extends Store {
   }
 
   @action _closeSettings() {
+    this.stores.services.sendToMail = null
     this.stores.router.push('/');
   }
 
 
   // Actions
-  @action _openEmailSelector() {
+  @action _openEmailSelector({ mail }) {
+    this.stores.services.sendToMail = mail;
     const emailSelectorPath = '/settings/emailSelector';
     this.stores.router.push(emailSelectorPath);
   }
 
   @action _closeEmailSelector() {
+    this.stores.services.sendToMail = null
     this.stores.router.push('/');
   }
 

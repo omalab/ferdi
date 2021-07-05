@@ -47,6 +47,8 @@ export default class ServicesStore extends Store {
 
   @observable listAllServices = [];
 
+  @observable sendToMail = null;
+
   // Array of service IDs that have recently been used
   // [0] => Most recent, [n] => Least recent
   // No service ID should be in the list multiple times, not all service IDs have to be in the list
@@ -70,7 +72,7 @@ export default class ServicesStore extends Store {
     this.actions.service.clearCache.listen(this._clearCache.bind(this));
     this.actions.service.setWebviewReference.listen(this._setWebviewReference.bind(this));
     this.actions.service.listAll.listen(this._getAllEnabled.bind(this));
-    this.actions.service.listAllEmailRecipes.listen(this._getAllEmail.bind(this));
+    this.actions.service.listcurrentWSEmailRecipes.listen(this._currentWSEmailRecipes.bind(this));
     this.actions.service.detachService.listen(this._detachService.bind(this));
     this.actions.service.focusService.listen(this._focusService.bind(this));
     this.actions.service.focusActiveService.listen(this._focusActiveService.bind(this));
@@ -216,18 +218,21 @@ export default class ServicesStore extends Store {
     return output;
   }
 
-  // Computed props
+  @computed get currentWSEmailRecipes() {
+    let output = this.allDisplayed;
+    output = output.filter((x) => {
+      if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
+        console.log(emailRecipes[x.recipe.id].link.length);
+        if (emailRecipes[x.recipe.id].link.length > 0) {
+          return true;
+        } return false;
+      } return false;
+    });
+    return output;
+  }
+
   @computed get allEmailRecipes() {
-    let output = [];
-    if (this.stores.user.isLoggedIn) {
-      const services = this.allServicesRequest.execute().result;
-      if (services) {
-        output = observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
-          s.index = index;
-          return s;
-        }));
-      }
-    }
+    let output = this.enabled;
     output = output.filter((x) => {
       if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
         console.log(emailRecipes[x.recipe.id].link.length);
@@ -531,9 +536,10 @@ export default class ServicesStore extends Store {
   }
 
 
-  @action _setEmailServiceActive({ serviceId, mail, keepActiveRoute }) {
+  @action _setEmailServiceActive({ serviceId, keepActiveRoute }) {
     const service = this.one(serviceId);
-    console.log(keepActiveRoute);
+    console.log('----' + this.sendToMail);
+    let mail = this.sendToMail;
     if (mail && mail.length > 0) {
       let url = emailRecipes[service.recipe.id].link;
       if (url) {
@@ -869,8 +875,8 @@ export default class ServicesStore extends Store {
     return service;
   }
 
-  @action _getAllEmail() {
-    const service = this.allEmailRecipes;
+  @action _currentWSEmailRecipes() {
+    const service = this.currentWSEmailRecipes;
     console.log(service);
     return service;
   }

@@ -473,12 +473,10 @@ ipcMain.on('change-recipe', (e, { url }) => {
   });
 });
 
-ipcMain.on('check-mail-recipe', () => {
-  debug('window');
+ipcMain.on('check-mail-recipe', (e, { mail }) => {
   onDidLoad((window) => {
     try {
-      debug('window');
-      window.webContents.send('checkEmailRecipes');
+      window.webContents.send('checkEmailRecipes', { mail });
     } catch (error) { console.log(error); }
   });
 });

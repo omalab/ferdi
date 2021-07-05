@@ -204,8 +204,8 @@ export default class AppStore extends Store {
       this._changeService(data, this);
     });
 
-    ipcRenderer.on('checkEmailRecipes', () => {
-      this.actions.ui.openEmailSelector();
+    ipcRenderer.on('checkEmailRecipes', (e, { mail }) => {
+      this.actions.ui.openEmailSelector({ mail });
     });
 
     ipcRenderer.on('muteApp', () => {

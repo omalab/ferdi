@@ -87,7 +87,7 @@ export default {
   },
   resetFilter: {},
   listAll: {},
-  listAllEmailRecipes: {},
+  listcurrentWSEmailRecipes: {},
   resetStatus: {},
   reorder: {
     oldIndex: PropTypes.number.isRequired,

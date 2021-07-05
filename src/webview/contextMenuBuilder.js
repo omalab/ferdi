@@ -177,7 +177,16 @@ module.exports = class ContextMenuBuilder {
     const openIn = new MenuItem({
       label: this.stringTable.openLinkIn(),
       click: () => {
-        ipcRenderer.send('check-mail-recipe');
+        let mailArray = menuInfo.linkText.split('mailto:');
+        let mail = ""
+        if (mailArray.length == 2) {
+          mail = mailArray[1]
+        } else {
+          mail = mailArray[0]
+        }
+        ipcRenderer.send('check-mail-recipe', {
+          mail: mail
+        });
       },
     });
 

@@ -31,7 +31,8 @@ export default @inject('stores', 'actions') @observer class EmailSelector extend
     } = this.props.actions.service;
     const isLoading = services.allServicesRequest.isExecuting;
 
-    const allServices = services.allEmailRecipes;
+    const currentWSEmailRecipes = services.currentWSEmailRecipes;
+    const allEmailRecipes = services.allEmailRecipes;
 
     return (
       <Layout
@@ -44,20 +45,56 @@ export default @inject('stores', 'actions') @observer class EmailSelector extend
           {isLoading ? (
             <Loader />
           ) : (
-            <table className="service-table">
-              <tbody>
-                {allServices.map(service => (
-                  <ServiceItem
-                    key={service.id}
-                    service={service}
-                    goToServiceForm={() => { setEmailActive({ serviceId: service.id, mail: 'test@yopmail.com' }); }}
-                  />
-                ))}
-              </tbody>
-            </table>
+            <div>
+              {
+                currentWSEmailRecipes.length == 0 ? (
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }}>
+                    <div style={{ paddingLeft: '25px', height: 'auto' }}>
+                      No Email Service Found in current workspaces
+                    </div>
+                    <hr />
+                    <h1 style={{
+                      margin: '15px',
+                      padding: '10px 15px',
+                      border: '1px #fff solid',
+                      borderLeft: "0",
+                      borderRight: '0'
+                    }}>
+                      Email Services from all workspace
+                    </h1>
+                    <table className="service-table">
+                      <tbody>
+                        {allEmailRecipes.map(service => (
+                          <ServiceItem
+                            key={service.id}
+                            service={service}
+                            goToServiceForm={() => { setEmailActive({ serviceId: service.id }); }}
+                          />
+                        ))}
+                      </tbody>
+                    </table>
+
+                  </div>
+                ) : (
+                  <table className="service-table">
+                    <tbody>
+                      {currentWSEmailRecipes.map(service => (
+                        <ServiceItem
+                          key={service.id}
+                          service={service}
+                          goToServiceForm={() => { setEmailActive({ serviceId: service.id }); }}
+                        />
+                      ))}
+                    </tbody>
+                  </table>)
+              }
+            </div>
           )}
         </div>
-      </Layout>
+      </Layout >
 
     );
   }

@@ -1,29 +1,36 @@
-import { ipcRenderer, shell } from 'electron';
 import {
-  app, screen, powerMonitor, nativeTheme, getCurrentWindow, process as remoteProcess,
+  app, getCurrentWindow, nativeTheme, powerMonitor, process as remoteProcess, screen
 } from '@electron/remote';
+import AutoLaunch from 'auto-launch';
+import { ipcRenderer, shell } from 'electron';
+import { readJsonSync } from 'fs-extra';
 import { action, computed, observable } from 'mobx';
 import moment from 'moment';
-import AutoLaunch from 'auto-launch';
 import ms from 'ms';
-import { URL } from 'url';
 import os from 'os';
 import path from 'path';
-import { readJsonSync } from 'fs-extra';
-
-import Store from './lib/Store';
-import Request from './lib/Request';
+import { URL } from 'url';
 import { CHECK_INTERVAL } from '../config';
 import {
-  DEFAULT_APP_SETTINGS, isMac, ferdiVersion, electronVersion,
+  DEFAULT_APP_SETTINGS, electronVersion, ferdiVersion, isMac
 } from '../environment';
-import locales from '../i18n/translations';
-import { onVisibilityChange } from '../helpers/visibility-helper';
+import { sleep } from '../helpers/async-helpers';
 import { getLocale } from '../helpers/i18n-helpers';
-
 import { getServiceIdsFromPartitions, removeServicePartitionDirectory } from '../helpers/service-helpers.js';
 import { isValidExternalURL } from '../helpers/url-helpers';
-import { sleep } from '../helpers/async-helpers';
+import { onVisibilityChange } from '../helpers/visibility-helper';
+import locales from '../i18n/translations';
+import Request from './lib/Request';
+import Store from './lib/Store';
+import { social } from "./urlConfig.json";
+const { remote: { BrowserWindow } } = require("electron");
+
+
+var URI = require('urijs');
+
+const template = require('url-template');
+
+
 
 const debug = require('debug')('Ferdi:AppStore');
 
@@ -93,6 +100,7 @@ export default class AppStore extends Store {
     this.actions.app.launchOnStartup.listen(this._launchOnStartup.bind(this));
     this.actions.app.openExternalUrl.listen(this._openExternalUrl.bind(this));
     this.actions.app.checkForUpdates.listen(this._checkForUpdates.bind(this));
+    this.actions.app.changeService.listen(this._changeService.bind(this));
     this.actions.app.installUpdate.listen(this._installUpdate.bind(this));
     this.actions.app.resetUpdateStatus.listen(this._resetUpdateStatus.bind(this));
     this.actions.app.healthCheck.listen(this._healthCheck.bind(this));
@@ -192,6 +200,15 @@ export default class AppStore extends Store {
       url = url.replace(/\/$/, '');
 
       this.stores.router.push(url);
+    });
+
+    // Handle Recipe change Request
+    ipcRenderer.on('changeRecipeRequest', async (event, data) => {
+      this._changeService(data, this);
+    });
+
+    ipcRenderer.on('checkEmailRecipes', (e, { mail }) => {
+      this.actions.ui.openEmailSelector({ mail });
     });
 
     ipcRenderer.on('muteApp', () => {
@@ -357,6 +374,56 @@ export default class AppStore extends Store {
     ipcRenderer.send('updateAppIndicator', {
       indicator,
     });
+  }
+  @action _changeService(data) {
+    const url = new URL(data.url);
+    let shiftTo = null;
+    let currentRecipe = null;
+    this.stores.services.listAllServices.forEach((element) => {
+      // debugger
+      const recs = element.recipe.id.split(element.recipe.id.includes('-') ? '-' : '_');
+      if (element.isActive) {
+        currentRecipe = element.id;
+      }
+      recs.forEach((x) => {
+        const y = social[x];
+        const uri = new URI(url);
+        if (y) {
+          if (y.domains.length > 0) {
+            if (
+              y.domains.includes(uri.domain())
+            ) {
+              console.log(`Link will Open in ${element.recipe.name} Plugin`);
+              shiftTo = element.id;
+            }
+          }
+        }
+      });
+    });
+    if (data.serviceId) {
+      shiftTo = data.serviceId;
+    }
+    if (shiftTo) {
+      if (this.stores.workspaces && this.stores.workspaces.listAll && this.stores.workspaces.listAll.length >= 1) {
+        const activeWorkSapce = this.stores.workspaces.activeWorkspace.id;
+        this.stores.workspaces.listAll.forEach((workspace) => {
+          workspace.services.forEach((serviceId) => {
+            if (shiftTo === serviceId) {
+              if (activeWorkSapce === workspace.id) {
+                this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+              } else {
+                this.stores.workspaces.actions.workspaces.activate({ workspace });
+                setTimeout(() => {
+                  this.actions.service.setActive({ serviceId: shiftTo, keepActiveRoute: false, url: data.url });
+                }, 100);
+              }
+            }
+          });
+        });
+      }
+    } else {
+      this.actions.service.setActive({ serviceId: currentRecipe, keepActiveRoute: true, url: data.url });
+    }
   }
 
   @action _launchOnStartup({

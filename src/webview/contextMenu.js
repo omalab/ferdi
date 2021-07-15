@@ -9,7 +9,6 @@ export default async function setupContextMenu(isSpellcheckEnabled, getDefaultSp
   );
 
   webContents.on('context-menu', (e, props) => {
-    // TODO?: e.preventDefault();
     contextMenuBuilder.showPopupMenu(
       { ...props, searchEngine: getSearchEngine(), clipboardNotifications: getClipboardNotifications() },
       isSpellcheckEnabled(),

@@ -1,27 +1,27 @@
-import { shell } from 'electron';
-import {
-  action,
-  reaction,
-  computed,
-  observable,
-} from 'mobx';
-import { debounce, remove } from 'lodash';
-import ms from 'ms';
 import { app } from '@electron/remote';
+import { shell } from 'electron';
 import fs from 'fs-extra';
+import { debounce, remove } from 'lodash';
+import {
+  action, computed,
+  observable, reaction
+} from 'mobx';
+import ms from 'ms';
 import path from 'path';
-
-import Store from './lib/Store';
-import Request from './lib/Request';
-import CachedRequest from './lib/CachedRequest';
+import { KEEP_WS_LOADED_USID } from '../config';
+import { serviceLimitStore } from '../features/serviceLimit';
+import { workspaceStore } from '../features/workspaces';
+import { getDevRecipeDirectory, getRecipeDirectory } from '../helpers/recipe-helpers';
 import { matchRoute } from '../helpers/routing-helpers';
 import { isInTimeframe } from '../helpers/schedule-helpers';
-import { getRecipeDirectory, getDevRecipeDirectory } from '../helpers/recipe-helpers';
-import { workspaceStore } from '../features/workspaces';
-import { serviceLimitStore } from '../features/serviceLimit';
-import { RESTRICTION_TYPES } from '../models/Service';
-import { KEEP_WS_LOADED_USID } from '../config';
 import { SPELLCHECKER_LOCALES } from '../i18n/languages';
+import { RESTRICTION_TYPES } from '../models/Service';
+import CachedRequest from './lib/CachedRequest';
+import Request from './lib/Request';
+import Store from './lib/Store';
+import { emailRecipes } from './urlConfig.json';
+
+
 
 const debug = require('debug')('Ferdi:ServiceStore');
 
@@ -32,11 +32,15 @@ export default class ServicesStore extends Store {
 
   @observable updateServiceRequest = new Request(this.api.services, 'update');
 
+  @observable listAllServices = [];
+
   @observable reorderServicesRequest = new Request(this.api.services, 'reorder');
 
   @observable deleteServiceRequest = new Request(this.api.services, 'delete');
 
   @observable clearCacheRequest = new Request(this.api.services, 'clearCache');
+
+  @observable sendToMail = null;
 
   @observable filterNeedle = null;
 
@@ -53,6 +57,7 @@ export default class ServicesStore extends Store {
     this.actions.service.blurActive.listen(this._blurActive.bind(this));
     this.actions.service.setActiveNext.listen(this._setActiveNext.bind(this));
     this.actions.service.setActivePrev.listen(this._setActivePrev.bind(this));
+    this.actions.service.setEmailActive.listen(this._setEmailServiceActive.bind(this));
     this.actions.service.showAddServiceInterface.listen(this._showAddServiceInterface.bind(this));
     this.actions.service.createService.listen(this._createService.bind(this));
     this.actions.service.createFromLegacyService.listen(this._createFromLegacyService.bind(this));
@@ -61,6 +66,8 @@ export default class ServicesStore extends Store {
     this.actions.service.openRecipeFile.listen(this._openRecipeFile.bind(this));
     this.actions.service.clearCache.listen(this._clearCache.bind(this));
     this.actions.service.setWebviewReference.listen(this._setWebviewReference.bind(this));
+    this.actions.service.listAll.listen(this._getAllEnabled.bind(this));
+    this.actions.service.listcurrentWSEmailRecipes.listen(this._currentWSEmailRecipes.bind(this));
     this.actions.service.detachService.listen(this._detachService.bind(this));
     this.actions.service.focusService.listen(this._focusService.bind(this));
     this.actions.service.focusActiveService.listen(this._focusActiveService.bind(this));
@@ -196,17 +203,33 @@ export default class ServicesStore extends Store {
   }
 
   // Computed props
+  @computed get currentWSEmailRecipes() {
+    let output = this.allDisplayed;
+    output = output.filter((x) => {
+      if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
+        console.log(emailRecipes[x.recipe.id].link.length);
+        if (emailRecipes[x.recipe.id].link.length > 0) {
+          return true;
+        } return false;
+      } return false;
+    });
+    return output;
+  }
+
   @computed get all() {
+    let output = [];
+
     if (this.stores.user.isLoggedIn) {
       const services = this.allServicesRequest.execute().result;
       if (services) {
-        return observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
+        output = observable(services.slice().slice().sort((a, b) => a.order - b.order).map((s, index) => {
           s.index = index;
           return s;
         }));
       }
     }
-    return [];
+    this.listAllServices = output;
+    return output;
   }
 
   @computed get enabled() {
@@ -253,6 +276,19 @@ export default class ServicesStore extends Store {
     }
 
     return displayedServices;
+  }
+
+  @computed get allEmailRecipes() {
+    let output = this.enabled;
+    output = output.filter((x) => {
+      if (Object.hasOwnProperty.call(emailRecipes, x.recipe.id)) {
+        console.log(emailRecipes[x.recipe.id].link.length);
+        if (emailRecipes[x.recipe.id].link.length > 0) {
+          return true
+        } else return false
+      } else return false
+    })
+    return output;
   }
 
   @computed get filtered() {
@@ -421,6 +457,27 @@ export default class ServicesStore extends Store {
       this.stores.router.push('/settings/services');
     }
   }
+  @action _setEmailServiceActive({ serviceId, keepActiveRoute }) {
+    const service = this.one(serviceId);
+    console.log('----' + this.sendToMail);
+    let mail = this.sendToMail;
+    if (mail && mail.length > 0) {
+      let url = emailRecipes[service.recipe.id].link;
+      if (url) {
+        url = url.replace('<mail>', mail)
+        try {
+          this.stores.app.actions.app.changeService({ serviceId, url })
+        } catch (error) { console.log(error); }
+      }
+    }
+  }
+
+  @action _currentWSEmailRecipes() {
+    const service = this.currentWSEmailRecipes;
+    console.log(service);
+    return service;
+  }
+
 
   @action async _deleteService({ serviceId, redirect }) {
     const request = this.deleteServiceRequest.execute(serviceId);
@@ -474,7 +531,7 @@ export default class ServicesStore extends Store {
     await request._promise;
   }
 
-  @action _setActive({ serviceId, keepActiveRoute }) {
+  @action _setActive({ serviceId, keepActiveRoute, url }) {
     if (!keepActiveRoute) this.stores.router.push('/');
     const service = this.one(serviceId);
 
@@ -484,6 +541,14 @@ export default class ServicesStore extends Store {
     service.isActive = true;
     this._awake({ serviceId: service.id });
     service.lastUsed = Date.now();
+    if (url && url.length > 0) {
+      const outInterval = setInterval(() => {
+        if (service.webview) {
+          service.webview.loadURL(url);
+          clearInterval(outInterval);
+        }
+      }, 100);
+    }
 
     if (this.isTodosServiceActive && !this.stores.todos.settings.isFeatureEnabledByUser) {
       this.actions.todos.toggleTodosFeatureVisibility();
@@ -724,6 +789,11 @@ export default class ServicesStore extends Store {
     }
 
     return service.webview.loadURL(service.url);
+  }
+
+  @action _getAllEnabled() {
+    const service = this.enabled;
+    return service;
   }
 
   @action _reloadActive() {

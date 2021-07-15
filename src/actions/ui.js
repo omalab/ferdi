@@ -8,4 +8,8 @@ export default {
   toggleServiceUpdatedInfoBar: {
     visible: PropTypes.bool,
   },
+  openEmailSelector: {
+    mail: PropTypes.string
+  },
+  closeEmailSelector: {},
 };

@@ -2,44 +2,39 @@
 
 import {
   app,
-  BrowserWindow,
-  shell,
-  ipcMain,
-  session,
+  BrowserWindow, ipcMain,
+  session, shell
 } from 'electron';
-
-import fs from 'fs-extra';
-import path from 'path';
-import windowStateKeeper from 'electron-window-state';
 import { enforceMacOSAppLocation } from 'electron-util';
+import windowStateKeeper from 'electron-window-state';
+import fs from 'fs-extra';
 import ms from 'ms';
-
-require('@electron/remote/main').initialize();
-
+import path from 'path';
 import { DEFAULT_WINDOW_OPTIONS } from './config';
-
-import {
-  DEFAULT_APP_SETTINGS,
-  isDevMode,
-  isMac,
-  isWindows,
-  isLinux,
-  aboutAppDetails,
-} from './environment';
-
-import { mainIpcHandler as basicAuthHandler } from './features/basicAuth';
-import ipcApi from './electron/ipc-api';
-import Tray from './lib/Tray';
-import DBus from './lib/DBus';
-import Settings from './electron/Settings';
 import handleDeepLink from './electron/deepLinking';
-import { isPositionValid } from './electron/windowUtils';
-import { appId } from './package.json'; // eslint-disable-line import/no-unresolved
 import './electron/exception';
-
+import ipcApi from './electron/ipc-api';
+import Settings from './electron/Settings';
+import { isPositionValid } from './electron/windowUtils';
+import {
+  aboutAppDetails, DEFAULT_APP_SETTINGS,
+  isDevMode, isLinux, isMac,
+  isWindows
+} from './environment';
+import { mainIpcHandler as basicAuthHandler } from './features/basicAuth';
 import { asarPath } from './helpers/asar-helpers';
 import { isValidExternalURL } from './helpers/url-helpers';
 import userAgent from './helpers/userAgent-helpers';
+import DBus from './lib/DBus';
+import Tray from './lib/Tray';
+import { appId } from './package.json'; // eslint-disable-line import/no-unresolved
+
+
+require('@electron/remote/main').initialize();
+
+
+
+
 
 const debug = require('debug')('Ferdi:App');
 
@@ -316,7 +311,7 @@ const createWindow = () => {
   if (isMac) {
     // eslint-disable-next-line global-require
     const { default: askFormacOSPermissions } = require('./electron/macOSPermissions');
-    setTimeout(() => askFormacOSPermissions(mainWindow), ms('30s'));
+    setTimeout(() => { try { askFormacOSPermissions(mainWindow), ms('30s') } catch (e) { } });
   }
 
   mainWindow.on('show', () => {
@@ -449,6 +444,26 @@ ipcMain.on('feature-basic-auth-cancel', () => {
   authCallback = noop;
 });
 
+ipcMain.on('change-recipe', (e, { url }) => {
+  onDidLoad((window) => {
+    try {
+      window.webContents.send('changeRecipeRequest', {
+        url,
+      });
+    } catch (error) { console.log(error); }
+  });
+});
+
+ipcMain.on('check-mail-recipe', (e, { mail })  => {
+  debug('window');
+  onDidLoad((window) => {
+    try {
+      debug('window');
+      window.webContents.send('checkEmailRecipes', { mail });
+    } catch (error) { console.log(error); }
+  });
+});
+
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // On OS X it is common for applications and their menu bar
@@ -464,6 +479,16 @@ app.on('window-all-closed', () => {
 
 app.on('before-quit', () => {
   willQuitApp = true;
+});
+
+ipcMain.on('on-context-menu', (e, { url }) => {
+  onDidLoad((window) => {
+    try {
+      window.webContents.send('checkContextMenu', {
+        url,
+      });
+    } catch (error) { console.log(error); }
+  });
 });
 
 app.on('activate', () => {

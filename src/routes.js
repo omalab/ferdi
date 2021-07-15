@@ -15,6 +15,7 @@ import TeamScreen from './containers/settings/TeamScreen';
 import EditUserScreen from './containers/settings/EditUserScreen';
 import EditSettingsScreen from './containers/settings/EditSettingsScreen';
 import InviteSettingsScreen from './containers/settings/InviteScreen';
+import EmailSelectorScreen from './containers/EmailSelector';
 import SupportFerdiScreen from './containers/settings/SupportScreen';
 import WelcomeScreen from './containers/auth/WelcomeScreen';
 import LoginScreen from './containers/auth/LoginScreen';
@@ -60,6 +61,7 @@ export default @inject('stores', 'actions') @observer class Routes extends Compo
             <Route path="/settings/recipes" component={RecipesScreen} />
             <Route path="/settings/recipes/:filter" component={RecipesScreen} />
             <Route path="/settings/services" component={ServicesScreen} />
+            <Route path="/settings/emailSelector" component={EmailSelectorScreen} />
             <Route path="/settings/services/:action/:id" component={EditServiceScreen} />
             <Route path={WORKSPACES_ROUTES.ROOT} component={WorkspacesScreen} />
             <Route path={WORKSPACES_ROUTES.EDIT} component={EditWorkspaceScreen} />

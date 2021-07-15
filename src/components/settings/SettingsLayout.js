@@ -18,7 +18,7 @@ export default
 @observer
 class SettingsLayout extends Component {
   static propTypes = {
-    navigation: PropTypes.element.isRequired,
+    navigation: PropTypes.element,
     children: oneOrManyChildElements.isRequired,
     closeSettings: PropTypes.func.isRequired,
   };

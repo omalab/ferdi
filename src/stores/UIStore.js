@@ -1,11 +1,11 @@
-import {
-  action, observable, computed, reaction,
-} from 'mobx';
-import { theme } from '@meetfranz/theme';
 import { nativeTheme, systemPreferences } from '@electron/remote';
-
-import Store from './lib/Store';
+import { theme } from '@meetfranz/theme';
+import {
+  action, computed, observable, reaction
+} from 'mobx';
 import { isMac, isWindows } from '../environment';
+import Store from './lib/Store';
+
 
 export default class UIStore extends Store {
   @observable showServicesUpdatedInfoBar = false;
@@ -18,6 +18,8 @@ export default class UIStore extends Store {
     // Register action handlers
     this.actions.ui.openSettings.listen(this._openSettings.bind(this));
     this.actions.ui.closeSettings.listen(this._closeSettings.bind(this));
+    this.actions.ui.openEmailSelector.listen(this._openEmailSelector.bind(this));
+    this.actions.ui.closeEmailSelector.listen(this._closeEmailSelector.bind(this));
     this.actions.ui.toggleServiceUpdatedInfoBar.listen(
       this._toggleServiceUpdatedInfoBar.bind(this),
     );
@@ -76,12 +78,25 @@ export default class UIStore extends Store {
   }
 
   // Actions
+
+  @action _openEmailSelector({ mail }) {
+    this.stores.services.sendToMail = mail;
+    const emailSelectorPath = '/settings/emailSelector';
+    this.stores.router.push(emailSelectorPath);
+  }
+
+  @action _closeEmailSelector() {
+    this.stores.services.sendToMail = null
+    this.stores.router.push('/');
+  }
+
   @action _openSettings({ path = '/settings' }) {
     const settingsPath = path !== '/settings' ? `/settings/${path}` : path;
     this.stores.router.push(settingsPath);
   }
 
   @action _closeSettings() {
+    this.stores.services.sendToMail = null
     this.stores.router.push('/');
   }
 

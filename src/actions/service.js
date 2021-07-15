@@ -5,6 +5,7 @@ export default {
   setActive: {
     serviceId: PropTypes.string.isRequired,
     keepActiveRoute: PropTypes.bool,
+    url: PropTypes.string,
   },
   blurActive: {},
   setActiveNext: {},
@@ -85,9 +86,16 @@ export default {
     oldIndex: PropTypes.number.isRequired,
     newIndex: PropTypes.number.isRequired,
   },
+  listAll: {},
   toggleNotifications: {
     serviceId: PropTypes.string.isRequired,
   },
+  setEmailActive: {
+    serviceId: PropTypes.string.isRequired,
+    keepActiveRoute: PropTypes.bool,
+    url: PropTypes.string,
+  },
+  listcurrentWSEmailRecipes: {},
   toggleAudio: {
     serviceId: PropTypes.string.isRequired,
   },

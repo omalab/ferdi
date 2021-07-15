@@ -32,6 +32,8 @@ export default class WorkspacesStore extends FeatureStore {
 
   @observable workspaceBeingEdited = null;
 
+  @observable listAll = null;
+
   @observable isSwitchingWorkspace = false;
 
   @observable isWorkspaceDrawerOpen = false;
@@ -39,8 +41,11 @@ export default class WorkspacesStore extends FeatureStore {
   @observable isSettingsRouteActive = null;
 
   @computed get workspaces() {
-    if (!this.isFeatureActive) return [];
-    return getUserWorkspacesRequest.result || [];
+    let output = [];
+    if (!this.isFeatureActive) return output;
+    if (getUserWorkspacesRequest.result) output = getUserWorkspacesRequest.result;
+    this.listAll = output;
+    return output;
   }
 
   @computed get isLoadingWorkspaces() {

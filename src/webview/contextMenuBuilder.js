@@ -6,13 +6,13 @@
  *
  * Source: https://github.com/electron-userland/electron-spellchecker/blob/master/src/context-menu-builder.js
  */
-import {
-  clipboard, ipcRenderer, nativeImage, shell,
-} from 'electron';
 import { Menu, MenuItem } from '@electron/remote';
+import {
+  clipboard, ipcRenderer, nativeImage, shell
+} from 'electron';
+import { SEARCH_ENGINE_NAMES, SEARCH_ENGINE_URLS } from '../config';
 import { isMac } from '../environment';
 
-import { SEARCH_ENGINE_NAMES, SEARCH_ENGINE_URLS } from '../config';
 
 const { URL } = require('url');
 
@@ -31,6 +31,8 @@ const contextMenuStringTable = {
   openLinkUrl: () => 'Open Link',
   openLinkInFerdiUrl: () => 'Open Link in Ferdi',
   openInBrowser: () => 'Open in Browser',
+  openLinkInRecipes: () => 'Open Link in Ferdi',
+  openLinkIn: () => 'Open Link in Email service',
   copyLinkUrl: () => 'Copy Link',
   copyImageUrl: () => 'Copy Image Address',
   copyImage: () => 'Copy Image',
@@ -172,16 +174,35 @@ module.exports = class ContextMenuBuilder {
       },
     });
 
-    const openInFerdiLink = new MenuItem({
-      label: this.stringTable.openLinkInFerdiUrl(),
+    const openInRecipes = new MenuItem({
+      label: this.stringTable.openLinkInRecipes(),
       click: () => {
-        window.location.href = menuInfo.linkURL;
+        ipcRenderer.send('change-recipe', {
+          url: menuInfo.linkURL,
+        });
       },
     });
-
+    const openIn = new MenuItem({
+      label: this.stringTable.openLinkIn(),
+      click: () => {
+        let mailArray = menuInfo.linkText.split('mailto:');
+        let mail = ""
+        if (mailArray.length == 2) {
+          mail = mailArray[1]
+        } else {
+          mail = mailArray[0]
+        }
+        ipcRenderer.send('check-mail-recipe', {
+          mail: mail
+        });
+      },
+    });
     menu.append(copyLink);
     menu.append(openLink);
-    menu.append(openInFerdiLink);
+    menu.append(openInRecipes);
+    if (isEmailAddress) {
+      menu.append(openIn);
+    }
 
     if (this.isSrcUrlValid(menuInfo)) {
       this.addSeparator(menu);

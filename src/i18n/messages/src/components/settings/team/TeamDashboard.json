@@ -2,7 +2,7 @@
   {
     "id": "settings.team.headline",
     "defaultMessage": "!!!Team",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 18,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "settings.team.contentHeadline",
     "defaultMessage": "!!!Franz Team Management",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 22,
       "column": 19
@@ -28,7 +28,7 @@
   {
     "id": "settings.team.intro",
     "defaultMessage": "!!!Your are currently using Franz Servers, which is why you have access to Team Management.",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 26,
       "column": 9
@@ -40,8 +40,8 @@
   },
   {
     "id": "settings.team.copy",
-    "defaultMessage": "!!!Franz's Team Management allows you to manage Franz Subscriptions for multiple users. Please keep in mind that having a Franz Premium subscription will give you no advantages in using Ferdi: The only reason you still have access to Team Management is so you can manage your legacy Franz Teams and so that you don't loose any functionality in managing your account.",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "defaultMessage": "!!!Franz's Team Management allows you to manage Franz Subscriptions for multiple users. Please keep in mind that having a Franz Premium subscription will give you no advantages in using Engage Dock: The only reason you still have access to Team Management is so you can manage your legacy Franz Teams and so that you don't loose any functionality in managing your account.",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 30,
       "column": 8
@@ -54,7 +54,7 @@
   {
     "id": "settings.team.manageAction",
     "defaultMessage": "!!!Manage your Team on meetfranz.com",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 34,
       "column": 16
@@ -67,7 +67,7 @@
   {
     "id": "settings.team.upgradeAction",
     "defaultMessage": "!!!Upgrade your Account",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 38,
       "column": 17
@@ -80,7 +80,7 @@
   {
     "id": "settings.team.teamsUnavailable",
     "defaultMessage": "!!!Teams are unavailable",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 42,
       "column": 20
@@ -93,7 +93,7 @@
   {
     "id": "settings.team.teamsUnavailableInfo",
     "defaultMessage": "!!!Teams are currently only available when using the Franz Server and after paying for Franz Professional. Please change your server to https://api.franzinfra.com to use teams.",
-    "file": "src/components/settings/team/TeamDashboard.js",
+    "file": "src\\components\\settings\\team\\TeamDashboard.js",
     "start": {
       "line": 46,
       "column": 24

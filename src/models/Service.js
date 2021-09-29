@@ -8,7 +8,7 @@ import { todosStore } from '../features/todos';
 import { isValidExternalURL } from '../helpers/url-helpers';
 import UserAgent from './UserAgent';
 
-const debug = require('debug')('Ferdi:Service');
+const debug = require('debug')('EngageDock:Service');
 
 export const RESTRICTION_TYPES = {
   SERVICE_LIMIT: 0,

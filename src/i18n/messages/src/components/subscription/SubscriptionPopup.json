@@ -2,7 +2,7 @@
   {
     "id": "subscriptionPopup.buttonCancel",
     "defaultMessage": "!!!Cancel",
-    "file": "src/components/subscription/SubscriptionPopup.js",
+    "file": "src\\components\\subscription\\SubscriptionPopup.js",
     "start": {
       "line": 11,
       "column": 16
@@ -15,7 +15,7 @@
   {
     "id": "subscriptionPopup.buttonDone",
     "defaultMessage": "!!!Done",
-    "file": "src/components/subscription/SubscriptionPopup.js",
+    "file": "src\\components\\subscription\\SubscriptionPopup.js",
     "start": {
       "line": 15,
       "column": 14

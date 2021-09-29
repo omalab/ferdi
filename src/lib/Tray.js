@@ -23,7 +23,7 @@ export default class TrayIcon {
 
   trayMenuTemplate = [
     {
-      label: 'Show Ferdi',
+      label: 'Show Engage Dock',
       click() {
         if (app.mainWindow.isMinimized()) {
           app.mainWindow.restore();
@@ -42,7 +42,7 @@ export default class TrayIcon {
       },
     },
     {
-      label: 'Quit Ferdi',
+      label: 'Quit Engage Dock',
       click() {
         app.quit();
       },
@@ -82,7 +82,7 @@ export default class TrayIcon {
 
     this.trayIcon = new Tray(this._getAsset('tray', INDICATOR_TRAY_PLAIN));
 
-    this.trayIcon.setToolTip('Ferdi');
+    this.trayIcon.setToolTip('Engage Dock');
 
     this.trayMenu = Menu.buildFromTemplate(this.trayMenuTemplate);
     if (isLinux) {

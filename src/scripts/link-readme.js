@@ -38,7 +38,7 @@ readme = readme.replace(/(?<!\[)\w+\/\w+#\d{1,}(?![\]\d])/gi, (match) => {
   return `[${repo}#${issueNr}](https://github.com/${repo}/issues/${issueNr})`;
 });
 
-// Replace Ferdi issues
+// Replace Engage Dock issues
 // Regex matches strings that don't begin with a "[", i.e. are not already linked and
 // don't begin with "franz", i.e. are not Franz issues, followed by a "#" and digits to indicate
 // a GitHub issue, and not ending with a "]"

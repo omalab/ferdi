@@ -2,7 +2,7 @@ import { sendAuthRequest } from '../../api/utils/auth';
 import Request from '../../stores/lib/Request';
 import apiBase from '../../api/apiBase';
 
-const debug = require('debug')('Ferdi:feature:planSelection:api');
+const debug = require('debug')('EngageDock:feature:planSelection:api');
 
 export const planSelectionApi = {
   downgrade: async () => {

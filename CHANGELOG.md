@@ -12,7 +12,7 @@
 
 ### Minor changes
 - Display search input when service is not found 💖 @arioki1
-- Expose Electron version information in "About Ferdi" (#1109) 💖 @vraravam
+- Expose Electron version information in "About Engage Dock" (#1109) 💖 @vraravam
 - Add delete service confirmation (#1286) 💖 @vraravam
 - Add macOS Big Sur icon (#1056) (#1100) 💖 @alopix @jakobsudau
 - Improve custom accent color design 💖 @kris7t
@@ -52,12 +52,12 @@
 - Fix spellchecker language saving (#1016)
 - Fix typo in the Login screen 💖 @eltociear
 - Fix typo in README.md 💖 @graves501
-- Fix "Show Ferdi In Menu Bar" nomenclature on macOS (#1417) 💖 @vraravam
+- Fix "Show Engage Dock In Menu Bar" nomenclature on macOS (#1417) 💖 @vraravam
 
 ### Under the hood
 - Update to Electron 13.0.1 💖 @vraravam, @kris7t
 - Update dependencies 💖 @vraravam, @kris7t
-- Synchronize with Ferdi 5.6.0 💖 @vraravam
+- Synchronize with Engage Dock 5.6.0 💖 @vraravam
 - Add Docker containers for building in Linux and development with VSCode 💖 @vraravam
 
 # [5.6.0-beta.5](https://github.com/getferdi/ferdi/compare/v5.6.0-beta.2...v5.6.0-beta.5) (2020-12-20)
@@ -74,8 +74,8 @@
 - Add Norwegian translations (#840) 💖 @larsmagnusherland
 - Update adaptable dark mode to work on all platforms (#834)
 - Improved onboarding flow and settings empty states (#996) 💖 @tofran
-- Enhance the "Support Ferdi" screen (#722) 💖 @yourcontact
-- Improve Ferdi's design (#977)
+- Enhance the "Support Engage Dock" screen (#722) 💖 @yourcontact
+- Improve Engage Dock's design (#977)
 
 ### Recipes
 - Add 24 new recipes! Nextcloud, Nextcloud Cospend, Nextcloud Tasks, StackExchange, Noisli, Yahoo Mail, TickTick, DevDocs, Figma, iCloud Reminders, OneNote, YouTrack, SimpleNote, Lark, Slite, Pinterest, Disqus, Microsoft Todo, Google Podcasts, YouTube Music, Sync.com, Wire, Fleep, Google Classroom 💖 @eandersons, @kittywhiskers, @andrsussa, @vraravam, @arioki1, @hongshaoyang, @tofran, @stephenpapierski, @marcolussetti, @alopix, @iansearly, @TanZng
@@ -107,7 +107,7 @@
 
 ### Under the hood
 - Update to Electron 9
-- Remove Ferdi string from default user agent (#806) 💖 @dannyqiu
+- Remove Engage Dock string from default user agent (#806) 💖 @dannyqiu
 - Add recipes packaging to development setup (#985)
 - Use imagemin to minify images (#1008) 💖 @vraravam
 - Disable Chromium's poor MPRIS implementation (#1023)
@@ -134,7 +134,7 @@
 ### Bug Fixes
 - Prevent unnecessary electron popup windows for links (#685) 💖 @mahadevans87
 - Refactor locking feature (#693)
-- Review launch on startup for macOS, start Ferdi app, not renderer (#696) 💖 @dannyqiu
+- Review launch on startup for macOS, start Engage Dock app, not renderer (#696) 💖 @dannyqiu
 - Fix TodosWebview user agent (#713) 💖 @mahadevans87
 - Fix crash when using Password Lock with TouchID API unavailable (#737) 💖 @mahadevans87
 - Fix setting of webview disablewebsecurity attribute (#772) 💖 @dannyqiu

@@ -2,7 +2,7 @@
   {
     "id": "feature.nightlyBuilds.title",
     "defaultMessage": "!!!Nightly Builds",
-    "file": "src/features/nightlyBuilds/Component.js",
+    "file": "src\\features\\nightlyBuilds\\Component.js",
     "start": {
       "line": 16,
       "column": 9
@@ -14,8 +14,8 @@
   },
   {
     "id": "feature.nightlyBuilds.info",
-    "defaultMessage": "!!!Nightly builds are highly experimental versions of Ferdi that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don't know what you are doing, we suggest not activating nightly builds.",
-    "file": "src/features/nightlyBuilds/Component.js",
+    "defaultMessage": "!!!Nightly builds are highly experimental versions of Engage Dock that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don't know what you are doing, we suggest not activating nightly builds.",
+    "file": "src\\features\\nightlyBuilds\\Component.js",
     "start": {
       "line": 20,
       "column": 8
@@ -28,7 +28,7 @@
   {
     "id": "feature.nightlyBuilds.activate",
     "defaultMessage": "!!!Activate",
-    "file": "src/features/nightlyBuilds/Component.js",
+    "file": "src\\features\\nightlyBuilds\\Component.js",
     "start": {
       "line": 24,
       "column": 12
@@ -41,7 +41,7 @@
   {
     "id": "feature.nightlyBuilds.cancel",
     "defaultMessage": "!!!Cancel",
-    "file": "src/features/nightlyBuilds/Component.js",
+    "file": "src\\features\\nightlyBuilds\\Component.js",
     "start": {
       "line": 28,
       "column": 10

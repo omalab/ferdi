@@ -3,7 +3,7 @@ import { state as ModalState } from './store';
 export { default as Component } from './Component';
 
 const state = ModalState;
-const debug = require('debug')('Ferdi:feature:publishDebugInfo');
+const debug = require('debug')('EngageDock:feature:publishDebugInfo');
 
 export default function initialize() {
   debug('Initialize publishDebugInfo feature');

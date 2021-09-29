@@ -2,7 +2,7 @@
   {
     "id": "settings.app.form.passwordToggle",
     "defaultMessage": "!!!Password toggle",
-    "file": "src/components/ui/Input.js",
+    "file": "src\\components\\ui\\Input.js",
     "start": {
       "line": 11,
       "column": 18

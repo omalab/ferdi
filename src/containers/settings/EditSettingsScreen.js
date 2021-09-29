@@ -30,7 +30,7 @@ import ServicesStore from '../../stores/ServicesStore';
 const messages = defineMessages({
   autoLaunchOnStart: {
     id: 'settings.app.form.autoLaunchOnStart',
-    defaultMessage: '!!!Launch Ferdi on start',
+    defaultMessage: '!!!Launch Engage Dock on start',
   },
   autoLaunchInBackground: {
     id: 'settings.app.form.autoLaunchInBackground',
@@ -38,7 +38,7 @@ const messages = defineMessages({
   },
   runInBackground: {
     id: 'settings.app.form.runInBackground',
-    defaultMessage: '!!!Keep Ferdi in background when closing the window',
+    defaultMessage: '!!!Keep Engage Dock in background when closing the window',
   },
   startMinimized: {
     id: 'settings.app.form.startMinimized',
@@ -46,23 +46,23 @@ const messages = defineMessages({
   },
   enableSystemTray: {
     id: 'settings.app.form.enableSystemTray',
-    defaultMessage: '!!!Always show Ferdi in System Tray',
+    defaultMessage: '!!!Always show Engage Dock in System Tray',
   },
   enableMenuBar: {
     id: 'settings.app.form.enableMenuBar',
-    defaultMessage: '!!!Always show Ferdi in Menu Bar',
+    defaultMessage: '!!!Always show Engage Dock in Menu Bar',
   },
   reloadAfterResume: {
     id: 'settings.app.form.reloadAfterResume',
-    defaultMessage: '!!!Reload Ferdi after system resume',
+    defaultMessage: '!!!Reload Engage Dock after system resume',
   },
   minimizeToSystemTray: {
     id: 'settings.app.form.minimizeToSystemTray',
-    defaultMessage: '!!!Minimize Ferdi to system tray',
+    defaultMessage: '!!!Minimize Engage Dock to system tray',
   },
   closeToSystemTray: {
     id: 'settings.app.form.closeToSystemTray',
-    defaultMessage: '!!!Close Ferdi to system tray',
+    defaultMessage: '!!!Close Engage Dock to system tray',
   },
   privateNotifications: {
     id: 'settings.app.form.privateNotifications',

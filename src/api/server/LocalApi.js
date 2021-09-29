@@ -4,7 +4,7 @@ import du from 'du';
 
 import { getServicePartitionsDirectory } from '../../helpers/service-helpers.js';
 
-const debug = require('debug')('Ferdi:LocalApi');
+const debug = require('debug')('EngageDock:LocalApi');
 
 export default class LocalApi {
   // Settings

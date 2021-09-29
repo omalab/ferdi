@@ -2,7 +2,7 @@ import { reaction } from 'mobx';
 import WorkspacesStore from './store';
 import { resetApiRequests } from './api';
 
-const debug = require('debug')('Ferdi:feature:workspaces');
+const debug = require('debug')('EngageDock:feature:workspaces');
 
 export const workspaceStore = new WorkspacesStore();
 

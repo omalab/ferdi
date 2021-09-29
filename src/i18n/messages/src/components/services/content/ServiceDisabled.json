@@ -2,7 +2,7 @@
   {
     "id": "service.disabledHandler.headline",
     "defaultMessage": "!!!{name} is disabled",
-    "file": "src/components/services/content/ServiceDisabled.js",
+    "file": "src\\components\\services\\content\\ServiceDisabled.js",
     "start": {
       "line": 9,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "service.disabledHandler.action",
     "defaultMessage": "!!!Enable {name}",
-    "file": "src/components/services/content/ServiceDisabled.js",
+    "file": "src\\components\\services\\content\\ServiceDisabled.js",
     "start": {
       "line": 13,
       "column": 10

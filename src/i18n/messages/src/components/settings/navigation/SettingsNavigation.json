@@ -2,7 +2,7 @@
   {
     "id": "settings.navigation.availableServices",
     "defaultMessage": "!!!Available services",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 17,
       "column": 21
@@ -15,7 +15,7 @@
   {
     "id": "settings.navigation.yourServices",
     "defaultMessage": "!!!Your services",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 21,
       "column": 16
@@ -28,7 +28,7 @@
   {
     "id": "settings.navigation.yourWorkspaces",
     "defaultMessage": "!!!Your workspaces",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 25,
       "column": 18
@@ -41,7 +41,7 @@
   {
     "id": "settings.navigation.account",
     "defaultMessage": "!!!Account",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 29,
       "column": 11
@@ -54,7 +54,7 @@
   {
     "id": "settings.navigation.team",
     "defaultMessage": "!!!Manage Team",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 33,
       "column": 8
@@ -67,7 +67,7 @@
   {
     "id": "settings.navigation.settings",
     "defaultMessage": "!!!Settings",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 37,
       "column": 12
@@ -79,8 +79,8 @@
   },
   {
     "id": "settings.navigation.supportFerdi",
-    "defaultMessage": "!!!About Ferdi",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "defaultMessage": "!!!About Engage Dock",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 41,
       "column": 16
@@ -93,7 +93,7 @@
   {
     "id": "settings.navigation.logout",
     "defaultMessage": "!!!Logout",
-    "file": "src/components/settings/navigation/SettingsNavigation.js",
+    "file": "src\\components\\settings\\navigation\\SettingsNavigation.js",
     "start": {
       "line": 45,
       "column": 10

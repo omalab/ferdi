@@ -19,7 +19,7 @@ const messages = defineMessages({
   },
   info: {
     id: 'locked.info',
-    defaultMessage: '!!!Ferdi is currently locked. Please unlock Ferdi with your password to see your messages.',
+    defaultMessage: '!!!Engage Dock is currently locked. Please unlock Engage Dock with your password to see your messages.',
   },
   touchId: {
     id: 'locked.touchId',

@@ -2,7 +2,7 @@
   {
     "id": "settings.services.headline",
     "defaultMessage": "!!!Your services",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 16,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "settings.searchService",
     "defaultMessage": "!!!Search service",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 20,
       "column": 17
@@ -28,7 +28,7 @@
   {
     "id": "settings.services.noServicesAdded",
     "defaultMessage": "!!!Start by adding a service.",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 24,
       "column": 19
@@ -40,8 +40,8 @@
   },
   {
     "id": "settings.recipes.nothingFound",
-    "defaultMessage": "!!!Sorry, but no service matched your search term. Please note that the website might show more services that have been added to Ferdi since the version that you are currently on. To get those new services, please consider upgrading to a newer version of Ferdi.",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "defaultMessage": "!!!Sorry, but no service matched your search term. Please note that the website might show more services that have been added to Engage Dock since the version that you are currently on. To get those new services, please consider upgrading to a newer version of Engage Dock.",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 28,
       "column": 18
@@ -54,7 +54,7 @@
   {
     "id": "settings.services.discoverServices",
     "defaultMessage": "!!!Discover services",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 32,
       "column": 20
@@ -67,7 +67,7 @@
   {
     "id": "settings.services.servicesRequestFailed",
     "defaultMessage": "!!!Could not load your services",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 36,
       "column": 25
@@ -80,7 +80,7 @@
   {
     "id": "settings.account.tryReloadServices",
     "defaultMessage": "!!!Try again",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 40,
       "column": 21
@@ -93,7 +93,7 @@
   {
     "id": "settings.services.updatedInfo",
     "defaultMessage": "!!!Your changes have been saved",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 44,
       "column": 15
@@ -106,7 +106,7 @@
   {
     "id": "settings.services.deletedInfo",
     "defaultMessage": "!!!Service has been deleted",
-    "file": "src/components/settings/services/ServicesDashboard.js",
+    "file": "src\\components\\settings\\services\\ServicesDashboard.js",
     "start": {
       "line": 48,
       "column": 15

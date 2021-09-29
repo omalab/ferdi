@@ -134,11 +134,11 @@ const menuItems = defineMessages({
   },
   reloadFranz: {
     id: 'menu.view.reloadFranz',
-    defaultMessage: '!!!Reload Ferdi',
+    defaultMessage: '!!!Reload Engage Dock',
   },
   lockFerdi: {
     id: 'menu.view.lockFerdi',
-    defaultMessage: '!!!Lock Ferdi',
+    defaultMessage: '!!!Lock Engage Dock',
   },
   reloadTodos: {
     id: 'menu.view.reloadTodos',
@@ -174,7 +174,7 @@ const menuItems = defineMessages({
   },
   debugInfoCopiedHeadline: {
     id: 'menu.help.debugInfoCopiedHeadline',
-    defaultMessage: '!!!Ferdi Debug Information',
+    defaultMessage: '!!!Engage Dock Debug Information',
   },
   debugInfoCopiedBody: {
     id: 'menu.help.debugInfoCopiedBody',
@@ -218,7 +218,7 @@ const menuItems = defineMessages({
   },
   about: {
     id: 'menu.app.about',
-    defaultMessage: '!!!About Ferdi',
+    defaultMessage: '!!!About Engage Dock',
   },
   announcement: {
     id: 'menu.app.announcement',
@@ -1020,7 +1020,7 @@ export default class FranzMenu {
         dialog.showMessageBox({
           type: 'info',
           title: 'Franz Ferdinand',
-          message: 'Ferdi',
+          message: 'Engage Dock',
           detail: aboutAppDetails(),
         });
       },

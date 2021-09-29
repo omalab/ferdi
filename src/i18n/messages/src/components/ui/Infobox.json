@@ -2,7 +2,7 @@
   {
     "id": "infobox.dismiss",
     "defaultMessage": "!!!Dismiss",
-    "file": "src/components/ui/Infobox.js",
+    "file": "src\\components\\ui\\Infobox.js",
     "start": {
       "line": 9,
       "column": 11

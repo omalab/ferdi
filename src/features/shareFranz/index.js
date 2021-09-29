@@ -6,7 +6,7 @@ import { planSelectionStore } from '../planSelection';
 
 export { default as Component } from './Component';
 
-const debug = require('debug')('Ferdi:feature:shareFranz');
+const debug = require('debug')('EngageDock:feature:shareFranz');
 
 const state = ModalState;
 

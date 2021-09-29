@@ -13,7 +13,7 @@ import { sleep } from '../helpers/async-helpers';
 import { getPlan } from '../helpers/plan-helpers';
 import { PLANS, TODOS_PARTITION_ID } from '../config';
 
-const debug = require('debug')('Ferdi:UserStore');
+const debug = require('debug')('EngageDock:UserStore');
 
 // TODO: split stores into UserStore and AuthStore
 export default class UserStore extends Store {

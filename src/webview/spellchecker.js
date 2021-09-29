@@ -2,7 +2,7 @@ import { getCurrentWebContents } from '@electron/remote';
 import { SPELLCHECKER_LOCALES } from '../i18n/languages';
 import { isMac } from '../environment';
 
-const debug = require('debug')('Ferdi:spellchecker');
+const debug = require('debug')('EngageDock:spellchecker');
 
 const webContents = getCurrentWebContents();
 const [defaultLocale] = webContents.session.getSpellCheckerLanguages();

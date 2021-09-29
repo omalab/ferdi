@@ -2,7 +2,7 @@
   {
     "id": "workspaces.switchingIndicator.switchingTo",
     "defaultMessage": "!!!Switching to",
-    "file": "src/features/workspaces/components/WorkspaceSwitchingIndicator.js",
+    "file": "src\\features\\workspaces\\components\\WorkspaceSwitchingIndicator.js",
     "start": {
       "line": 12,
       "column": 15

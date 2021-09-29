@@ -10,7 +10,7 @@ if (isMac) {
   askForScreenCaptureAccess = require('node-mac-permissions').askForScreenCaptureAccess;
 }
 
-const debug = require('debug')('Ferdi:macOSPermissions');
+const debug = require('debug')('EngageDock:macOSPermissions');
 
 const permissionExists = macosVersion.isGreaterThanOrEqualTo('10.15');
 const filePath = path.join(app.getPath('userData'), '.has-app-requested-screen-capture-permissions');
@@ -60,7 +60,7 @@ export default async function (mainWindow) {
     const { response } = await dialog.showMessageBox(mainWindow, {
       type: 'info',
       message: 'Enable Screen Sharing',
-      detail: 'To enable screen sharing for some services, Ferdi needs the permission to record your screen.',
+      detail: 'To enable screen sharing for some services, Engage Dock needs the permission to record your screen.',
       buttons: [
         'Allow screen sharing',
         'No',

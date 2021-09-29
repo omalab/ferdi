@@ -1,8 +1,8 @@
 [
   {
     "id": "feature.shareFranz.headline",
-    "defaultMessage": "!!!Ferdi is better together!",
-    "file": "src/features/shareFranz/Component.js",
+    "defaultMessage": "!!!Engage Dock is better together!",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 17,
       "column": 12
@@ -14,8 +14,8 @@
   },
   {
     "id": "feature.shareFranz.text",
-    "defaultMessage": "!!!Tell your friends and colleagues how awesome Ferdi is and help us to spread the word.",
-    "file": "src/features/shareFranz/Component.js",
+    "defaultMessage": "!!!Tell your friends and colleagues how awesome Engage Dock is and help us to spread the word.",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 21,
       "column": 8
@@ -28,7 +28,7 @@
   {
     "id": "feature.shareFranz.action.email",
     "defaultMessage": "!!!Share as email",
-    "file": "src/features/shareFranz/Component.js",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 25,
       "column": 16
@@ -41,7 +41,7 @@
   {
     "id": "feature.shareFranz.action.facebook",
     "defaultMessage": "!!!Share on Facebook",
-    "file": "src/features/shareFranz/Component.js",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 29,
       "column": 19
@@ -54,7 +54,7 @@
   {
     "id": "feature.shareFranz.action.twitter",
     "defaultMessage": "!!!Share on Twitter",
-    "file": "src/features/shareFranz/Component.js",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 33,
       "column": 18
@@ -67,7 +67,7 @@
   {
     "id": "feature.shareFranz.shareText.email",
     "defaultMessage": "!!! I've added {count} services to Franz! Get the free app for WhatsApp, Messenger, Slack, Skype and co at www.meetfranz.com",
-    "file": "src/features/shareFranz/Component.js",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 37,
       "column": 18
@@ -80,7 +80,7 @@
   {
     "id": "feature.shareFranz.shareText.twitter",
     "defaultMessage": "!!! I've added {count} services to Franz! Get the free app for WhatsApp, Messenger, Slack, Skype and co at www.meetfranz.com /cc @FranzMessenger",
-    "file": "src/features/shareFranz/Component.js",
+    "file": "src\\features\\shareFranz\\Component.js",
     "start": {
       "line": 41,
       "column": 20

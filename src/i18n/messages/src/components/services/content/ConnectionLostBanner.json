@@ -1,8 +1,8 @@
 [
   {
     "id": "connectionLostBanner.message",
-    "defaultMessage": "!!!Oh no! Ferdi lost the connection to {name}.",
-    "file": "src/components/services/content/ConnectionLostBanner.js",
+    "defaultMessage": "!!!Oh no! Engage Dock lost the connection to {name}.",
+    "file": "src\\components\\services\\content\\ConnectionLostBanner.js",
     "start": {
       "line": 15,
       "column": 8
@@ -15,7 +15,7 @@
   {
     "id": "connectionLostBanner.informationLink",
     "defaultMessage": "!!!What happened?",
-    "file": "src/components/services/content/ConnectionLostBanner.js",
+    "file": "src\\components\\services\\content\\ConnectionLostBanner.js",
     "start": {
       "line": 19,
       "column": 19
@@ -28,7 +28,7 @@
   {
     "id": "connectionLostBanner.cta",
     "defaultMessage": "!!!Reload Service",
-    "file": "src/components/services/content/ConnectionLostBanner.js",
+    "file": "src\\components\\services\\content\\ConnectionLostBanner.js",
     "start": {
       "line": 23,
       "column": 7

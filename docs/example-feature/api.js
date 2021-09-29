@@ -1,5 +1,5 @@
 export default {
   async getName() {
-    return Promise.resolve('Ferdi');
+    return Promise.resolve('Engage Dock');
   },
 };

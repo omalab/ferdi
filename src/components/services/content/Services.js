@@ -14,7 +14,7 @@ import serverlessLogin from '../../../helpers/serverless-helpers';
 const messages = defineMessages({
   welcome: {
     id: 'services.welcome',
-    defaultMessage: '!!!Welcome to Ferdi',
+    defaultMessage: '!!!Welcome to Engage Dock',
   },
   getStarted: {
     id: 'services.getStarted',
@@ -22,15 +22,15 @@ const messages = defineMessages({
   },
   login: {
     id: 'services.login',
-    defaultMessage: '!!!Please login to use Ferdi.',
+    defaultMessage: '!!!Please login to use Engage Dock.',
   },
   serverless: {
     id: 'services.serverless',
-    defaultMessage: '!!!Use Ferdi without an Account',
+    defaultMessage: '!!!Use Engage Dock without an Account',
   },
   serverInfo: {
     id: 'services.serverInfo',
-    defaultMessage: '!!!Optionally, you can change your Ferdi server by clicking the cog in the bottom left corner.',
+    defaultMessage: '!!!Optionally, you can change your Engage Dock server by clicking the cog in the bottom left corner.',
   },
 });
 

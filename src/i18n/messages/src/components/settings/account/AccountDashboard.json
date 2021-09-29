@@ -2,7 +2,7 @@
   {
     "id": "settings.account.headline",
     "defaultMessage": "!!!Account",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 17,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "settings.account.headlineSubscription",
     "defaultMessage": "!!!Your Subscription",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 21,
       "column": 24
@@ -28,7 +28,7 @@
   {
     "id": "settings.account.headlineDangerZone",
     "defaultMessage": "!!Danger Zone",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 25,
       "column": 22
@@ -41,7 +41,7 @@
   {
     "id": "settings.account.manageSubscription.label",
     "defaultMessage": "!!!Manage your subscription",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 29,
       "column": 33
@@ -54,7 +54,7 @@
   {
     "id": "settings.account.upgradeToPro.label",
     "defaultMessage": "!!!Upgrade to Franz Professional",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 33,
       "column": 23
@@ -67,7 +67,7 @@
   {
     "id": "settings.account.accountType.basic",
     "defaultMessage": "!!!Basic Account",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 37,
       "column": 20
@@ -80,7 +80,7 @@
   {
     "id": "settings.account.accountType.premium",
     "defaultMessage": "!!!Premium Supporter Account",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 41,
       "column": 22
@@ -93,7 +93,7 @@
   {
     "id": "settings.account.account.editButton",
     "defaultMessage": "!!!Edit Account",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 45,
       "column": 21
@@ -106,7 +106,7 @@
   {
     "id": "settings.account.headlineInvoices",
     "defaultMessage": "!!Invoices",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 49,
       "column": 18
@@ -119,7 +119,7 @@
   {
     "id": "settings.account.invoiceDownload",
     "defaultMessage": "!!!Download",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 53,
       "column": 19
@@ -132,7 +132,7 @@
   {
     "id": "settings.account.userInfoRequestFailed",
     "defaultMessage": "!!!Could not load user information",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 57,
       "column": 25
@@ -145,7 +145,7 @@
   {
     "id": "settings.account.tryReloadUserInfoRequest",
     "defaultMessage": "!!!Try again",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 61,
       "column": 28
@@ -158,7 +158,7 @@
   {
     "id": "settings.account.deleteAccount",
     "defaultMessage": "!!!Delete account",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 65,
       "column": 17
@@ -170,8 +170,8 @@
   },
   {
     "id": "settings.account.deleteInfo",
-    "defaultMessage": "!!!If you don't need your Ferdi account any longer, you can delete your account and all related data here.",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "defaultMessage": "!!!If you don't need your Engage Dock account any longer, you can delete your account and all related data here.",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 69,
       "column": 14
@@ -184,7 +184,7 @@
   {
     "id": "settings.account.deleteEmailSent",
     "defaultMessage": "!!!You have received an email with a link to confirm your account deletion. Your account and data cannot be restored!",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 74,
       "column": 19
@@ -197,7 +197,7 @@
   {
     "id": "settings.account.trial",
     "defaultMessage": "!!!Free Trial",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 79,
       "column": 9
@@ -210,7 +210,7 @@
   {
     "id": "settings.account.yourLicense",
     "defaultMessage": "!!!Your Franz License:",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 83,
       "column": 15
@@ -223,7 +223,7 @@
   {
     "id": "settings.account.trialEndsIn",
     "defaultMessage": "!!!Your free trial ends in {duration}.",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 87,
       "column": 15
@@ -236,7 +236,7 @@
   {
     "id": "settings.account.trialUpdateBillingInfo",
     "defaultMessage": "!!!Please update your billing info to continue using {license} after your trial period.",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 91,
       "column": 33
@@ -249,7 +249,7 @@
   {
     "id": "settings.account.accountUnavailable",
     "defaultMessage": "Account is unavailable",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 96,
       "column": 22
@@ -261,8 +261,8 @@
   },
   {
     "id": "settings.account.accountUnavailableInfo",
-    "defaultMessage": "You are using Ferdi without an account. If you want to use Ferdi with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.",
-    "file": "src/components/settings/account/AccountDashboard.js",
+    "defaultMessage": "You are using Engage Dock without an account. If you want to use Engage Dock with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.",
+    "file": "src\\components\\settings\\account\\AccountDashboard.js",
     "start": {
       "line": 100,
       "column": 26

@@ -4,7 +4,7 @@ import BasicAuthComponent from './Component';
 
 import { state as ModalState } from './store';
 
-const debug = require('debug')('Ferdi:feature:basicAuth');
+const debug = require('debug')('EngageDock:feature:basicAuth');
 
 const state = ModalState;
 

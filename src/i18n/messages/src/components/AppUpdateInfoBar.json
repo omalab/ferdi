@@ -1,8 +1,8 @@
 [
   {
     "id": "infobar.updateAvailable",
-    "defaultMessage": "!!!A new update for Ferdi is available.",
-    "file": "src/components/AppUpdateInfoBar.js",
+    "defaultMessage": "!!!A new update for Engage Dock is available.",
+    "file": "src\\components\\AppUpdateInfoBar.js",
     "start": {
       "line": 9,
       "column": 19
@@ -15,7 +15,7 @@
   {
     "id": "infobar.buttonChangelog",
     "defaultMessage": "!!!Changelog",
-    "file": "src/components/AppUpdateInfoBar.js",
+    "file": "src\\components\\AppUpdateInfoBar.js",
     "start": {
       "line": 13,
       "column": 13
@@ -28,7 +28,7 @@
   {
     "id": "infobar.buttonInstallUpdate",
     "defaultMessage": "!!!Restart & install update",
-    "file": "src/components/AppUpdateInfoBar.js",
+    "file": "src\\components\\AppUpdateInfoBar.js",
     "start": {
       "line": 17,
       "column": 23

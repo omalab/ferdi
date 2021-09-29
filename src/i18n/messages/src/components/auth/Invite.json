@@ -2,7 +2,7 @@
   {
     "id": "settings.invite.headline",
     "defaultMessage": "!!!Invite Friends",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 16,
       "column": 20
@@ -15,7 +15,7 @@
   {
     "id": "invite.headline.friends",
     "defaultMessage": "!!!Invite 3 of your friends or colleagues",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 20,
       "column": 12
@@ -28,7 +28,7 @@
   {
     "id": "invite.name.label",
     "defaultMessage": "!!!Name",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 24,
       "column": 13
@@ -41,7 +41,7 @@
   {
     "id": "invite.email.label",
     "defaultMessage": "!!!Email address",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 28,
       "column": 14
@@ -54,7 +54,7 @@
   {
     "id": "invite.submit.label",
     "defaultMessage": "!!!Send invites",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 32,
       "column": 21
@@ -67,7 +67,7 @@
   {
     "id": "invite.skip.label",
     "defaultMessage": "!!!I want to do this later",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 36,
       "column": 19
@@ -80,7 +80,7 @@
   {
     "id": "invite.successInfo",
     "defaultMessage": "!!!Invitations sent successfully",
-    "file": "src/components/auth/Invite.js",
+    "file": "src\\components\\auth\\Invite.js",
     "start": {
       "line": 40,
       "column": 21

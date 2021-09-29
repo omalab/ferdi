@@ -23,7 +23,7 @@ import { IPC, TODOS_ROUTES } from './constants';
 import { state as delayAppState } from '../delayApp';
 import UserAgent from '../../models/UserAgent';
 
-const debug = require('debug')('Ferdi:feature:todos:store');
+const debug = require('debug')('EngageDock:feature:todos:store');
 
 export default class TodoStore extends FeatureStore {
   @observable stores = null;

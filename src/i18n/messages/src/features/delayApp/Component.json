@@ -2,7 +2,7 @@
   {
     "id": "feature.delayApp.headline",
     "defaultMessage": "!!!Please purchase license to skip waiting",
-    "file": "src/features/delayApp/Component.js",
+    "file": "src\\features\\delayApp\\Component.js",
     "start": {
       "line": 16,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "feature.delayApp.trial.headline",
     "defaultMessage": "!!!Get the free Franz Professional 14 day trial and skip the line",
-    "file": "src/features/delayApp/Component.js",
+    "file": "src\\features\\delayApp\\Component.js",
     "start": {
       "line": 20,
       "column": 17
@@ -28,7 +28,7 @@
   {
     "id": "feature.delayApp.upgrade.action",
     "defaultMessage": "!!!Upgrade Franz",
-    "file": "src/features/delayApp/Component.js",
+    "file": "src\\features\\delayApp\\Component.js",
     "start": {
       "line": 24,
       "column": 10
@@ -41,7 +41,7 @@
   {
     "id": "feature.delayApp.trial.action",
     "defaultMessage": "!!!Yes, I want the free 14 day trial of Franz Professional",
-    "file": "src/features/delayApp/Component.js",
+    "file": "src\\features\\delayApp\\Component.js",
     "start": {
       "line": 28,
       "column": 15
@@ -53,8 +53,8 @@
   },
   {
     "id": "feature.delayApp.text",
-    "defaultMessage": "!!!Ferdi will continue in {seconds} seconds.",
-    "file": "src/features/delayApp/Component.js",
+    "defaultMessage": "!!!Engage Dock will continue in {seconds} seconds.",
+    "file": "src\\features\\delayApp\\Component.js",
     "start": {
       "line": 32,
       "column": 8

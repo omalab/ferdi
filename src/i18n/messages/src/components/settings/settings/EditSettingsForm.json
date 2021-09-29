@@ -2,7 +2,7 @@
   {
     "id": "settings.app.headline",
     "defaultMessage": "!!!Settings",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 24,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "settings.app.headlineGeneral",
     "defaultMessage": "!!!General",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 28,
       "column": 19
@@ -27,8 +27,8 @@
   },
   {
     "id": "settings.app.sentryInfo",
-    "defaultMessage": "!!!Sending telemetry data allows us to find errors in Ferdi - we will not send any personal information like your message data! Changing this option requires you to restart Ferdi.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Sending telemetry data allows us to find errors in Engage Dock - we will not send any personal information like your message data! Changing this option requires you to restart Engage Dock.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 32,
       "column": 14
@@ -40,8 +40,8 @@
   },
   {
     "id": "settings.app.hibernateInfo",
-    "defaultMessage": "!!!By default, Ferdi will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!By default, Engage Dock will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 36,
       "column": 17
@@ -53,8 +53,8 @@
   },
   {
     "id": "settings.app.inactivityLockInfo",
-    "defaultMessage": "!!!Minutes of inactivity, after which Ferdi should automatically lock. Use 0 to disable",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Minutes of inactivity, after which Engage Dock should automatically lock. Use 0 to disable",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 40,
       "column": 22
@@ -67,7 +67,7 @@
   {
     "id": "settings.app.todoServerInfo",
     "defaultMessage": "!!!This server will be used for the \"Franz Todo\" feature. (default: https://app.franztodos.com)",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 44,
       "column": 18
@@ -80,7 +80,7 @@
   {
     "id": "settings.app.lockedPassword",
     "defaultMessage": "!!!Password",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 48,
       "column": 18
@@ -92,8 +92,8 @@
   },
   {
     "id": "settings.app.lockedPasswordInfo",
-    "defaultMessage": "!!!Please make sure to set a password you'll remember.\nIf you loose this password, you will have to reinstall Ferdi.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Please make sure to set a password you'll remember.\nIf you loose this password, you will have to reinstall Engage Dock.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 52,
       "column": 22
@@ -105,8 +105,8 @@
   },
   {
     "id": "settings.app.lockInfo",
-    "defaultMessage": "!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Ferdi or lock Ferdi yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Engage Dock or lock Engage Dock yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 56,
       "column": 12
@@ -119,7 +119,7 @@
   {
     "id": "settings.app.scheduledDNDTimeInfo",
     "defaultMessage": "!!!Times in 24-Hour-Format. End time can be before start time (e.g. start 17:00, end 09:00) to enable Do-not-Disturb overnight.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 60,
       "column": 24
@@ -131,8 +131,8 @@
   },
   {
     "id": "settings.app.scheduledDNDInfo",
-    "defaultMessage": "!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Ferdi.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Engage Dock.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 64,
       "column": 20
@@ -145,7 +145,7 @@
   {
     "id": "settings.app.headlineLanguage",
     "defaultMessage": "!!!Language",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 68,
       "column": 20
@@ -158,7 +158,7 @@
   {
     "id": "settings.app.headlineUpdates",
     "defaultMessage": "!!!Updates",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 72,
       "column": 19
@@ -171,7 +171,7 @@
   {
     "id": "settings.app.headlineAppearance",
     "defaultMessage": "!!!Appearance",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 76,
       "column": 22
@@ -184,7 +184,7 @@
   {
     "id": "settings.app.universalDarkModeInfo",
     "defaultMessage": "!!!Universal Dark Mode tries to dynamically generate dark mode styles for services that are otherwise not currently supported.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 80,
       "column": 25
@@ -197,7 +197,7 @@
   {
     "id": "settings.app.accentColorInfo",
     "defaultMessage": "!!!Write your accent color in a CSS-compatible format. (Default: {defaultAccentColor})",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 84,
       "column": 19
@@ -210,7 +210,7 @@
   {
     "id": "settings.app.headlinePrivacy",
     "defaultMessage": "!!!Privacy",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 88,
       "column": 19
@@ -223,7 +223,7 @@
   {
     "id": "settings.app.headlineAdvanced",
     "defaultMessage": "!!!Advanced",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 92,
       "column": 20
@@ -235,8 +235,8 @@
   },
   {
     "id": "settings.app.translationHelp",
-    "defaultMessage": "!!!Help us to translate Ferdi into your language.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Help us to translate Engage Dock into your language.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 96,
       "column": 19
@@ -248,8 +248,8 @@
   },
   {
     "id": "settings.app.spellCheckerLanguageInfo",
-    "defaultMessage": "!!!Ferdi uses your Mac's build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac's System Preferences.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Engage Dock uses your Mac's build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac's System Preferences.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 100,
       "column": 28
@@ -262,7 +262,7 @@
   {
     "id": "settings.app.subheadlineCache",
     "defaultMessage": "!!!Cache",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 104,
       "column": 20
@@ -274,8 +274,8 @@
   },
   {
     "id": "settings.app.cacheInfo",
-    "defaultMessage": "!!!Ferdi cache is currently using {size} of disk space.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!Engage Dock cache is currently using {size} of disk space.",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 108,
       "column": 13
@@ -288,7 +288,7 @@
   {
     "id": "settings.app.cacheNotCleared",
     "defaultMessage": "!!!Couldn't clear all cache",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 112,
       "column": 19
@@ -301,7 +301,7 @@
   {
     "id": "settings.app.buttonClearAllCache",
     "defaultMessage": "!!!Clear cache",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 116,
       "column": 23
@@ -314,7 +314,7 @@
   {
     "id": "settings.app.buttonSearchForUpdate",
     "defaultMessage": "!!!Check for updates",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 120,
       "column": 25
@@ -327,7 +327,7 @@
   {
     "id": "settings.app.buttonInstallUpdate",
     "defaultMessage": "!!!Restart & install update",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 124,
       "column": 23
@@ -340,7 +340,7 @@
   {
     "id": "settings.app.updateStatusSearching",
     "defaultMessage": "!!!Is searching for update",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 128,
       "column": 25
@@ -353,7 +353,7 @@
   {
     "id": "settings.app.updateStatusAvailable",
     "defaultMessage": "!!!Update available, downloading...",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 132,
       "column": 25
@@ -365,8 +365,8 @@
   },
   {
     "id": "settings.app.updateStatusUpToDate",
-    "defaultMessage": "!!!You are using the latest version of Ferdi",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "defaultMessage": "!!!You are using the latest version of Engage Dock",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 136,
       "column": 24
@@ -379,7 +379,7 @@
   {
     "id": "settings.app.currentVersion",
     "defaultMessage": "!!!Current version:",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 140,
       "column": 18
@@ -392,7 +392,7 @@
   {
     "id": "settings.app.restartRequired",
     "defaultMessage": "!!!Changes require restart",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 144,
       "column": 22
@@ -405,7 +405,7 @@
   {
     "id": "settings.app.languageDisclaimer",
     "defaultMessage": "!!!Official translations are English & German. All other languages are community based translations.",
-    "file": "src/components/settings/settings/EditSettingsForm.js",
+    "file": "src\\components\\settings\\settings\\EditSettingsForm.js",
     "start": {
       "line": 148,
       "column": 22

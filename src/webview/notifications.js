@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron';
 import uuidV1 from 'uuid/v1';
 
-const debug = require('debug')('Ferdi:Notifications');
+const debug = require('debug')('EngageDock:Notifications');
 
 class Notification {
   static permission = 'granted';

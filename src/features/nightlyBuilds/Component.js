@@ -19,7 +19,7 @@ const messages = defineMessages({
   },
   info: {
     id: 'feature.nightlyBuilds.info',
-    defaultMessage: '!!!Nightly builds are highly experimental versions of Ferdi that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don\'t know what you are doing, we suggest not activating nightly builds.',
+    defaultMessage: '!!!Nightly builds are highly experimental versions of Engage Dock that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don\'t know what you are doing, we suggest not activating nightly builds.',
   },
   activate: {
     id: 'feature.nightlyBuilds.activate',

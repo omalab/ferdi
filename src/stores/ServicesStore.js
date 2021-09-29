@@ -23,7 +23,7 @@ import { emailRecipes } from './urlConfig.json';
 
 
 
-const debug = require('debug')('Ferdi:ServiceStore');
+const debug = require('debug')('EngageDock:ServiceStore');
 
 export default class ServicesStore extends Store {
   @observable allServicesRequest = new CachedRequest(this.api.services, 'all');
@@ -934,7 +934,7 @@ export default class ServicesStore extends Store {
     const service = this.active;
     if (service) {
       this.actions.service.focusService({ serviceId: service.id });
-      document.title = `Ferdi - ${service.name}`;
+      document.title = `Engage Dock - ${service.name}`;
     }
   }
 

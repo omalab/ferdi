@@ -20,7 +20,7 @@ const messages = defineMessages({
   },
   info: {
     id: 'feature.publishDebugInfo.info',
-    defaultMessage: '!!!Publishing your debug information helps us find issues and errors in Ferdi. By publishing your debug information you accept Ferdi Debugger\'s privacy policy and terms of service',
+    defaultMessage: '!!!Publishing your debug information helps us find issues and errors in Engage Dock. By publishing your debug information you accept Engage Dock Debugger\'s privacy policy and terms of service',
   },
   error: {
     id: 'feature.publishDebugInfo.error',

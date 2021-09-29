@@ -7,7 +7,7 @@ import path from 'path';
 
 import ServiceModel from '../../../models/Service';
 
-const debug = require('debug')('Ferdi:Services');
+const debug = require('debug')('EngageDock:Services');
 
 @observer
 class ServiceWebview extends Component {

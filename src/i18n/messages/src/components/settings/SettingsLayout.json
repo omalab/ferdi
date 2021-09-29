@@ -2,7 +2,7 @@
   {
     "id": "settings.app.closeSettings",
     "defaultMessage": "!!!Close settings",
-    "file": "src/components/settings/SettingsLayout.js",
+    "file": "src\\components\\settings\\SettingsLayout.js",
     "start": {
       "line": 11,
       "column": 17

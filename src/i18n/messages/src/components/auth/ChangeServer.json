@@ -2,7 +2,7 @@
   {
     "id": "changeserver.headline",
     "defaultMessage": "!!!Change server",
-    "file": "src/components/auth/ChangeServer.js",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 14,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "changeserver.label",
     "defaultMessage": "!!!Server",
-    "file": "src/components/auth/ChangeServer.js",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 18,
       "column": 9
@@ -27,8 +27,8 @@
   },
   {
     "id": "changeserver.warning",
-    "defaultMessage": "!!!Extra settings offered by Ferdi will not be saved",
-    "file": "src/components/auth/ChangeServer.js",
+    "defaultMessage": "!!!Extra settings offered by Engage Dock will not be saved",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 22,
       "column": 11
@@ -41,7 +41,7 @@
   {
     "id": "changeserver.customServerLabel",
     "defaultMessage": "!!!Custom server",
-    "file": "src/components/auth/ChangeServer.js",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 26,
       "column": 21
@@ -54,7 +54,7 @@
   {
     "id": "changeserver.urlError",
     "defaultMessage": "!!!Enter a valid URL",
-    "file": "src/components/auth/ChangeServer.js",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 30,
       "column": 12
@@ -67,7 +67,7 @@
   {
     "id": "changeserver.submit",
     "defaultMessage": "!!!Submit",
-    "file": "src/components/auth/ChangeServer.js",
+    "file": "src\\components\\auth\\ChangeServer.js",
     "start": {
       "line": 34,
       "column": 10

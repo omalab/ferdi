@@ -3,7 +3,7 @@ import Request from '../../stores/lib/Request';
 import apiBase from '../../api/apiBase';
 import { GITHUB_FERDI_REPO_NAME, GITHUB_ORG_NAME } from '../../config';
 
-const debug = require('debug')('Ferdi:feature:announcements:api');
+const debug = require('debug')('EngageDock:feature:announcements:api');
 
 export const announcementsApi = {
   async getCurrentVersion() {

@@ -2,7 +2,7 @@
   {
     "id": "service.webviewLoader.loading",
     "defaultMessage": "!!!Loading {service}",
-    "file": "src/components/ui/WebviewLoader/index.js",
+    "file": "src\\components\\ui\\WebviewLoader\\index.js",
     "start": {
       "line": 11,
       "column": 11

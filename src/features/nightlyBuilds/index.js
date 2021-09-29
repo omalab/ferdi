@@ -2,7 +2,7 @@ import { state as ModalState } from './store';
 
 export { default as Component } from './Component';
 
-const debug = require('debug')('Ferdi:feature:nightlyBuilds');
+const debug = require('debug')('EngageDock:feature:nightlyBuilds');
 
 const state = ModalState;
 

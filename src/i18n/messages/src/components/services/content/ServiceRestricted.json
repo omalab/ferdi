@@ -2,7 +2,7 @@
   {
     "id": "service.restrictedHandler.serviceLimit.headline",
     "defaultMessage": "!!!You have reached your service limit.",
-    "file": "src/components/services/content/ServiceRestricted.js",
+    "file": "src\\components\\services\\content\\ServiceRestricted.js",
     "start": {
       "line": 11,
       "column": 24
@@ -15,7 +15,7 @@
   {
     "id": "service.restrictedHandler.serviceLimit.text",
     "defaultMessage": "!!!Please upgrade your account to use more than {count} services.",
-    "file": "src/components/services/content/ServiceRestricted.js",
+    "file": "src\\components\\services\\content\\ServiceRestricted.js",
     "start": {
       "line": 15,
       "column": 20
@@ -28,7 +28,7 @@
   {
     "id": "service.restrictedHandler.customUrl.headline",
     "defaultMessage": "!!!Franz Professional Plan required",
-    "file": "src/components/services/content/ServiceRestricted.js",
+    "file": "src\\components\\services\\content\\ServiceRestricted.js",
     "start": {
       "line": 19,
       "column": 21
@@ -41,7 +41,7 @@
   {
     "id": "service.restrictedHandler.customUrl.text",
     "defaultMessage": "!!!Please upgrade to the Franz Professional plan to use custom urls & self hosted services.",
-    "file": "src/components/services/content/ServiceRestricted.js",
+    "file": "src\\components\\services\\content\\ServiceRestricted.js",
     "start": {
       "line": 23,
       "column": 17
@@ -54,7 +54,7 @@
   {
     "id": "service.restrictedHandler.action",
     "defaultMessage": "!!!Upgrade Account",
-    "file": "src/components/services/content/ServiceRestricted.js",
+    "file": "src\\components\\services\\content\\ServiceRestricted.js",
     "start": {
       "line": 27,
       "column": 10

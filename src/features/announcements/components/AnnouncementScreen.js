@@ -19,7 +19,7 @@ const markedOptions = { sanitize: true, renderer };
 const messages = defineMessages({
   headline: {
     id: 'feature.announcements.changelog.headline',
-    defaultMessage: '!!!Changes in Ferdi {version}',
+    defaultMessage: '!!!Changes in Engage Dock {version}',
   },
 });
 

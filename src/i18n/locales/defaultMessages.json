@@ -2,7 +2,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!A new update for Ferdi is available.",
+        "defaultMessage": "!!!A new update for Engage Docke Dock is available.",
         "end": {
           "column": 3,
           "line": 12
@@ -72,7 +72,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Extra settings offered by Ferdi will not be saved",
+        "defaultMessage": "!!!Extra settings offered by Engage Docke Dock will not be saved",
         "end": {
           "column": 3,
           "line": 25
@@ -129,7 +129,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Import your Ferdi 4 services",
+        "defaultMessage": "!!!Import your Engage Docke Dock 4 services",
         "end": {
           "column": 3,
           "line": 16
@@ -142,7 +142,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Services not yet supported in Ferdi 5",
+        "defaultMessage": "!!!Services not yet supported in Engage Docke Dock 5",
         "end": {
           "column": 3,
           "line": 20
@@ -295,7 +295,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Ferdi is currently locked. Please unlock Ferdi with your password to see your messages.",
+        "defaultMessage": "!!!Engage Docke Dock is currently locked. Please uEngage Dock Engage Dock with your password to see your messages.",
         "end": {
           "column": 3,
           "line": 23
@@ -469,7 +469,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Try importing your Franz account into Ferdi",
+        "defaultMessage": "!!!Try importing your Franz account into Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 47
@@ -534,7 +534,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Use Ferdi without an Account",
+        "defaultMessage": "!!!Use Engage Docke Dock without an Account",
         "end": {
           "column": 3,
           "line": 67
@@ -804,7 +804,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Continue to Ferdi",
+        "defaultMessage": "!!!Continue to Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 61
@@ -1053,7 +1053,7 @@
         }
       },
       {
-        "defaultMessage": "!!!By creating a Ferdi account you accept the",
+        "defaultMessage": "!!!By creating a Engage Docke Dock account you accept the",
         "end": {
           "column": 3,
           "line": 46
@@ -1131,7 +1131,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Use Ferdi without an Account",
+        "defaultMessage": "!!!Use Engage Docke Dock without an Account",
         "end": {
           "column": 3,
           "line": 70
@@ -1188,7 +1188,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Use Ferdi without an Account",
+        "defaultMessage": "!!!Use Engage Docke Dock without an Account",
         "end": {
           "column": 3,
           "line": 22
@@ -1367,7 +1367,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Lock Ferdi",
+        "defaultMessage": "!!!Lock Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 55
@@ -1525,7 +1525,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Oh no! Ferdi lost the connection to {name}.",
+        "defaultMessage": "!!!Oh no! Engage Docke Dock lost the connection to {name}.",
         "end": {
           "column": 3,
           "line": 18
@@ -1740,7 +1740,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Welcome to Ferdi",
+        "defaultMessage": "!!!Welcome to Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 18
@@ -1766,7 +1766,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Please login to use Ferdi.",
+        "defaultMessage": "!!!Please login to use Engage Docke Dock.",
         "end": {
           "column": 3,
           "line": 26
@@ -1779,7 +1779,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Use Ferdi without an Account",
+        "defaultMessage": "!!!Use Engage Docke Dock without an Account",
         "end": {
           "column": 3,
           "line": 30
@@ -1792,7 +1792,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Optionally, you can change your Ferdi server by clicking the cog in the bottom left corner.",
+        "defaultMessage": "!!!Optionally, you can change your Engage Docke Dock server by clicking the cog in the bottom left corner.",
         "end": {
           "column": 3,
           "line": 34
@@ -2241,7 +2241,7 @@
         }
       },
       {
-        "defaultMessage": "!!!If you don't need your Ferdi account any longer, you can delete your account and all related data here.",
+        "defaultMessage": "!!!If you don't need your Engage Docke Dock account any longer, you can delete your account and all related data here.",
         "end": {
           "column": 3,
           "line": 73
@@ -2332,7 +2332,7 @@
         }
       },
       {
-        "defaultMessage": "You are using Ferdi without an account. If you want to use Ferdi with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.",
+        "defaultMessage": "You are using Engage Docke Dock without an account. If you want tEngage Dock Engage Dock with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.",
         "end": {
           "column": 3,
           "line": 103
@@ -2428,7 +2428,7 @@
         }
       },
       {
-        "defaultMessage": "!!!About Ferdi",
+        "defaultMessage": "!!!About Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 44
@@ -2524,7 +2524,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Sorry, but no service matched your search term - but you can still probably add it using the \"Custom Website\" option. Please note that the website might show more services that have been added to Ferdi since the version that you are currently on. To get those new services, please consider upgrading to a newer version of Ferdi.",
+        "defaultMessage": "!!!Sorry, but no service matched your search term - but you can still probably add it using the \"Custom Website\" option. Please note that the website might show more services that have been added to Engage Docke Dock since the version that you are currently on. To get those new services, please consider upgrading to a newer versiEngage Dock Engage Dock.",
         "end": {
           "column": 3,
           "line": 44
@@ -2828,7 +2828,7 @@
         }
       },
       {
-        "defaultMessage": "!!!To add self hosted services, you need a Ferdi Premium Supporter Account.",
+        "defaultMessage": "!!!To add self hosted services, you need a Engage Docke Dock Premium Supporter Account.",
         "end": {
           "column": 3,
           "line": 86
@@ -2984,7 +2984,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Please restart Ferdi after changing proxy Settings.",
+        "defaultMessage": "!!!Please restart Engage Docke Dock after changing proxy Settings.",
         "end": {
           "column": 3,
           "line": 134
@@ -2997,7 +2997,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Proxy settings will not be synchronized with the Ferdi servers.",
+        "defaultMessage": "!!!Proxy settings will not be synchronized with the Engage Docke Dock servers.",
         "end": {
           "column": 3,
           "line": 138
@@ -3155,7 +3155,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Sorry, but no service matched your search term. Please note that the website might show more services that have been added to Ferdi since the version that you are currently on. To get those new services, please consider upgrading to a newer version of Ferdi.",
+        "defaultMessage": "!!!Sorry, but no service matched your search term. Please note that the website might show more services that have been added to Engage Docke Dock since the version that you are currently on. To get those new services, please consider upgrading to a newer versiEngage Dock Engage Dock.",
         "end": {
           "column": 3,
           "line": 31
@@ -3264,7 +3264,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Sending telemetry data allows us to find errors in Ferdi - we will not send any personal information like your message data! Changing this option requires you to restart Ferdi.",
+        "defaultMessage": "!!!Sending telemetry data allows us to find errors in Engage Docke Dock - we will not send any personal information like your message data! Changing this option requires you to reEngage Dock Engage Dock.",
         "end": {
           "column": 3,
           "line": 35
@@ -3277,7 +3277,7 @@
         }
       },
       {
-        "defaultMessage": "!!!By default, Ferdi will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.",
+        "defaultMessage": "!!!By default, Engage Docke Dock will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.",
         "end": {
           "column": 3,
           "line": 39
@@ -3290,7 +3290,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Minutes of inactivity, after which Ferdi should automatically lock. Use 0 to disable",
+        "defaultMessage": "!!!Minutes of inactivity, after which Engage Docke Dock should automatically lock. Use 0 to disable",
         "end": {
           "column": 3,
           "line": 43
@@ -3329,7 +3329,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Please make sure to set a password you'll remember.\nIf you loose this password, you will have to reinstall Ferdi.",
+        "defaultMessage": "!!!Please make sure to set a password you'll remember.\nIf you loose this password, you will have to reinstall Engage Docke Dock.",
         "end": {
           "column": 3,
           "line": 55
@@ -3342,7 +3342,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Ferdi or lock Ferdi yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.",
+        "defaultMessage": "!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Engage Docke Dock orEngage Dock Engage Dock yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.",
         "end": {
           "column": 3,
           "line": 59
@@ -3368,7 +3368,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Ferdi.",
+        "defaultMessage": "!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Engage Docke Dock.",
         "end": {
           "column": 3,
           "line": 67
@@ -3472,7 +3472,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Help us to translate Ferdi into your language.",
+        "defaultMessage": "!!!Help us to translate Engage Docke Dock into your language.",
         "end": {
           "column": 3,
           "line": 99
@@ -3485,7 +3485,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Ferdi uses your Mac's build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac's System Preferences.",
+        "defaultMessage": "!!!Engage Docke Dock uses your Mac's build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac's System Preferences.",
         "end": {
           "column": 3,
           "line": 103
@@ -3511,7 +3511,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Ferdi cache is currently using {size} of disk space.",
+        "defaultMessage": "!!!Engage Docke Dock cache is currently using {size} of disk space.",
         "end": {
           "column": 3,
           "line": 111
@@ -3602,7 +3602,7 @@
         }
       },
       {
-        "defaultMessage": "!!!You are using the latest version of Ferdi",
+        "defaultMessage": "!!!You are using the latest version of Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 139
@@ -3677,7 +3677,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!About Ferdi",
+        "defaultMessage": "!!!About Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 10
@@ -3690,7 +3690,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Do you like Ferdi?",
+        "defaultMessage": "!!!Do you like Engage Docke Dock?",
         "end": {
           "column": 3,
           "line": 14
@@ -3703,7 +3703,7 @@
         }
       },
       {
-        "defaultMessage": "!!!<p>Ferdi is an open-source and a community-lead application.</p><p>Thanks to the people who make this possbile:</p>",
+        "defaultMessage": "!!!<p>Engage Docke Dock is an open-source and a community-lead application.</p><p>Thanks to the people who make this possbile:</p>",
         "end": {
           "column": 3,
           "line": 18
@@ -3742,7 +3742,7 @@
         }
       },
       {
-        "defaultMessage": "!!!The development of Ferdi is done by volunteers. People who use Ferdi like you. They maintain, fix, and improve Ferdi in their spare time.",
+        "defaultMessage": "!!!The development of Engage Docke Dock is done by volunteers. People whEngage Dock Engage Dock like you. They maintain, fix, Engage Dockmprove Engage Dock in their spare time.",
         "end": {
           "column": 3,
           "line": 30
@@ -3807,7 +3807,7 @@
         }
       },
       {
-        "defaultMessage": "!!!If you feel like supporting Ferdi development with a donation, you can do so on both,",
+        "defaultMessage": "!!!If you feel like supporting Engage Docke Dock development with a donation, you can do so on both,",
         "end": {
           "column": 3,
           "line": 50
@@ -3859,7 +3859,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Do you want to help us improve Ferdi?",
+        "defaultMessage": "!!!Do you want to help us improve Engage Docke Dock?",
         "end": {
           "column": 3,
           "line": 66
@@ -3916,7 +3916,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Franz's Team Management allows you to manage Franz Subscriptions for multiple users. Please keep in mind that having a Franz Premium subscription will give you no advantages in using Ferdi: The only reason you still have access to Team Management is so you can manage your legacy Franz Teams and so that you don't loose any functionality in managing your account.",
+        "defaultMessage": "!!!Franz's Team Management allows you to manage Franz Subscriptions for multiple users. Please keep in mind that having a Franz Premium subscription will give you no advantages in using Engage Docke Dock: The only reason you still have access to Team Management is so you can manage your legacy Franz Teams and so that you don't loose any functionality in managing your account.",
         "end": {
           "column": 3,
           "line": 33
@@ -4971,7 +4971,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Launch Ferdi on start",
+        "defaultMessage": "!!!Launch Engage Docke Dock on start",
         "end": {
           "column": 3,
           "line": 34
@@ -4997,7 +4997,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Keep Ferdi in background when closing the window",
+        "defaultMessage": "!!!Keep Engage Docke Dock in background when closing the window",
         "end": {
           "column": 3,
           "line": 42
@@ -5023,7 +5023,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Always show Ferdi in System Tray",
+        "defaultMessage": "!!!Always show Engage Docke Dock in System Tray",
         "end": {
           "column": 3,
           "line": 50
@@ -5036,7 +5036,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Always show Ferdi in Menu Bar",
+        "defaultMessage": "!!!Always show Engage Docke Dock in Menu Bar",
         "end": {
           "column": 3,
           "line": 54
@@ -5049,7 +5049,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Reload Ferdi after system resume",
+        "defaultMessage": "!!!Reload Engage Docke Dock after system resume",
         "end": {
           "column": 3,
           "line": 58
@@ -5062,7 +5062,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Minimize Ferdi to system tray",
+        "defaultMessage": "!!!Minimize Engage Docke Dock to system tray",
         "end": {
           "column": 3,
           "line": 62
@@ -5075,7 +5075,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Close Ferdi to system tray",
+        "defaultMessage": "!!!Close Engage Docke Dock to system tray",
         "end": {
           "column": 3,
           "line": 66
@@ -5683,7 +5683,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Changes in Ferdi {version}",
+        "defaultMessage": "!!!Changes in Engage Docke Dock {version}",
         "end": {
           "column": 3,
           "line": 23
@@ -5771,7 +5771,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Ferdi will continue in {seconds} seconds.",
+        "defaultMessage": "!!!Engage Docke Dock will continue in {seconds} seconds.",
         "end": {
           "column": 3,
           "line": 35
@@ -5802,7 +5802,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Nightly builds are highly experimental versions of Ferdi that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don't know what you are doing, we suggest not activating nightly builds.",
+        "defaultMessage": "!!!Nightly builds are highly experimental versions of Engage Docke Dock that may contain unpolished or uncompleted features. These nightly builds are mainly used by developers to test their newly developed features and how they will perform in the final build. If you don't know what you are doing, we suggest not activating nightly builds.",
         "end": {
           "column": 3,
           "line": 23
@@ -6152,7 +6152,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Publishing your debug information helps us find issues and errors in Ferdi. By publishing your debug information you accept Ferdi Debugger's privacy policy and terms of service",
+        "defaultMessage": "!!!Publishing your debug information helps us find issues and errors in Engage Docke Dock. By publishing your debug information you aEngage Dock Engage Dock Debugger's privacy policy and terms of service",
         "end": {
           "column": 3,
           "line": 24
@@ -6398,7 +6398,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Ferdi is better together!",
+        "defaultMessage": "!!!Engage Docke Dock is better together!",
         "end": {
           "column": 3,
           "line": 20
@@ -6411,7 +6411,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Tell your friends and colleagues how awesome Ferdi is and help us to spread the word.",
+        "defaultMessage": "!!!Tell your friends and colleagues how awesome Engage Docke Dock is and help us to spread the word.",
         "end": {
           "column": 3,
           "line": 24
@@ -7093,7 +7093,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Less is More: Introducing Ferdi Workspaces",
+        "defaultMessage": "!!!Less is More: Introducing Engage Docke Dock Workspaces",
         "end": {
           "column": 3,
           "line": 51
@@ -7339,7 +7339,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "!!!Can't connect to Ferdi Online Services",
+        "defaultMessage": "!!!Can't connect to Engage Docke Dock Online Services",
         "end": {
           "column": 3,
           "line": 7
@@ -7838,7 +7838,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Reload Ferdi",
+        "defaultMessage": "!!!Reload Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 138
@@ -7851,7 +7851,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Lock Ferdi",
+        "defaultMessage": "!!!Lock Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 142
@@ -7968,7 +7968,7 @@
         }
       },
       {
-        "defaultMessage": "!!!Ferdi Debug Information",
+        "defaultMessage": "!!!Engage Docke Dock Debug Information",
         "end": {
           "column": 3,
           "line": 178
@@ -8111,7 +8111,7 @@
         }
       },
       {
-        "defaultMessage": "!!!About Ferdi",
+        "defaultMessage": "!!!About Engage Docke Dock",
         "end": {
           "column": 3,
           "line": 222

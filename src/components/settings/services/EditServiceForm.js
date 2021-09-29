@@ -82,7 +82,7 @@ const messages = defineMessages({
   },
   customUrlPremiumInfo: {
     id: 'settings.service.form.customUrlPremiumInfo',
-    defaultMessage: '!!!To add self hosted services, you need a Ferdi Premium Supporter Account.',
+    defaultMessage: '!!!To add self hosted services, you need a Engage Dock Premium Supporter Account.',
   },
   customUrlUpgradeAccount: {
     id: 'settings.service.form.customUrlUpgradeAccount',
@@ -130,11 +130,11 @@ const messages = defineMessages({
   },
   proxyRestartInfo: {
     id: 'settings.service.form.proxy.restartInfo',
-    defaultMessage: '!!!Please restart Ferdi after changing proxy Settings.',
+    defaultMessage: '!!!Please restart Engage Dock after changing proxy Settings.',
   },
   proxyInfo: {
     id: 'settings.service.form.proxy.info',
-    defaultMessage: '!!!Proxy settings will not be synchronized with the Ferdi servers.',
+    defaultMessage: '!!!Proxy settings will not be synchronized with the Engage Dock servers.',
   },
 });
 

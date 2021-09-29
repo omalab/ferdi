@@ -1,7 +1,7 @@
 import { reaction } from 'mobx';
 import { ServiceLimitStore } from './store';
 
-const debug = require('debug')('Ferdi:feature:serviceLimit');
+const debug = require('debug')('EngageDock:feature:serviceLimit');
 
 let store = null;
 

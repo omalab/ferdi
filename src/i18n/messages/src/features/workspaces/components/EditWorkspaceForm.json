@@ -2,7 +2,7 @@
   {
     "id": "settings.workspace.form.buttonDelete",
     "defaultMessage": "!!!Delete workspace",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 21,
       "column": 16
@@ -15,7 +15,7 @@
   {
     "id": "settings.workspace.form.buttonSave",
     "defaultMessage": "!!!Save workspace",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 25,
       "column": 14
@@ -28,7 +28,7 @@
   {
     "id": "settings.workspace.form.name",
     "defaultMessage": "!!!Name",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 29,
       "column": 8
@@ -41,7 +41,7 @@
   {
     "id": "settings.workspace.form.yourWorkspaces",
     "defaultMessage": "!!!Your workspaces",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 33,
       "column": 18
@@ -54,7 +54,7 @@
   {
     "id": "settings.workspace.form.keepLoaded",
     "defaultMessage": "!!!Keep this workspace loaded*",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 37,
       "column": 14
@@ -67,7 +67,7 @@
   {
     "id": "settings.workspace.form.keepLoadedInfo",
     "defaultMessage": "!!!*This option will be overwritten by the global \"Keep all workspaces loaded\" option.",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 41,
       "column": 18
@@ -80,7 +80,7 @@
   {
     "id": "settings.workspace.form.servicesInWorkspaceHeadline",
     "defaultMessage": "!!!Services in this Workspace",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 46,
       "column": 31
@@ -93,7 +93,7 @@
   {
     "id": "settings.services.noServicesAdded",
     "defaultMessage": "!!!Start by adding a service.",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 50,
       "column": 19
@@ -106,7 +106,7 @@
   {
     "id": "settings.services.discoverServices",
     "defaultMessage": "!!!Discover services",
-    "file": "src/features/workspaces/components/EditWorkspaceForm.js",
+    "file": "src\\features\\workspaces\\components\\EditWorkspaceForm.js",
     "start": {
       "line": 54,
       "column": 20

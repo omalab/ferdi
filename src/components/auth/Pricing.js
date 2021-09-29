@@ -57,7 +57,7 @@ const messages = defineMessages({
   },
   ctaSkip: {
     id: 'pricing.trial.cta.skip',
-    defaultMessage: '!!!Continue to Ferdi',
+    defaultMessage: '!!!Continue to Engage Dock',
   },
   featuresHeadline: {
     id: 'pricing.trial.features.headline',

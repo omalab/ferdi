@@ -53,7 +53,7 @@ export default @injectSheet(styles) @withTheme class AppLoader extends Component
 
     return (
       <FullscreenLoader
-        title="Ferdi"
+        title="Engage Dock"
         className={classes.component}
         spinnerColor={theme.colorAppLoaderSpinner}
       >

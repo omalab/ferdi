@@ -9,7 +9,7 @@
     </a>
 </p>
 
-# Ferdi
+# Engage Dock
 
 <p align="center">
 <img alt="GitHub Releases" src="https://img.shields.io/github/downloads/getferdi/ferdi/latest/total?label=Downloads&logo=iCloud&logoColor=%23FFFFFF">

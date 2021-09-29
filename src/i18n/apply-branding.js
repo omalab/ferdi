@@ -4,7 +4,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-console.log('Applying Ferdi branding to translations...');
+console.log('Applying Engage Dock branding to translations...');
 
 // Keys to ignore when applying branding
 const ignore = [
@@ -32,7 +32,7 @@ const ignoreFiles = [
 const replace = {
   'meetfranz.com': 'getferdi.com',
   'meetferdi.com': 'getferdi.com', // If Franz already got replaced with Ferdi
-  franz: 'Ferdi',
+  franz: 'Engage Dock',
   '!!!': '',
 };
 

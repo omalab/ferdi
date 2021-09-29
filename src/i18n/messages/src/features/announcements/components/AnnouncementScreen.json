@@ -1,8 +1,8 @@
 [
   {
     "id": "feature.announcements.changelog.headline",
-    "defaultMessage": "!!!Changes in Ferdi {version}",
-    "file": "src/features/announcements/components/AnnouncementScreen.js",
+    "defaultMessage": "!!!Changes in Engage Dock {version}",
+    "file": "src\\features\\announcements\\components\\AnnouncementScreen.js",
     "start": {
       "line": 20,
       "column": 12

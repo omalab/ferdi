@@ -36,7 +36,7 @@ require('@electron/remote/main').initialize();
 
 
 
-const debug = require('debug')('Ferdi:App');
+const debug = require('debug')('EngageDock:App');
 
 // From Electron 9 onwards, app.allowRendererProcessReuse = true by default. This causes the app to crash on Windows due to the
 // Electron Windows Notification API crashing. Setting this to false fixes the issue until the electron team fixes the notification bug
@@ -118,7 +118,7 @@ if (!gotTheLock) {
           } else if (argv.includes('--quit')) {
             // Needs to be delayed to not interfere with mainWindow.restore();
             setTimeout(() => {
-              debug('Quitting Ferdi via Task');
+              debug('Quitting Engage Dock via Task');
               app.quit();
             }, 1);
           }
@@ -376,13 +376,13 @@ app.on('ready', () => {
       arguments: `${isDevMode ? `${__dirname} ` : ''}--reset-window`,
       iconPath: asarPath(path.join(isDevMode ? `${__dirname}../src/` : __dirname, 'assets/images/taskbar/win32/display.ico')),
       iconIndex: 0,
-      title: 'Move Ferdi to Current Display',
-      description: 'Restore the position and size of Ferdi',
+      title: 'Move Engage Dock to Current Display',
+      description: 'Restore the position and size of Engage Dock',
     }, {
       program: process.execPath,
       arguments: `${isDevMode ? `${__dirname} ` : ''}--quit`,
       iconIndex: 0,
-      title: 'Quit Ferdi',
+      title: 'Quit Engage Dock',
     }]);
   }
 

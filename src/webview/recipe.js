@@ -31,7 +31,7 @@ import { screenShareCss } from './screenshare';
 
 import { DEFAULT_APP_SETTINGS, isDevMode } from '../environment';
 
-const debug = require('debug')('Ferdi:Plugin');
+const debug = require('debug')('EngageDock:Plugin');
 
 class RecipeController {
   @observable settings = {

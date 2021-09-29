@@ -163,7 +163,7 @@ export default @inject('stores', 'actions') @observer class ServiceView extends 
               <div>
                 <span role="img" aria-label="Sleeping Emoji">😴</span>
                 {' '}
-                This service is currently hibernating. If this page doesn&#x27;t close soon, please try reloading Ferdi.
+                This service is currently hibernating. If this page doesn&#x27;t close soon, please try reloading Engage Dock.
               </div>
             )}
           </>

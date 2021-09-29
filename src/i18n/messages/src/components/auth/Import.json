@@ -1,8 +1,8 @@
 [
   {
     "id": "import.headline",
-    "defaultMessage": "!!!Import your Ferdi 4 services",
-    "file": "src/components/auth/Import.js",
+    "defaultMessage": "!!!Import your Engage Dock 4 services",
+    "file": "src\\components\\auth\\Import.js",
     "start": {
       "line": 13,
       "column": 12
@@ -14,8 +14,8 @@
   },
   {
     "id": "import.notSupportedHeadline",
-    "defaultMessage": "!!!Services not yet supported in Ferdi 5",
-    "file": "src/components/auth/Import.js",
+    "defaultMessage": "!!!Services not yet supported in Engage Dock 5",
+    "file": "src\\components\\auth\\Import.js",
     "start": {
       "line": 17,
       "column": 24
@@ -28,7 +28,7 @@
   {
     "id": "import.submit.label",
     "defaultMessage": "!!!Import {count} services",
-    "file": "src/components/auth/Import.js",
+    "file": "src\\components\\auth\\Import.js",
     "start": {
       "line": 21,
       "column": 21
@@ -41,7 +41,7 @@
   {
     "id": "import.skip.label",
     "defaultMessage": "!!!I want to add services manually",
-    "file": "src/components/auth/Import.js",
+    "file": "src\\components\\auth\\Import.js",
     "start": {
       "line": 25,
       "column": 19

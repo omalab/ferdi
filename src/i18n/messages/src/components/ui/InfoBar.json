@@ -2,7 +2,7 @@
   {
     "id": "infobar.hide",
     "defaultMessage": "!!!Hide",
-    "file": "src/components/ui/InfoBar.js",
+    "file": "src\\components\\ui\\InfoBar.js",
     "start": {
       "line": 12,
       "column": 8

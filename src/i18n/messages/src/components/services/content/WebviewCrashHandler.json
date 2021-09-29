@@ -2,7 +2,7 @@
   {
     "id": "service.crashHandler.headline",
     "defaultMessage": "!!!Oh no!",
-    "file": "src/components/services/content/WebviewCrashHandler.js",
+    "file": "src\\components\\services\\content\\WebviewCrashHandler.js",
     "start": {
       "line": 10,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "service.crashHandler.text",
     "defaultMessage": "!!!{name} has caused an error.",
-    "file": "src/components/services/content/WebviewCrashHandler.js",
+    "file": "src\\components\\services\\content\\WebviewCrashHandler.js",
     "start": {
       "line": 14,
       "column": 8
@@ -28,7 +28,7 @@
   {
     "id": "service.crashHandler.action",
     "defaultMessage": "!!!Reload {name}",
-    "file": "src/components/services/content/WebviewCrashHandler.js",
+    "file": "src\\components\\services\\content\\WebviewCrashHandler.js",
     "start": {
       "line": 18,
       "column": 10
@@ -41,7 +41,7 @@
   {
     "id": "service.crashHandler.autoReload",
     "defaultMessage": "!!!Trying to automatically restore {name} in {seconds} seconds",
-    "file": "src/components/services/content/WebviewCrashHandler.js",
+    "file": "src\\components\\services\\content\\WebviewCrashHandler.js",
     "start": {
       "line": 22,
       "column": 14

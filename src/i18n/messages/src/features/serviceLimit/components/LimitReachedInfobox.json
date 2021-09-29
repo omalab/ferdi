@@ -2,7 +2,7 @@
   {
     "id": "feature.serviceLimit.limitReached",
     "defaultMessage": "!!!You have added {amount} of {limit} services. Please upgrade your account to add more services.",
-    "file": "src/features/serviceLimit/components/LimitReachedInfobox.js",
+    "file": "src\\features\\serviceLimit\\components\\LimitReachedInfobox.js",
     "start": {
       "line": 9,
       "column": 16
@@ -15,7 +15,7 @@
   {
     "id": "premiumFeature.button.upgradeAccount",
     "defaultMessage": "!!!Upgrade account",
-    "file": "src/features/serviceLimit/components/LimitReachedInfobox.js",
+    "file": "src\\features\\serviceLimit\\components\\LimitReachedInfobox.js",
     "start": {
       "line": 13,
       "column": 10

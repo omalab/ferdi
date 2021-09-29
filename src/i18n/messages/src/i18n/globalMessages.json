@@ -1,8 +1,8 @@
 [
   {
     "id": "global.api.unhealthy",
-    "defaultMessage": "!!!Can't connect to Ferdi Online Services",
-    "file": "src/i18n/globalMessages.js",
+    "defaultMessage": "!!!Can't connect to Engage Dock Online Services",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 4,
       "column": 16
@@ -15,7 +15,7 @@
   {
     "id": "global.notConnectedToTheInternet",
     "defaultMessage": "!!!You are not connected to the internet.",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 8,
       "column": 29
@@ -28,7 +28,7 @@
   {
     "id": "global.spellchecking.language",
     "defaultMessage": "!!!Spell checking language",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 12,
       "column": 24
@@ -41,7 +41,7 @@
   {
     "id": "global.spellchecker.useDefault",
     "defaultMessage": "!!!Use System Default ({default})",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 16,
       "column": 29
@@ -54,7 +54,7 @@
   {
     "id": "global.spellchecking.autodetect",
     "defaultMessage": "!!!Detect language automatically",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 20,
       "column": 34
@@ -67,7 +67,7 @@
   {
     "id": "global.spellchecking.autodetect.short",
     "defaultMessage": "!!!Automatic",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 24,
       "column": 39
@@ -80,7 +80,7 @@
   {
     "id": "global.userAgentPref",
     "defaultMessage": "!!!User Agent",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 28,
       "column": 17
@@ -93,7 +93,7 @@
   {
     "id": "global.userAgentHelp",
     "defaultMessage": "!!!Use 'https://whatmyuseragent.com/' (to discover) or 'https://developers.whatismybrowser.com/useragents/explore/' (to choose) your desired user agent and copy-paste it here.",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 32,
       "column": 17
@@ -106,7 +106,7 @@
   {
     "id": "global.franzProRequired",
     "defaultMessage": "!!!Franz Professional Required",
-    "file": "src/i18n/globalMessages.js",
+    "file": "src\\i18n\\globalMessages.js",
     "start": {
       "line": 36,
       "column": 15

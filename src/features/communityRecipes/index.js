@@ -1,7 +1,7 @@
 import { reaction } from 'mobx';
 import { CommunityRecipesStore } from './store';
 
-const debug = require('debug')('Ferdi:feature:communityRecipes');
+const debug = require('debug')('EngageDock:feature:communityRecipes');
 
 export const communityRecipesStore = new CommunityRecipesStore();
 

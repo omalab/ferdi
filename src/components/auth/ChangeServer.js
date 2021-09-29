@@ -21,7 +21,7 @@ const messages = defineMessages({
   },
   warning: {
     id: 'changeserver.warning',
-    defaultMessage: '!!!Extra settings offered by Ferdi will not be saved',
+    defaultMessage: '!!!Extra settings offered by Engage Dock will not be saved',
   },
   customServerLabel: {
     id: 'changeserver.customServerLabel',
@@ -59,7 +59,7 @@ export default @observer class ChangeServer extends Component {
       server: {
         label: this.context.intl.formatMessage(messages.label),
         value: this.props.server,
-        options: [{ value: this.ferdiServer, label: 'Ferdi' }, { value: this.franzServer, label: 'Franz' }, { value: this.defaultServers.includes(this.props.server) ? '' : this.props.server, label: 'Custom' }],
+        options: [{ value: this.ferdiServer, label: 'Engage Dock' }, { value: this.franzServer, label: 'Franz' }, { value: this.defaultServers.includes(this.props.server) ? '' : this.props.server, label: 'Custom' }],
       },
       customServer: {
         label: this.context.intl.formatMessage(messages.customServerLabel),

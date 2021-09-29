@@ -5,7 +5,7 @@ import { config } from './constants';
 import { DEFAULT_FEATURES_CONFIG } from '../../config';
 import { getUserWorkspacesRequest } from '../workspaces/api';
 
-const debug = require('debug')('Ferdi:feature:delayApp');
+const debug = require('debug')('EngageDock:feature:delayApp');
 
 export const state = observable({
   isDelayAppScreenVisible: DEFAULT_FEATURES_CONFIG.needToWaitToProceed,

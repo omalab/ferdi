@@ -16,11 +16,11 @@ import ServicesStore from '../../stores/ServicesStore';
 const messages = defineMessages({
   headline: {
     id: 'feature.shareFranz.headline',
-    defaultMessage: '!!!Ferdi is better together!',
+    defaultMessage: '!!!Engage Dock is better together!',
   },
   text: {
     id: 'feature.shareFranz.text',
-    defaultMessage: '!!!Tell your friends and colleagues how awesome Ferdi is and help us to spread the word.',
+    defaultMessage: '!!!Tell your friends and colleagues how awesome Engage Dock is and help us to spread the word.',
   },
   actionsEmail: {
     id: 'feature.shareFranz.action.email',

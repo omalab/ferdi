@@ -48,7 +48,7 @@ export default class Recipe {
     }
 
     if (!data.id) {
-      // Ferdi 4 recipes do not have an Id
+      // Engage Dock 4 recipes do not have an Id
       throw Error(`Recipe '${data.name}' requires Id`);
     }
 

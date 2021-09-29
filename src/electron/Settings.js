@@ -4,7 +4,7 @@ import path from 'path';
 
 import { SETTINGS_PATH } from '../environment';
 
-const debug = require('debug')('Ferdi:Settings');
+const debug = require('debug')('EngageDock:Settings');
 
 export default class Settings {
   type = '';

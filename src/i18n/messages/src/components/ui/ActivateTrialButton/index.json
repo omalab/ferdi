@@ -2,7 +2,7 @@
   {
     "id": "feature.delayApp.upgrade.action",
     "defaultMessage": "!!!Get a Franz Supporter License",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 13,
       "column": 10
@@ -15,7 +15,7 @@
   {
     "id": "feature.delayApp.trial.action",
     "defaultMessage": "!!!Yes, I want the free 14 day trial of Franz Professional",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 17,
       "column": 15
@@ -28,7 +28,7 @@
   {
     "id": "feature.delayApp.upgrade.actionShort",
     "defaultMessage": "!!!Upgrade account",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 21,
       "column": 15
@@ -41,7 +41,7 @@
   {
     "id": "feature.delayApp.trial.actionShort",
     "defaultMessage": "!!!Activate the free Franz Professional trial",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 25,
       "column": 20
@@ -54,7 +54,7 @@
   {
     "id": "pricing.trial.terms.headline",
     "defaultMessage": "!!!No strings attached",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 29,
       "column": 29
@@ -67,7 +67,7 @@
   {
     "id": "pricing.trial.terms.noCreditCard",
     "defaultMessage": "!!!No credit card required",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 33,
       "column": 16
@@ -80,7 +80,7 @@
   {
     "id": "pricing.trial.terms.automaticTrialEnd",
     "defaultMessage": "!!!Your free trial ends automatically after 14 days",
-    "file": "src/components/ui/ActivateTrialButton/index.js",
+    "file": "src\\components\\ui\\ActivateTrialButton\\index.js",
     "start": {
       "line": 37,
       "column": 21

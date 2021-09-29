@@ -41,10 +41,10 @@ export default function userAgent(removeChromeVersion = false, addFerdiVersion =
 
   let applicationString = '';
   if (addFerdiVersion) {
-    applicationString = ` Ferdi/${ferdiVersion} Electron/${electronVersion}`;
+    applicationString = ` Engage Dock/${ferdiVersion} Electron/${electronVersion}`;
   }
 
   // Chrome is pinned to WebKit 537.36, the latest version before hard forking to Blink.
   return `Mozilla/5.0 (${platformString}) AppleWebKit/537.36 (KHTML, like Gecko) ${chromeVersionString} Safari/537.36${applicationString}`;
-  // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Ferdi/5.5.1-nightly.13 Electron/8.2.3
+  // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Engage Dock/5.5.1-nightly.13 Electron/8.2.3
 }

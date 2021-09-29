@@ -3,7 +3,7 @@ import { autoUpdater } from 'electron-updater';
 import { GITHUB_NIGHTLIES_REPO_NAME, GITHUB_ORG_NAME } from '../../config';
 import { isMac, isWindows } from '../../environment';
 
-const debug = require('debug')('Ferdi:ipcApi:autoUpdate');
+const debug = require('debug')('EngageDock:ipcApi:autoUpdate');
 
 export default (params) => {
   const enableUpdate = Boolean(params.settings.app.get('automaticUpdates'));

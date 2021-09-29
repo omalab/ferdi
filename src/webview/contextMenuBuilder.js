@@ -1,7 +1,7 @@
 /**
  * Context Menu builder.
  *
- * Based on "electron-spellchecker"'s  ContextMenuBuilder but customized for Ferdi
+ * Based on "electron-spellchecker"'s  ContextMenuBuilder but customized for Engage Dock
  * and for usage with Electron's build-in spellchecker
  *
  * Source: https://github.com/electron-userland/electron-spellchecker/blob/master/src/context-menu-builder.js
@@ -29,9 +29,9 @@ const contextMenuStringTable = {
   paste: () => 'Paste',
   searchWith: ({ searchEngine }) => `Search with ${searchEngine}`,
   openLinkUrl: () => 'Open Link',
-  openLinkInFerdiUrl: () => 'Open Link in Ferdi',
+  openLinkInFerdiUrl: () => 'Open Link in Engage Dock',
   openInBrowser: () => 'Open in Browser',
-  openLinkInRecipes: () => 'Open Link in Ferdi',
+  openLinkInRecipes: () => 'Open Link in Engage Dock',
   openLinkIn: () => 'Open Link in Email service',
   copyLinkUrl: () => 'Copy Link',
   copyImageUrl: () => 'Copy Image Address',

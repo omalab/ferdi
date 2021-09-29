@@ -187,7 +187,7 @@ class ButtonComponent extends Component<IProps> {
     let showLoader = false;
     if (loaded) {
       showLoader = !loaded;
-      console.warn('Ferdi Button prop `loaded` will be deprecated in the future. Please use `busy` instead');
+      console.warn('Engage Dock Button prop `loaded` will be deprecated in the future. Please use `busy` instead');
     }
     if (busy) {
       showLoader = busy;

@@ -2,7 +2,7 @@
   {
     "id": "settings.workspaces.headline",
     "defaultMessage": "!!!Your workspaces",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 20,
       "column": 12
@@ -15,7 +15,7 @@
   {
     "id": "settings.workspaces.noWorkspacesAdded",
     "defaultMessage": "!!!You haven't created any workspaces yet.",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 24,
       "column": 19
@@ -28,7 +28,7 @@
   {
     "id": "settings.workspaces.workspacesRequestFailed",
     "defaultMessage": "!!!Could not load your workspaces",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 28,
       "column": 27
@@ -41,7 +41,7 @@
   {
     "id": "settings.workspaces.tryReloadWorkspaces",
     "defaultMessage": "!!!Try again",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 32,
       "column": 23
@@ -54,7 +54,7 @@
   {
     "id": "settings.workspaces.updatedInfo",
     "defaultMessage": "!!!Your changes have been saved",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 36,
       "column": 15
@@ -67,7 +67,7 @@
   {
     "id": "settings.workspaces.deletedInfo",
     "defaultMessage": "!!!Workspace has been deleted",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 40,
       "column": 15
@@ -80,7 +80,7 @@
   {
     "id": "settings.workspaces.workspaceFeatureInfo",
     "defaultMessage": "!!!Info about workspace feature",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 44,
       "column": 24
@@ -92,8 +92,8 @@
   },
   {
     "id": "settings.workspaces.workspaceFeatureHeadline",
-    "defaultMessage": "!!!Less is More: Introducing Ferdi Workspaces",
-    "file": "src/features/workspaces/components/WorkspacesDashboard.js",
+    "defaultMessage": "!!!Less is More: Introducing Engage Dock Workspaces",
+    "file": "src\\features\\workspaces\\components\\WorkspacesDashboard.js",
     "start": {
       "line": 48,
       "column": 28

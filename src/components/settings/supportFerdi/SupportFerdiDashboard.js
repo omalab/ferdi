@@ -6,15 +6,15 @@ import InfoBar from '../../ui/InfoBar';
 const messages = defineMessages({
   headline: {
     id: 'settings.supportFerdi.headline',
-    defaultMessage: '!!!About Ferdi',
+    defaultMessage: '!!!About Engage Dock',
   },
   title: {
     id: 'settings.supportFerdi.title',
-    defaultMessage: '!!!Do you like Ferdi?',
+    defaultMessage: '!!!Do you like Engage Dock?',
   },
   aboutIntro: {
     id: 'settings.supportFerdi.aboutIntro',
-    defaultMessage: '!!!<p>Ferdi is an open-source and a community-lead application.</p><p>Thanks to the people who make this possbile:</p>',
+    defaultMessage: '!!!<p>Engage Dock is an open-source and a community-lead application.</p><p>Thanks to the people who make this possbile:</p>',
   },
   textListContributors: {
     id: 'settings.supportFerdi.textListContributors',
@@ -26,7 +26,7 @@ const messages = defineMessages({
   },
   textVolunteers: {
     id: 'settings.supportFerdi.textVolunteers',
-    defaultMessage: '!!!The development of Ferdi is done by volunteers. People who use Ferdi like you. They maintain, fix, and improve Ferdi in their spare time.',
+    defaultMessage: '!!!The development of Engage Dock is done by volunteers. People who use Engage Dock like you. They maintain, fix, and improve Engage Dock in their spare time.',
   },
   textSupportWelcome: {
     id: 'settings.supportFerdi.textSupportWelcome',
@@ -46,7 +46,7 @@ const messages = defineMessages({
   },
   textDonation: {
     id: 'settings.supportFerdi.textDonation',
-    defaultMessage: '!!!If you feel like supporting Ferdi development with a donation, you can do so on both,',
+    defaultMessage: '!!!If you feel like supporting Engage Dock development with a donation, you can do so on both,',
   },
   textDonationAnd: {
     id: 'settings.supportFerdi.textDonationAnd',
@@ -62,7 +62,7 @@ const messages = defineMessages({
   },
   bannerText: {
     id: 'settings.supportFerdi.bannerText',
-    defaultMessage: '!!!Do you want to help us improve Ferdi?',
+    defaultMessage: '!!!Do you want to help us improve Engage Dock?',
   },
 });
 

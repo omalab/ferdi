@@ -2,7 +2,7 @@
   {
     "id": "global.upgradeButton.upgradeToPro",
     "defaultMessage": "!!!Upgrade to Franz Professional",
-    "file": "src/components/ui/UpgradeButton/index.js",
+    "file": "src\\components\\ui\\UpgradeButton\\index.js",
     "start": {
       "line": 13,
       "column": 16

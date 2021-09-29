@@ -43,7 +43,7 @@ const messages = defineMessages({
   },
   customServerSuggestion: {
     id: 'login.customServerSuggestion',
-    defaultMessage: '!!!Try importing your Franz account into Ferdi',
+    defaultMessage: '!!!Try importing your Franz account into Engage Dock',
   },
   tokenExpired: {
     id: 'login.tokenExpired',
@@ -63,7 +63,7 @@ const messages = defineMessages({
   },
   serverless: {
     id: 'services.serverless',
-    defaultMessage: '!!!Use Ferdi without an Account',
+    defaultMessage: '!!!Use Engage Dock without an Account',
   },
   passwordLink: {
     id: 'login.link.password',

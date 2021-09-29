@@ -31,7 +31,7 @@ const messages = defineMessages({
   },
   text: {
     id: 'feature.delayApp.text',
-    defaultMessage: '!!!Ferdi will continue in {seconds} seconds.',
+    defaultMessage: '!!!Engage Dock will continue in {seconds} seconds.',
   },
 });
 

@@ -2,7 +2,7 @@
   {
     "id": "subscription.cta.choosePlan",
     "defaultMessage": "!!!Choose your plan",
-    "file": "src/components/subscription/SubscriptionForm.js",
+    "file": "src\\components\\subscription\\SubscriptionForm.js",
     "start": {
       "line": 13,
       "column": 21
@@ -15,7 +15,7 @@
   {
     "id": "settings.account.headlineUpgradeAccount",
     "defaultMessage": "!!!Upgrade your account and get the full Franz experience",
-    "file": "src/components/subscription/SubscriptionForm.js",
+    "file": "src\\components\\subscription\\SubscriptionForm.js",
     "start": {
       "line": 17,
       "column": 18
@@ -28,7 +28,7 @@
   {
     "id": "subscription.teaser.intro",
     "defaultMessage": "!!!Franz 5 comes with a wide range of new features to boost up your everyday communication - batteries included. Check out our new plans and find out which one suits you most!",
-    "file": "src/components/subscription/SubscriptionForm.js",
+    "file": "src\\components\\subscription\\SubscriptionForm.js",
     "start": {
       "line": 21,
       "column": 14
@@ -41,7 +41,7 @@
   {
     "id": "subscription.teaser.includedFeatures",
     "defaultMessage": "!!!Paid Franz Plans include:",
-    "file": "src/components/subscription/SubscriptionForm.js",
+    "file": "src\\components\\subscription\\SubscriptionForm.js",
     "start": {
       "line": 25,
       "column": 20

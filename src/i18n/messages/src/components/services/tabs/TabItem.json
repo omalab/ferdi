@@ -2,7 +2,7 @@
   {
     "id": "tabs.item.reload",
     "defaultMessage": "!!!Reload",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 20,
       "column": 10
@@ -15,7 +15,7 @@
   {
     "id": "tabs.item.edit",
     "defaultMessage": "!!!Edit",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 24,
       "column": 8
@@ -28,7 +28,7 @@
   {
     "id": "tabs.item.disableNotifications",
     "defaultMessage": "!!!Disable notifications",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 28,
       "column": 24
@@ -41,7 +41,7 @@
   {
     "id": "tabs.item.enableNotification",
     "defaultMessage": "!!!Enable notifications",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 32,
       "column": 23
@@ -54,7 +54,7 @@
   {
     "id": "tabs.item.disableAudio",
     "defaultMessage": "!!!Disable audio",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 36,
       "column": 16
@@ -67,7 +67,7 @@
   {
     "id": "tabs.item.enableAudio",
     "defaultMessage": "!!!Enable audio",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 40,
       "column": 15
@@ -80,7 +80,7 @@
   {
     "id": "tabs.item.disableService",
     "defaultMessage": "!!!Disable Service",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 44,
       "column": 18
@@ -93,7 +93,7 @@
   {
     "id": "tabs.item.enableService",
     "defaultMessage": "!!!Enable Service",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 48,
       "column": 17
@@ -106,7 +106,7 @@
   {
     "id": "tabs.item.deleteService",
     "defaultMessage": "!!!Delete Service",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 52,
       "column": 17
@@ -119,7 +119,7 @@
   {
     "id": "tabs.item.confirmDeleteService",
     "defaultMessage": "!!!Do you really want to delete the {serviceName} service?",
-    "file": "src/components/services/tabs/TabItem.js",
+    "file": "src\\components\\services\\tabs\\TabItem.js",
     "start": {
       "line": 56,
       "column": 24

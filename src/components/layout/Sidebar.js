@@ -51,7 +51,7 @@ const messages = defineMessages({
   },
   lockFerdi: {
     id: 'sidebar.lockFerdi',
-    defaultMessage: '!!!Lock Ferdi',
+    defaultMessage: '!!!Lock Engage Dock',
   },
 });
 

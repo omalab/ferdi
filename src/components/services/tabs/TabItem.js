@@ -14,7 +14,7 @@ import { observable, autorun } from 'mobx';
 import ServiceModel from '../../../models/Service';
 import { ctrlKey, cmdKey } from '../../../environment';
 
-const IS_SERVICE_DEBUGGING_ENABLED = (localStorage.getItem('debug') || '').includes('Ferdi:Service');
+const IS_SERVICE_DEBUGGING_ENABLED = (localStorage.getItem('debug') || '').includes('Engage Dock:Service');
 
 const messages = defineMessages({
   reload: {

@@ -69,7 +69,7 @@ const messages = defineMessages({
   deleteInfo: {
     id: 'settings.account.deleteInfo',
     defaultMessage:
-      "!!!If you don't need your Ferdi account any longer, you can delete your account and all related data here.",
+      "!!!If you don't need your Engage Dock account any longer, you can delete your account and all related data here.",
   },
   deleteEmailSent: {
     id: 'settings.account.deleteEmailSent',
@@ -99,7 +99,7 @@ const messages = defineMessages({
   },
   accountUnavailableInfo: {
     id: 'settings.account.accountUnavailableInfo',
-    defaultMessage: 'You are using Ferdi without an account. If you want to use Ferdi with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.',
+    defaultMessage: 'You are using Engage Dock without an account. If you want to use Engage Dock with an account and keep your services synchronized across installations, please select a server in the Settings tab then login.',
   },
 });
 

@@ -31,15 +31,15 @@ const messages = defineMessages({
   },
   sentryInfo: {
     id: 'settings.app.sentryInfo',
-    defaultMessage: '!!!Sending telemetry data allows us to find errors in Ferdi - we will not send any personal information like your message data! Changing this option requires you to restart Ferdi.',
+    defaultMessage: '!!!Sending telemetry data allows us to find errors in Engage Dock - we will not send any personal information like your message data! Changing this option requires you to restart Engage Dock.',
   },
   hibernateInfo: {
     id: 'settings.app.hibernateInfo',
-    defaultMessage: '!!!By default, Ferdi will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.',
+    defaultMessage: '!!!By default, Engage Dock will keep all your services open and loaded in the background so they are ready when you want to use them. Service Hibernation will unload your services after a specified amount. This is useful to save RAM or keeping services from slowing down your computer.',
   },
   inactivityLockInfo: {
     id: 'settings.app.inactivityLockInfo',
-    defaultMessage: '!!!Minutes of inactivity, after which Ferdi should automatically lock. Use 0 to disable',
+    defaultMessage: '!!!Minutes of inactivity, after which Engage Dock should automatically lock. Use 0 to disable',
   },
   todoServerInfo: {
     id: 'settings.app.todoServerInfo',
@@ -51,11 +51,11 @@ const messages = defineMessages({
   },
   lockedPasswordInfo: {
     id: 'settings.app.lockedPasswordInfo',
-    defaultMessage: '!!!Please make sure to set a password you\'ll remember.\nIf you loose this password, you will have to reinstall Ferdi.',
+    defaultMessage: '!!!Please make sure to set a password you\'ll remember.\nIf you loose this password, you will have to reinstall Engage Dock.',
   },
   lockInfo: {
     id: 'settings.app.lockInfo',
-    defaultMessage: '!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Ferdi or lock Ferdi yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.',
+    defaultMessage: '!!!Password Lock allows you to keep your messages protected.\nUsing Password Lock, you will be prompted to enter your password everytime you start Engage Dock or lock Engage Dock yourself using the lock symbol in the bottom left corner or the shortcut CMD/CTRL+Shift+L.',
   },
   scheduledDNDTimeInfo: {
     id: 'settings.app.scheduledDNDTimeInfo',
@@ -63,7 +63,7 @@ const messages = defineMessages({
   },
   scheduledDNDInfo: {
     id: 'settings.app.scheduledDNDInfo',
-    defaultMessage: '!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Ferdi.',
+    defaultMessage: '!!!Scheduled Do-not-Disturb allows you to define a period of time in which you do not want to get Notifications from Engage Dock.',
   },
   headlineLanguage: {
     id: 'settings.app.headlineLanguage',
@@ -95,11 +95,11 @@ const messages = defineMessages({
   },
   translationHelp: {
     id: 'settings.app.translationHelp',
-    defaultMessage: '!!!Help us to translate Ferdi into your language.',
+    defaultMessage: '!!!Help us to translate Engage Dock into your language.',
   },
   spellCheckerLanguageInfo: {
     id: 'settings.app.spellCheckerLanguageInfo',
-    defaultMessage: '!!!Ferdi uses your Mac\'s build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac\'s System Preferences.',
+    defaultMessage: '!!!Engage Dock uses your Mac\'s build-in spellchecker to check for typos. If you want to change the languages the spellchecker checks for, you can do so in your Mac\'s System Preferences.',
   },
   subheadlineCache: {
     id: 'settings.app.subheadlineCache',
@@ -107,7 +107,7 @@ const messages = defineMessages({
   },
   cacheInfo: {
     id: 'settings.app.cacheInfo',
-    defaultMessage: '!!!Ferdi cache is currently using {size} of disk space.',
+    defaultMessage: '!!!Engage Dock cache is currently using {size} of disk space.',
   },
   cacheNotCleared: {
     id: 'settings.app.cacheNotCleared',
@@ -135,7 +135,7 @@ const messages = defineMessages({
   },
   updateStatusUpToDate: {
     id: 'settings.app.updateStatusUpToDate',
-    defaultMessage: '!!!You are using the latest version of Ferdi',
+    defaultMessage: '!!!You are using the latest version of Engage Dock',
   },
   currentVersion: {
     id: 'settings.app.currentVersion',
@@ -686,7 +686,7 @@ export default @observer class EditSettingsForm extends Component {
                 <span className="mdi mdi-github-face" />
                 <span>
 
-                  Ferdi is based on
+                  Engage Dock is based on
                   {' '}
                   <a href={`${GITHUB_FRANZ_URL}/franz`} target="_blank">Franz</a>
 

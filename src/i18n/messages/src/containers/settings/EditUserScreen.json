@@ -2,7 +2,7 @@
   {
     "id": "settings.user.form.firstname",
     "defaultMessage": "!!!Firstname",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 14,
       "column": 13
@@ -15,7 +15,7 @@
   {
     "id": "settings.user.form.lastname",
     "defaultMessage": "!!!Lastname",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 18,
       "column": 12
@@ -28,7 +28,7 @@
   {
     "id": "settings.user.form.email",
     "defaultMessage": "!!!Email",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 22,
       "column": 9
@@ -41,7 +41,7 @@
   {
     "id": "settings.user.form.accountType.label",
     "defaultMessage": "!!!Account type",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 26,
       "column": 20
@@ -54,7 +54,7 @@
   {
     "id": "settings.user.form.accountType.individual",
     "defaultMessage": "!!!Individual",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 30,
       "column": 25
@@ -67,7 +67,7 @@
   {
     "id": "settings.user.form.accountType.non-profit",
     "defaultMessage": "!!!Non-Profit",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 34,
       "column": 24
@@ -80,7 +80,7 @@
   {
     "id": "settings.user.form.accountType.company",
     "defaultMessage": "!!!Company",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 38,
       "column": 22
@@ -93,7 +93,7 @@
   {
     "id": "settings.user.form.currentPassword",
     "defaultMessage": "!!!Current password",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 42,
       "column": 19
@@ -106,7 +106,7 @@
   {
     "id": "settings.user.form.newPassword",
     "defaultMessage": "!!!New password",
-    "file": "src/containers/settings/EditUserScreen.js",
+    "file": "src\\containers\\settings\\EditUserScreen.js",
     "start": {
       "line": 46,
       "column": 15

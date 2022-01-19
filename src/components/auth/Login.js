@@ -41,7 +41,7 @@ const messages = defineMessages({
   },
   customServerSuggestion: {
     id: 'login.customServerSuggestion',
-    defaultMessage: 'Try importing your Franz account into Ferdi',
+    defaultMessage: 'Try importing your Franz account into Engage Dock',
   },
   tokenExpired: {
     id: 'login.tokenExpired',

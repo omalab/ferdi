@@ -2,7 +2,7 @@ import { action, computed, observe, observable } from 'mobx';
 
 import defaultUserAgent from '../helpers/userAgent-helpers';
 
-const debug = require('debug')('Ferdi:UserAgent');
+const debug = require('debug')('EngageDock:UserAgent');
 
 export default class UserAgent {
   _willNavigateListener = null;

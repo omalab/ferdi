@@ -4,7 +4,7 @@ const { validateAll } = use('Validator');
 const Env = use('Env');
 
 const fetch = require('node-fetch');
-const debug = require('debug')('Ferdi:internalServer:RecipeController');
+const debug = require('debug')('EngageDock:internalServer:RecipeController');
 const { LIVE_FERDI_API } = require('../../../../config');
 const { API_VERSION } = require('../../../../environment-remote');
 

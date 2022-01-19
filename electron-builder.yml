@@ -2,7 +2,7 @@ directories:
   app: ./build
   output: ./out
 
-appId: "com.kytwb.ferdi"
+appId: "com.omalab.engagedock"
 
 mac:
   hardenedRuntime: true
@@ -47,9 +47,9 @@ win:
 linux:
   icon: ./build-helpers/images/icons
   category: Network;InstantMessaging;
-  executableName: ferdi
+  executableName: engageDock
   synopsis: "Messaging app for WhatsApp, Slack, Telegram, Gmail, Hangouts and many many more."
-  description: "Ferdi is your messaging app / former Emperor of Austria and combines chat & messaging services into one application. Ferdi currently supports Slack, WhatsApp, Gmail, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more. You can download Ferdi for free for Mac & Windows."
+  description: "Enage Dock is your messaging app / former Emperor of Austria and combines chat & messaging services into one application. Engage Dock currently supports Slack, WhatsApp, Gmail, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more. You can download Engage Dock for free for Mac & Windows."
   target:
     - target: AppImage
     - target: deb
@@ -64,8 +64,8 @@ nsis:
   oneClick: true
 
 protocols:
-  name: Ferdi
-  schemes: [ferdi]
+  name: Engage Dock
+  schemes: [engageDock]
 
 asarUnpack:
   - ./recipes

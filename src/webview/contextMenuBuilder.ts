@@ -1,7 +1,7 @@
 /**
  * Context Menu builder.
  *
- * Based on "electron-spellchecker"'s  ContextMenuBuilder but customized for Ferdi
+ * Based on "electron-spellchecker"'s  ContextMenuBuilder but customized for Engage Dock
  * and for usage with Electron's build-in spellchecker
  *
  * Source: https://github.com/electron-userland/electron-spellchecker/blob/master/src/context-menu-builder.js

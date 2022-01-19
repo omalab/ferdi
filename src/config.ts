@@ -155,7 +155,7 @@ export const FRANZ_DEV_DOCS = 'http://bit.ly/franz-dev-hub';
 
 export const FILE_SYSTEM_SETTINGS_TYPES = ['app', 'proxy'];
 
-export const LOCAL_SERVER = 'You are using Ferdi without a server';
+export const LOCAL_SERVER = 'You are using Engage Dock without a server';
 export const SERVER_NOT_LOADED = 'Ferdi::SERVER_NOT_LOADED';
 
 export const ALLOWED_PROTOCOLS = ['https:', 'http:', 'ftp:', 'ferdi:'];

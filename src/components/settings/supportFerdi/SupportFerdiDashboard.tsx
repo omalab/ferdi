@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 const messages = defineMessages({
   headline: {
     id: 'settings.supportFerdi.headline',
-    defaultMessage: 'About Ferdi',
+    defaultMessage: 'About Engage Dock',
   },
   aboutIntro: {
     id: 'settings.supportFerdi.aboutIntro',
@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
   about: {
     id: 'settings.supportFerdi.about',
-    defaultMessage: 'The development of Ferdi is done by contributors. People who use Ferdi like you. They maintain, fix, and improve Ferdi in their spare time.',
+    defaultMessage: 'The development of Engage Dock is done by contributors. People who use Engage Dock like you. They maintain, fix, and improve Engage Dock in their spare time.',
   }
 });
 

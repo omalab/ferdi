@@ -1,13 +1,13 @@
 const { ferdiVersion } = require('../../environment-remote');
 
 /**
- * Migrate server database to work with current Ferdi version
+ * Migrate server database to work with current Engage Dock version
  */
 const Database = use('Database');
 const User = use('App/Models/User');
 
 const migrateLog = text => {
-  console.log('\u001B[36m%s\u001B[0m', 'Ferdi Migration:', '\u001B[0m', text);
+  console.log('\u001B[36m%s\u001B[0m', 'Engage Dock Migration:', '\u001B[0m', text);
 };
 
 module.exports = async () => {
@@ -21,7 +21,7 @@ module.exports = async () => {
   const user = await User.find(1);
   let settings;
   if (!user) {
-    migrateLog("🎩  Migrating from old Ferdi version as user doesn't exist");
+    migrateLog("🎩  Migrating from old Engage Dock version as user doesn't exist");
 
     // Create new user
     await Database.raw('INSERT INTO  "users" ("id") VALUES (\'1\');');
@@ -41,7 +41,7 @@ module.exports = async () => {
       settings && settings.db_version ? settings.db_version : '5.4.0-beta.2';
     migrateLog(`🔮  Migrating table from ${srcVersion} to ${ferdiVersion}`);
 
-    // Migrate database to current Ferdi version
+    // Migrate database to current Engage Dock version
     // Currently no migrations
 
     // Update version number in database

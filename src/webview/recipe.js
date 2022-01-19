@@ -50,7 +50,7 @@ import {
 
 import { DEFAULT_APP_SETTINGS } from '../config';
 
-const debug = require('debug')('Ferdi:Plugin');
+const debug = require('debug')('EngageDock:Plugin');
 
 const badgeHandler = new BadgeHandler();
 

@@ -1,8 +1,8 @@
 {
-  "name": "ferdi",
-  "productName": "Ferdi",
-  "desktopName": "ferdi.desktop",
-  "appId": "com.kytwb.ferdi",
+  "name": "engagedock",
+  "productName": "Engage Dock",
+  "desktopName": "engageDock.desktop",
+  "appId": "com.omalab.engagedock",
   "version": "5.7.0",
   "description": "Messaging app for WhatsApp, Slack, Telegram, HipChat, Hangouts and many many more.",
   "copyright": "kytwb",

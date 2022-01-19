@@ -9,7 +9,7 @@
     </a>
 </p>
 
-# Ferdi
+# Engage Dock
 
 <p>
 <a href="https://guardrails.io/"><img alt="GuardRails" src="https://img.shields.io/badge/GuardRails-enabled-default.svg"></a>
@@ -23,7 +23,7 @@
 
 > 🤴🏽 Hard-fork of [Franz](https://github.com/meetfranz/franz), adding awesome features and removing unwanted ones.
 
-Ferdi is a desktop app that helps you organize how you use your favourite apps by combining them into one application. It is based on Franz - a software already used by thousands of people - with the difference that Ferdi gives you many additional features and doesn't restrict its usage! Furthermore, Ferdi is compatible with your existing Franz account, so you can continue right where you left off. Please find out more about Ferdi and its features on [getferdi.com](https://getferdi.com).
+Engage Dock is a desktop app that helps you organize how you use your favourite apps by combining them into one application. It is based on Franz - a software already used by thousands of people - with the difference that Engage Dock gives you many additional features and doesn't restrict its usage! Furthermore, Engage Dock is compatible with your existing Franz account, so you can continue right where you left off. Please find out more about Engage Dock and its features on [getferdi.com](https://getferdi.com).
 
 ## Screenshots
 
@@ -32,10 +32,10 @@ Ferdi is a desktop app that helps you organize how you use your favourite apps b
 <p align="center">
 <img alt="Keep all your messaging services in one place." src="./branding/screenshots/hero.png">
 <em>"Keep all your messaging services in one place."</em>
-<img alt="Order your services with Ferdi Workspaces." src="./branding/screenshots/workspaces.png">
-<em>"Order your services with Ferdi Workspaces."</em>
-<img alt="Always keep your Todos list open with Ferdi Todos." src="./branding/screenshots/todos.png">
-<em>"Always keep your Todos list open with Ferdi Todos."</em>
+<img alt="Order your services with Engage Dock Workspaces." src="./branding/screenshots/workspaces.png">
+<em>"Order your services with Engage Dock Workspaces."</em>
+<img alt="Always keep your Todos list open with Engage Dock Todos." src="./branding/screenshots/todos.png">
+<em>"Always keep your Todos list open with Engage Dock Todos."</em>
 <img alt="Supporting all your services." src="./branding/screenshots/service-store.png">
 <em>"Supporting all your services."</em>
 </p>

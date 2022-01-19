@@ -34,7 +34,7 @@ const messages = defineMessages({
   },
   supportFerdi: {
     id: 'settings.navigation.supportFerdi',
-    defaultMessage: 'About Ferdi',
+    defaultMessage: 'About Engage Dock',
   },
   logout: {
     id: 'settings.navigation.logout',
@@ -65,7 +65,7 @@ class SettingsNavigation extends Component {
     localStorage.removeItem('authToken');
 
     if (isUsingWithoutAccount) {
-      // Reset server back to Ferdi API
+      // Reset server back to Engage Dock API
       this.props.actions.settings.update({
         type: 'app',
         data: {
@@ -77,7 +77,7 @@ class SettingsNavigation extends Component {
 
     this.props.stores.router.push('/auth/welcome');
 
-    // Reload Ferdi, otherwise many settings won't sync correctly with the server
+    // Reload Engage Dock, otherwise many settings won't sync correctly with the server
     // after logging into another account
     window.location.reload();
   }

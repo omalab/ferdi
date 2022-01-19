@@ -52,15 +52,15 @@ const messages = defineMessages({
   },
   openTodosDrawer: {
     id: 'sidebar.openTodosDrawer',
-    defaultMessage: 'Open Ferdi Todos',
+    defaultMessage: 'Open Engage Dock Todos',
   },
   closeTodosDrawer: {
     id: 'sidebar.closeTodosDrawer',
-    defaultMessage: 'Close Ferdi Todos',
+    defaultMessage: 'Close Engage Dock Todos',
   },
   lockFerdi: {
     id: 'sidebar.lockFerdi',
-    defaultMessage: 'Lock Ferdi',
+    defaultMessage: 'Lock Engage Dock',
   },
 });
 

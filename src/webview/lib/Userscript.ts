@@ -14,7 +14,7 @@ export default class Userscript {
   // Service configuration
   config = {};
 
-  // Ferdi and service settings
+  // Engage Dock and service settings
   settings = {};
 
   constructor(recipe, controller, config) {
@@ -25,7 +25,7 @@ export default class Userscript {
   }
 
   /**
-   * Set internal copy of Ferdi's settings.
+   * Set internal copy of Engage Dock's settings.
    * This is only used internally and can not be used to change any settings
    *
    * @param {*} settings

@@ -36,12 +36,12 @@ import globalMessages from '../../i18n/globalMessages';
 import WorkspacesStore from '../../features/workspaces/store';
 import ServicesStore from '../../stores/ServicesStore';
 
-const debug = require('debug')('Ferdi:EditSettingsScreen');
+const debug = require('debug')('EngageDock:EditSettingsScreen');
 
 const messages = defineMessages({
   autoLaunchOnStart: {
     id: 'settings.app.form.autoLaunchOnStart',
-    defaultMessage: 'Launch Ferdi on start',
+    defaultMessage: 'Launch Engage Dock on start',
   },
   autoLaunchInBackground: {
     id: 'settings.app.form.autoLaunchInBackground',
@@ -49,7 +49,7 @@ const messages = defineMessages({
   },
   runInBackground: {
     id: 'settings.app.form.runInBackground',
-    defaultMessage: 'Keep Ferdi in background when closing the window',
+    defaultMessage: 'Keep Engage Dock in background when closing the window',
   },
   startMinimized: {
     id: 'settings.app.form.startMinimized',
@@ -57,27 +57,27 @@ const messages = defineMessages({
   },
   confirmOnQuit: {
     id: 'settings.app.form.confirmOnQuit',
-    defaultMessage: 'Confirm when quitting Ferdi',
+    defaultMessage: 'Confirm when quitting Engage Dock',
   },
   enableSystemTray: {
     id: 'settings.app.form.enableSystemTray',
-    defaultMessage: 'Always show Ferdi in System Tray',
+    defaultMessage: 'Always show Engage Dock in System Tray',
   },
   enableMenuBar: {
     id: 'settings.app.form.enableMenuBar',
-    defaultMessage: 'Always show Ferdi in Menu Bar',
+    defaultMessage: 'Always show Engage Dock in Menu Bar',
   },
   reloadAfterResume: {
     id: 'settings.app.form.reloadAfterResume',
-    defaultMessage: 'Reload Ferdi after system resume',
+    defaultMessage: 'Reload Engage Dock after system resume',
   },
   minimizeToSystemTray: {
     id: 'settings.app.form.minimizeToSystemTray',
-    defaultMessage: 'Minimize Ferdi to system tray',
+    defaultMessage: 'Minimize Engage Dock to system tray',
   },
   closeToSystemTray: {
     id: 'settings.app.form.closeToSystemTray',
-    defaultMessage: 'Close Ferdi to system tray',
+    defaultMessage: 'Close Engage Dock to system tray',
   },
   privateNotifications: {
     id: 'settings.app.form.privateNotifications',
@@ -133,7 +133,7 @@ const messages = defineMessages({
   },
   useTouchIdToUnlock: {
     id: 'settings.app.form.useTouchIdToUnlock',
-    defaultMessage: 'Allow using TouchID to unlock Ferdi',
+    defaultMessage: 'Allow using TouchID to unlock Engage Dock',
   },
   inactivityLock: {
     id: 'settings.app.form.inactivityLock',
@@ -225,7 +225,7 @@ const messages = defineMessages({
   },
   enableGlobalHideShortcut: {
     id: 'settings.app.form.enableGlobalHideShortcut',
-    defaultMessage: 'Enable Global shortcut to hide Ferdi',
+    defaultMessage: 'Enable Global shortcut to hide Engage Dock',
   },
   beta: {
     id: 'settings.app.form.beta',
@@ -237,7 +237,7 @@ const messages = defineMessages({
   },
   enableTodos: {
     id: 'settings.app.form.enableTodos',
-    defaultMessage: 'Enable Ferdi Todos',
+    defaultMessage: 'Enable Engage Dock Todos',
   },
   keepAllWorkspacesLoaded: {
     id: 'settings.app.form.keepAllWorkspacesLoaded',

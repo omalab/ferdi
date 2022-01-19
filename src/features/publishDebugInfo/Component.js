@@ -14,7 +14,7 @@ import { DEBUG_API } from '../../config';
 import AppStore from '../../stores/AppStore';
 import ServicesStore from '../../stores/ServicesStore';
 
-const debug = require('debug')('Ferdi:feature:publishDebugInfo');
+const debug = require('debug')('EngageDock:feature:publishDebugInfo');
 
 const messages = defineMessages({
   title: {
@@ -24,7 +24,7 @@ const messages = defineMessages({
   info: {
     id: 'feature.publishDebugInfo.info',
     defaultMessage:
-      "Publishing your debug information helps us find issues and errors in Ferdi. By publishing your debug information you accept Ferdi Debugger's privacy policy and terms of service",
+      "Publishing your debug information helps us find issues and errors in 'EngageDock:. By publishing your debug information you accept 'EngageDock: Debugger's privacy policy and terms of service",
   },
   error: {
     id: 'feature.publishDebugInfo.error',

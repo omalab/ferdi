@@ -14,7 +14,7 @@ import {
   ifUndefinedNumber,
 } from '../jsUtils';
 
-const debug = require('debug')('Ferdi:Service');
+const debug = require('debug')('EngageDock:Service');
 
 export default class Service {
   id = '';

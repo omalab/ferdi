@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 
 import { v1 as uuidV1 } from 'uuid';
 
-const debug = require('debug')('Ferdi:Notifications');
+const debug = require('debug')('EngageDock:Notifications');
 
 export class NotificationsHandler {
   onNotify = (data: { title: string; options: any; notificationId: string }) =>

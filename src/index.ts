@@ -44,7 +44,7 @@ import { asarPath } from './helpers/asar-helpers';
 import { openExternalUrl } from './helpers/url-helpers';
 import userAgent from './helpers/userAgent-helpers';
 
-const debug = require('debug')('Ferdi:App');
+const debug = require('debug')('EngageDock:App');
 
 // Globally set useragent to fix user agent override in service workers
 debug('Set userAgent to ', userAgent());
@@ -139,7 +139,7 @@ if (!gotTheLock) {
           } else if (argv.includes('--quit')) {
             // Needs to be delayed to not interfere with mainWindow.restore();
             setTimeout(() => {
-              debug('Quitting Ferdi via Task');
+              debug('Quitting Engage Dock  via Task');
               app.quit();
             }, 1);
           }
@@ -467,15 +467,15 @@ app.on('ready', () => {
         arguments: `${extraArgs}--reset-window`,
         iconPath,
         iconIndex: 0,
-        title: 'Move Ferdi to Current Display',
-        description: 'Restore the position and size of Ferdi',
+        title: 'Move Engage Dock  to Current Display',
+        description: 'Restore the position and size of Engage Dock ',
       },
       {
         program: process.execPath,
         arguments: `${extraArgs}--quit`,
         iconPath,
         iconIndex: 0,
-        title: 'Quit Ferdi',
+        title: 'Quit Engage Dock ',
         description: '',
       },
     ]);
@@ -688,7 +688,7 @@ app.on('before-quit', event => {
     selection = dialog.showMessageBoxSync(mainWindow!, {
       type: 'question',
       message: 'Quit',
-      detail: 'Do you really want to quit Ferdi?',
+      detail: 'Do you really want to quit Engage Dock ?',
       buttons: ['Yes', 'No'],
     });
   }

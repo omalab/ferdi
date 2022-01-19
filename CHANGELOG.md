@@ -11,7 +11,7 @@
 
 - Added `stackoverflow-chat` Recipe (getferdi/recipes#718) 💖 @vraravam
 - Allow self-hosted option for kimai-cloud service 💖 @vraravam
-- Remove call to 'clearStorageData' so that MS Teams can remember login creds across Ferdi restarts 💖 @vraravam
+- Remove call to 'clearStorageData' so that MS Teams can remember login creds across Engage Dock restarts 💖 @vraravam
 
 # [v5.6.3-nightly.9](https://github.com/getferdi/ferdi/compare/v5.6.3-nightly.8...v5.6.3-nightly.9) (2021-09-21)
 
@@ -49,7 +49,7 @@
 
 ### Features
 
-- Ferdi now support Split View Mode (#1926) 💖 @niutech
+- Engage Dock now support Split View Mode (#1926) 💖 @niutech
 
 ### Bug fixes
 
@@ -114,7 +114,7 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 
 ### Bug Fixes
 
-- Better implementation of prompting before quitting Ferdi (#1919) 💖 @vraravam
+- Better implementation of prompting before quitting Engage Dock (#1919) 💖 @vraravam
 - Fix broken menu due to referencing old intl value 💖 @mhatvan
 - Fix broken system tray menu (app wasn't quitting) by reverting previous fix 💖 @vraravam
 - Fix unread count in Office365 not working for non-English locales (getferdi/recipes#679) 💖 @vraravam
@@ -172,16 +172,16 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 
 ### Features
 
-- Add a confirmation dialog and a preference while quitting Ferdi (#1879) 💖 @vraravam
+- Add a confirmation dialog and a preference while quitting Engage Dock (#1879) 💖 @vraravam
 - Services now support aliases!!!! (#1774) 💖 @vraravam
 - Turn off the certificate-whitelisting in ms-teams since that can cause an MITM attack. 💖 @vraravam, @kris7t
-- Remove 'shareFranz' feature since its always turned off for Ferdi 💖 @vraravam
+- Remove 'shareFranz' feature since its always turned off for Engage Dock 💖 @vraravam
 - Sort the recipes according to their service name in the 'Add new Service' screen 💖 @vraravam
-- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the ferdi profile in their file explorer 💖 @vraravam
+- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the Engage Dock profile in their file explorer 💖 @vraravam
 - [Security] Refactored Url helpers to ensure that theres a single place for vetting and opening external urls as recommended by [this article](https://benjamin-altpeter.de/shell-openexternal-dangers/) (#1789) 💖 @vraravam
 - Catch up with minor changes in Franz 5.7.0
 - Add entitlements for screen-capture-permissions on macos 💖 @vraravam
-- Ferdi is now present in the [snapstore](https://snapcraft.io/ferdi) 💖 @mhatvan
+- Engage Dock is now present in the [snapstore](https://snapcraft.io/ferdi) 💖 @mhatvan
 - Quicker way to toggle dark mode from the sidebar context menu 💖 @vraravam
 - Follow OS reduced motion setting (#1757) 💖 @mhatvan, @vraravam
 - Add new Help menu item to allow easy import/export of config files 💖 @vraravam
@@ -201,7 +201,7 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 
 - Upgrade to [electron 13.3.0](https://github.com/electron/electron/releases/tag/v13.3.0) 💖 @vraravam
 - Upgrade `electron-builder` to `22.12.1` which will allow converion from `npm` to `pnpm` 💖 @mhatvan
-- Remove references to 'premium' validation checks and paid subscriptions (making them permanently on) since Ferdi is free to all users forever 💖 @vraravam
+- Remove references to 'premium' validation checks and paid subscriptions (making them permanently on) since Engage Dock is free to all users forever 💖 @vraravam
 - Build tooling: 'recipes' (using 'pnpm') will coexist with 'ferdi' (using 'npm') (#1905) 💖 @mhatvan, @vraravam
 - Use symbols for key shortcuts consistently 💖 @vraravam
 - Add ability for service recipe to expose known certificate hosts (#1890) 💖 @vraravam
@@ -248,7 +248,7 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 - Fix for 'Support' link not working (404 error) (#1806) 💖 @kytwb
 - Fix zoom actions executed on another services (#1867) 💖 @sad270
 - Fix sidebar context menu not synced when toggling via the context menu (#1871) 💖 @sad270
-- Ferdi locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
+- Engage Dock locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
 - When the active workspace gets deleted, the default workspace gets auto-selected. 💖 @sad270, @vraravam
 - Fix reordering of services in vertical style layout (#1833) 💖 @vraravam
 - Fix address bar not updating (#1836) 💖 @mhatvan
@@ -259,7 +259,7 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 - Incorrect position while adding a new service when there were pre-existing services (#1820) 💖 @vraravam
 - Fix issue with some shortcuts not working on macos (those that either used `alt` or `shift` keys) 💖 @vraravam
 - Fix app focus detection 💖 @vraravam
-- Fix error while importing ferdi configuration without workspaces (#1776) 💖 @vraravam
+- Fix error while importing Engage Dock configuration without workspaces (#1776) 💖 @vraravam
 - Use electron's API to enable/disable spell-check when the app starts up 💖 @vraravam
 - Explicitly use env var to specify hostname for adonis for the internal-server. This fixes issue for some users where they have an alias for the `localhost` 💖 @vraravam
 - Prevent pasting twice (#1644) 💖 @stnkl, @vraravam
@@ -269,7 +269,7 @@ This is a hotfix for the 5.6.1 release, along with a couple of changes that were
 Please note that this is the same code as the `v5.6.1-nightly.56` tag.
 The cumulative changes since the previous beta release are:
 
-- Add a confirmation dialog and a preference while quitting Ferdi (#1879) 💖 @vraravam
+- Add a confirmation dialog and a preference while quitting Engage Dock (#1879) 💖 @vraravam
 - Turn off the certificate-whitelisting in ms-teams since that can cause an MITM attack. 💖 @vraravam, @kris7t
 
 ### Bug Fixes
@@ -281,7 +281,7 @@ The cumulative changes since the previous beta release are:
 - Fix for 'Support' link not working (404 error) (#1806) 💖 @kytwb
 - Fix zoom actions executed on another services (#1867) 💖 @sad270
 - Fix sidebar context menu not synced when toggling via the context menu (#1871) 💖 @sad270
-- Ferdi locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
+- Engage Dock locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
 
 ### Internal
 
@@ -318,7 +318,7 @@ The cumulative changes since the previous beta release are:
 
 # [v5.6.1-nightly.53](https://github.com/getferdi/ferdi/compare/v5.6.1-nightly.52...v5.6.1-nightly.53) (2021-09-08)
 
-- Add a confirmation dialog and a preference while quitting Ferdi (#1879) 💖 @vraravam
+- Add a confirmation dialog and a preference while quitting Engage Dock (#1879) 💖 @vraravam
 
 ### Bug Fixes
 
@@ -346,7 +346,7 @@ The cumulative changes since the previous beta release are:
 
 ### Bug Fixes
 
-- Ferdi locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
+- Engage Dock locking with lock feature disabled (#1866). Set & run the inactivity timeout only if lock feature is enabled, and use same condition between lock screen and locked menu 💖 @sad270
 
 ### Internal
 
@@ -460,11 +460,11 @@ Please note that this is the same code as the `v5.6.1-nightly.37` tag.
 The cumulative changes since the previous beta release are:
 
 - Upgraded to [electron 13.2.2](https://github.com/electron/electron/releases/tag/v13.2.2) 💖 @vraravam
-- Remove checks that refers to paid subscription since Ferdi is always free 💖 @vraravam
-- Remove 'shareFranz' feature since its always turned off for Ferdi 💖 @vraravam
+- Remove checks that refers to paid subscription since Engage Dock is always free 💖 @vraravam
+- Remove 'shareFranz' feature since its always turned off for Engage Dock 💖 @vraravam
 - Sorted the recipes according to their service name in the 'Add new Service' screen 💖 @vraravam
 - Moved some npm dependencies that were incorrectly classified as runtime deps. This has saved approx 16MB from the installed file (on macos) 💖 @vraravam, @mhatvan
-- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the ferdi profile in their file explorer 💖 @vraravam
+- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the Engage Dock profile in their file explorer 💖 @vraravam
 - [Security] Refactored Url helpers to ensure that theres a single place for vetting and opening external urls as recommended by [this article](https://benjamin-altpeter.de/shell-openexternal-dangers/) (#1789) 💖 @vraravam
 - Catch up with minor changes in Franz 5.7.0
 - Add entitlements for screen-capture-permissions 💖 @vraravam
@@ -518,8 +518,8 @@ The cumulative changes since the previous beta release are:
 
 # [v5.6.1-nightly.35](https://github.com/getferdi/ferdi/compare/v5.6.1-nightly.34...v5.6.1-nightly.35) (2021-08-22)
 
-- Remove checks that refers to paid subscription since Ferdi is always free 💖 @vraravam
-- Remove 'shareFranz' feature since its always turned off for Ferdi 💖 @vraravam
+- Remove checks that refers to paid subscription since Engage Dock is always free 💖 @vraravam
+- Remove 'shareFranz' feature since its always turned off for Engage Dock 💖 @vraravam
 
 ### Bug Fixes
 
@@ -588,7 +588,7 @@ The cumulative changes since the previous beta release are:
 
 # [v5.6.1-nightly.27](https://github.com/getferdi/ferdi/compare/v5.6.1-nightly.26...v5.6.1-nightly.27) (2021-08-15)
 
-- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the ferdi profile in their file explorer 💖 @vraravam
+- Add buttons in the 'Advanced' section of preferences to allow users to quickly open the Engage Dock profile in their file explorer 💖 @vraravam
 - [Security] Refactored Url helpers to ensure that there's a single place for vetting and opening external urls as recommended by [this article](https://benjamin-altpeter.de/shell-openexternal-dangers/) (#1789) 💖 @vraravam
 
 ### Internal
@@ -621,9 +621,9 @@ The cumulative changes since the previous beta release are:
 
 ### Bug Fixes
 
-- Fix startup crash for Ferdi v5.6.1-nightly.23 💖 @vraravam
+- Fix startup crash for Engage Dock v5.6.1-nightly.23 💖 @vraravam
 - Fix the sidebar context menu for toggling dark mode. 💖 @vraravam
-- Fix error while importing ferdi data (#1776) 💖 @vraravam
+- Fix error while importing Engage Dock data (#1776) 💖 @vraravam
 
 ### Internal
 
@@ -635,7 +635,7 @@ The cumulative changes since the previous beta release are:
 
 ### Bug Fixes
 
-- Fix startup crash for Ferdi v5.6.1-nightly.22 💖 @vraravam
+- Fix startup crash for Engage Dock v5.6.1-nightly.22 💖 @vraravam
 
 ### Internal
 
@@ -643,7 +643,7 @@ The cumulative changes since the previous beta release are:
 
 # [v5.6.1-nightly.22](https://github.com/getferdi/ferdi/compare/v5.6.1-nightly.21...v5.6.1-nightly.22) (2021-08-11)
 
-- Add Ferdi snap package (#1767) 💖 @mhatvan
+- Add Engage Dock snap package (#1767) 💖 @mhatvan
 - Follow OS reduced motion setting (#1757) 💖 @mhatvan
 
 ### Internal
@@ -707,7 +707,7 @@ The cumulative changes since the previous beta release are:
 
 ## [5.6.1-nightly.13](https://github.com/getferdi/ferdi/compare/v5.6.1-nightly.12...v5.6.1-nightly.13) (2021-08-04)
 
-- Changed the cron for the ferdi build to run at 12:15 am UTC. 💖 @vraravam
+- Changed the cron for the Engage Dock build to run at 12:15 am UTC. 💖 @vraravam
 - Removed straggling code related to 'popular services'. 💖 @vraravam
 - Upgraded 'electron' to '13.1.8'. 💖 @vraravam
 
@@ -760,7 +760,7 @@ The cumulative changes since the previous beta release are:
 - 5.6.1-nightly.4
 - Update submodules, browserslist data updates and linter fixes [skip ci]
 - 5.6.1-nightly.3
-- Trying to fix issue with CHANGES_COUNT not being deduced properly on CI runs (thus skipping the ferdi version). [skip ci] 💖 @vraravam
+- Trying to fix issue with CHANGES_COUNT not being deduced properly on CI runs (thus skipping the Engage Dock version). [skip ci] 💖 @vraravam
 - Updated recipes to pull in context-isolation changes. [skip ci] 💖 @kris7t
 - Recipe context isolation (#1456) 💖 @kris7t
 - Update submodules, browserslist data updates and linter fixes [skip ci]
@@ -813,7 +813,7 @@ The cumulative changes since the previous beta release are:
 - Fix color adjustments in Settings screen 💖 @kris7t
 - Expose Chrome version to todos webview (fix #1211) (#1478) 💖 @kris7t
 - Added ability to turn off notifications for clipboard events generated from the context menu 💖 @vraravam
-- Build Ferdi for freeBSD 💖 @vraravam
+- Build Engage Dock for freeBSD 💖 @vraravam
 - CI Builds moved to using GitHub actions 💖 @vraravam
 - Bump electron-builder to 22.11.7 (fix #1469) 💖 @kris7t, @vraravam
 - Fix active Todos service behaviour (#1481) 💖 @kytwb, @kris7t
@@ -825,7 +825,7 @@ The cumulative changes since the previous beta release are:
 - Enforce strict adherence to node, npm and node-gyp versions (mainly for contributors) 💖 @vraravam
 - Refactored all runtime configs: moved from 'config.js' into 'environment.js' 💖 @vraravam
 - Removed references to png images since they were not being used anyways. Results in smaller installer file 💖 @vraravam
-- Building ferdi on an ARM machine (#1611) 💖 @vraravam
+- Building Engage Dock on an ARM machine (#1611) 💖 @vraravam
 
 # [5.6.0-beta.6](https://github.com/getferdi/ferdi/compare/v5.6.0-beta.5...v5.6.0-beta.6) (2021-05-31)
 
@@ -885,13 +885,13 @@ The cumulative changes since the previous beta release are:
 - Fix spellchecker language saving (#1016)
 - Fix typo in the Login screen 💖 @eltociear
 - Fix typo in README.md 💖 @graves501
-- Fix "Show Ferdi In Menu Bar" nomenclature on macOS (#1417) 💖 @vraravam
+- Fix "Show Engage Dock In Menu Bar" nomenclature on macOS (#1417) 💖 @vraravam
 
 ### Under the hood
 
 - Update to Electron 13.0.1 💖 @vraravam, @kris7t
 - Update dependencies 💖 @vraravam, @kris7t
-- Synchronize with Ferdi 5.6.0 💖 @vraravam
+- Synchronize with Engage Dock 5.6.0 💖 @vraravam
 - Add Docker containers for building in Linux and development with VSCode 💖 @vraravam
 
 # [5.6.0-beta.5](https://github.com/getferdi/ferdi/compare/v5.6.0-beta.2...v5.6.0-beta.5) (2020-12-20)
@@ -946,7 +946,7 @@ The cumulative changes since the previous beta release are:
 ### Under the hood
 
 - Update to Electron 9
-- Remove Ferdi string from default user agent (#806) 💖 @dannyqiu
+- Remove Engage Dock string from default user agent (#806) 💖 @dannyqiu
 - Add recipes packaging to development setup (#985)
 - Use imagemin to minify images (#1008) 💖 @vraravam
 - Disable Chromium's poor MPRIS implementation (#1023)
@@ -976,7 +976,7 @@ The cumulative changes since the previous beta release are:
 
 - Prevent unnecessary electron popup windows for links (#685) 💖 @mahadevans87
 - Refactor locking feature (#693)
-- Review launch on startup for macOS, start Ferdi app, not renderer (#696) 💖 @dannyqiu
+- Review launch on startup for macOS, start Engage Dockapp, not renderer (#696) 💖 @dannyqiu
 - Fix TodosWebview user agent (#713) 💖 @mahadevans87
 - Fix crash when using Password Lock with TouchID API unavailable (#737) 💖 @mahadevans87
 - Fix setting of webview disablewebsecurity attribute (#772) 💖 @dannyqiu
@@ -989,7 +989,7 @@ The cumulative changes since the previous beta release are:
 - Add modifyRequestHeaders, enable properly setting headers for services (#639), 💖 @mahadevans87 @sampathBlam
 - Add dropdown list to choose Todo service (#418, #477), 💖 @yourcontact
 - Add hotkey for darkmode (#530, #537), 💖 @Room4O4 & @mahadevans87
-- Add option to start Ferdi minimized (#490, #534)
+- Add option to start Engage Dockminimized (#490, #534)
 - Add option to show draggable window area on macOS (#304, #532)
 - Add support for Adaptable Dark Mode on Windows (#548), 💖 @Room4O4 & @mahadevans87
 - Add notification & audio toggle action in tray context menu (#542), 💖 @Room4O4 & @mahadevans87
@@ -1009,16 +1009,16 @@ The cumulative changes since the previous beta release are:
 - Improve user onboarding (#493)
 - Improve "Updates" section in settings (#506), 💖 @yourcontact
 - Improve information about Franz Premium and Teams
-- Hide user lastname on Ferdi servers as it is not stored
+- Hide user lastname on Engage Dock servers as it is not stored
 - Improve draggable window area height for macOS (#304, #479)
 - Remove server setting from settings screen (#516), 💖 @mrassili
 - Update Electron to 8.1.1 (#480)
 - Window title now reflects service name (#213), 💖 @gmarec
 - Improve system tray icon behaviour (#307)
 - Improve navigation bar behaviour setting (#270)
-- Ferdi is now available as Flatpak on Flathub (#323), 💖 @lhw
+- Engage Dock is now available as Flatpak on Flathub (#323), 💖 @lhw
 - Add automatic local recipe updates
-- Add option to start Ferdi in system tray (#331), 💖 @jereksel
+- Add option to start Engage Dock in system tray (#331), 💖 @jereksel
 - Add better support for macOS dark mode
 - Add better seperation in settings
 - Change Sentry telemetry to be opt-in only (#160)
@@ -1096,7 +1096,7 @@ The cumulative changes since the previous beta release are:
 - Merge Franz 5.5.0-beta.2
 - Add dropdown list to choose Todo service (#418, #477), 💖 @yourcontact
 - Add hotkey for darkmode (#530, #537), 💖 @Room4O4 & @mahadevans87
-- Add option to start Ferdi minimized (#490, #534)
+- Add option to start Engage Dock minimized (#490, #534)
 - Add option to show draggable window area on macOS (#304, #532)
 - Add support for Adaptable Dark Mode on Windows (#548), 💖 @Room4O4 & @mahadevans87
 - Add notification & audio toggle action in tray context menu (#542), 💖 @Room4O4 & @mahadevans87
@@ -1109,7 +1109,7 @@ The cumulative changes since the previous beta release are:
 - Improve "Updates" section in settings (#506), 💖 @yourcontact
 - Improve information about Franz Premium and Teams
 - Improve user scripts (#559)
-- Hide user lastname on Ferdi servers as it is not stored
+- Hide user lastname on Engage Dock servers as it is not stored
 - Improve draggable window area height for macOS (#304, #479)
 - Remove server setting from settings screen (#516), 💖 @mrassili
 - Update Electron to 8.1.1 (#480)
@@ -1148,7 +1148,7 @@ The cumulative changes since the previous beta release are:
 - Fix spellchecker by using setTimeout https://github.com/getferdi/ferdi/issues/220
 - Fix zoom +/- in services https://github.com/getferdi/ferdi/issues/143
 - Fix microphone/camera access on some versions of macOS #193
-- Fix bugs with using Ferdi without an account
+- Fix bugs with using Engage Dock without an account
 
 ### Build changes
 
@@ -1330,7 +1330,7 @@ Merge Franz v5.3.1 into Ferdi.
 - **App:** Add security checks for external URLs ([6e5531a](https://github.com/meetfranz/franz/commit/6e5531a))
 - **Linux:** Add auto updater for Linux AppImage builds ([d641b4e](https://github.com/meetfranz/franz/commit/d641b4e))
 - **Spell check:** Add British English as spell check language ([#1306](https://github.com/meetfranz/franz/issues/1306)) ([67fa325](https://github.com/meetfranz/franz/commit/67fa325))
-- **Windows:** Add option to quit Ferdi from Taskbar icon ([952fc8b](https://github.com/meetfranz/franz/commit/952fc8b))
+- **Windows:** Add option to quit Engage Dock from Taskbar icon ([952fc8b](https://github.com/meetfranz/franz/commit/952fc8b))
 
 ### Bug Fixes
 
@@ -1339,7 +1339,7 @@ Merge Franz v5.3.1 into Ferdi.
 - **Service:** Fix service zoom (cmd/ctrl+ & cmd/ctrl-) ([91a0f59](https://github.com/meetfranz/franz/commit/91a0f59))
 - **Service:** Fix shortcut for (un)muting notifications & audio ([1df3342](https://github.com/meetfranz/franz/commit/1df3342))
 - **Windows:** Fix copy & paste in service context menus ([e66fcaa](https://github.com/meetfranz/franz/commit/e66fcaa)), closes [#1316](https://github.com/meetfranz/franz/issues/1316)
-- **Windows:** Fix losing window when "Keep Ferdi in background" is enabled ([78a3722](https://github.com/meetfranz/franz/commit/78a3722))
+- **Windows:** Fix losing window when "Keep Engage Dock in background" is enabled ([78a3722](https://github.com/meetfranz/franz/commit/78a3722))
 
 ### General
 
@@ -1355,7 +1355,7 @@ Merge Franz v5.3.1 into Ferdi.
 ### Features
 
 - **Spellchecker:** Add automatic spellcheck language detection ([a5e7171](https://github.com/meetfranz/franz/commit/a5e7171))
-- **Windows:** Add option to quit Ferdi from Taskbar ([8808601](https://github.com/meetfranz/franz/commit/8808601))
+- **Windows:** Add option to quit Engage Dock from Taskbar ([8808601](https://github.com/meetfranz/franz/commit/8808601))
 
 ### Bug Fixes
 
@@ -1429,7 +1429,7 @@ Merge Franz v5.3.1 into Ferdi.
 
 ### Features
 
-- **Windows:** Add taskbar action to reset Ferdi window ([08fa75a](https://github.com/meetfranz/franz/commit/08fa75a))
+- **Windows:** Add taskbar action to reset Engage Dock window ([08fa75a](https://github.com/meetfranz/franz/commit/08fa75a))
 - **Context Menu:** Add "Go Back" and "Go Forward" ([5c18595](https://github.com/meetfranz/franz/commit/5c18595))
 - **Context Menu:** Add Lookup, Search Google for ([5d5aa0c](https://github.com/meetfranz/franz/commit/5d5aa0c))
 - **App:** Add `--devtools` command line arg to automatically open Dev Tools ([84fc3a0](https://github.com/meetfranz/franz/commit/84fc3a0))
@@ -1526,7 +1526,7 @@ Merge Franz v5.3.1 into Ferdi.
 
 - **App:** Fix memory leak in recipe polling loop ([c99848f](https://github.com/meetfranz/franz/commit/c99848f))
 - **App:** Fix validation for side-by-side teamId & customURL ([bd51150](https://github.com/meetfranz/franz/commit/bd51150))
-- **App:** Reload Ferdi instead of all services one by one on sleep resume ([4e5f7af](https://github.com/meetfranz/franz/commit/4e5f7af))
+- **App:** Reload Engage Dock instead of all services one by one on sleep resume ([4e5f7af](https://github.com/meetfranz/franz/commit/4e5f7af))
 - **App:** Fix toggle buttons shown during import ([1220e2c](https://github.com/meetfranz/franz/commit/1220e2c))
   fix(App): Bugfix Fix memory leak in recipe polling loop
 - **App:** Fix invite screen [object Object] values ([81c4e99](https://github.com/meetfranz/franz/commit/81c4e99))
@@ -1618,8 +1618,8 @@ Merge Franz v5.3.1 into Ferdi.
 ### Bug Fixes
 
 - **App:** Add checks to service url validation to prevent app freeze ([db8515f](https://github.com/meetfranz/franz/commit/db8515f))
-- **macOS:** Fix disable launch Ferdi on start ([34bba09](https://github.com/meetfranz/franz/commit/34bba09))
-- **Windows:** Launch Ferdi on start when selected ([34bba09](https://github.com/meetfranz/franz/commit/34bba09))
+- **macOS:** Fix disable launch Engage Dock on start ([34bba09](https://github.com/meetfranz/franz/commit/34bba09))
+- **Windows:** Launch Engage Dock on start when selected ([34bba09](https://github.com/meetfranz/franz/commit/34bba09))
 - **Onboarding:** Fix issue with import of on-premise services ([7c7d27d](https://github.com/meetfranz/franz/commit/7c7d27d))
 - **Shortcuts:** Flip shortcut to navigate to next/previous service ([37d5923](https://github.com/meetfranz/franz/commit/37d5923))
 - **Windows:** Open Window when app is pinned to taskbar and minimized to system tray ([777814a](https://github.com/meetfranz/franz/commit/777814a))
@@ -1648,10 +1648,10 @@ Merge Franz v5.3.1 into Ferdi.
 
 ### Bug Fixes
 
-- **App:** Force Ferdi to use single window ([2ae409e](https://github.com/meetfranz/franz/commit/2ae409e))
+- **App:** Force Engage Dock to use single window ([2ae409e](https://github.com/meetfranz/franz/commit/2ae409e))
 - **Onboarding:** Fix enable/disable service import toggle ([23174f9](https://github.com/meetfranz/franz/commit/23174f9))
 - **Onboarding:** Fix service import ([99d1c01](https://github.com/meetfranz/franz/commit/99d1c01))
 - **Payment:** Fix payment window when name contains special character ([a854614](https://github.com/meetfranz/franz/commit/a854614))
 - **macOS:** Add macOS dark theme system tray icon ([55805f1](https://github.com/meetfranz/franz/commit/55805f1))
 - **Windows:** Fix enable/disable autostart on login ([eca7f3b](https://github.com/meetfranz/franz/commit/eca7f3b))
-- **Windows:** Fix multiple system tray icons when opening/closing Ferdi ([5b9b0c7](https://github.com/meetfranz/franz/commit/5b9b0c7))
+- **Windows:** Fix multiple system tray icons when opening/closing Engage Dock ([5b9b0c7](https://github.com/meetfranz/franz/commit/5b9b0c7))
